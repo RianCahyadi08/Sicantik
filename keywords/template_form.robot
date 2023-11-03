@@ -12,6 +12,9 @@ Move To Template Form
     Go To    https://uji.sicantik.go.id/template-form
     Sleep    3s
 
+Click Icon Edit
+    Click Element    class:fa-edit
+
 Click Button Filter
     Click Element    xpath://*[@id="kt_profile_details_view"]/div/div[2]/div/div[1]/button
 
