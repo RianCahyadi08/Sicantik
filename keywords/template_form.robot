@@ -55,8 +55,10 @@ Input Field Kunci
 Click Button Simpan Data
     Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[2]/button[2]
 
+# Canvas
 Click Button Buat Canvas
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[1]
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[1]
+    Click Button    default:Buat Canvas
     Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
 
 Input Tab Index Canvas
@@ -78,13 +80,13 @@ Select Tipe Tabel Canvas
 
 Select Tipe Tabel Grid Canvas
     Press Keys    None    TAB
-    Press Keys    None    Form
+    Press Keys    None    Tabel Grid
     Press Keys    None    ARROW_DOWN
     Press Keys    None    ENTER
 
 Select Tipe Tabel Static Canvas
     Press Keys    None    TAB
-    Press Keys    None    Form
+    Press Keys    None    Tabel Sta
     Press Keys    None    ARROW_DOWN
     Press Keys    None    ENTER
 
@@ -99,12 +101,12 @@ Input Nama Canvas
     Press Keys    None    TAB
     Press Keys    None    ${namaCanvas}
 
-Input Web Service Awal
+Input Web Service Awal Canvas
     [Arguments]    ${webServiceAwal}
     Press Keys    None    TAB
     Press Keys    None    ${webServiceAwal}
 
-Select Data Table
+Select Data Table Canvas
     Press Keys    None    TAB
     Sleep    1s
     Press Keys    None    ARROW_DOWN
@@ -118,9 +120,12 @@ Input No Urut Canvas
 
 Click Button Simpan Canvas
     Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+# End Canvas
+
 
 Click Button Buat Canvas Formula
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[4]
+    Click Button    default:Buat Canvas Formula
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[4]
     Wait Until Element Is Visible    xpath://*[@id="canvas-modal-formula"]/div/form/div/div[1]/h5
 
 Input Tab Index
@@ -138,10 +143,11 @@ Click Button Simpan Buat Canvas Formula
     Click Button    xpath://*[@id="canvas-modal-formula"]/div/form/div/div[3]/button[2]
 
 Click Button Buat Tab
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[2]
+    Click Button    default:Buat Tab
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[2]
     Wait Until Element Is Visible    class:modal-title
 
-Input Label
+Input Label Buat Tab
     Press Keys    None    TAB
     [Arguments]    ${label}
     Press Keys    None    ${label}
@@ -150,23 +156,21 @@ Click Button Simpan Buat Tab
     Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
 
 Click Button Buat Tombol
-    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[5]
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[4]
-    # Click Button    name: Buat Tombol 
+    Click Button    default:Buat Tombol
     Sleep    1s
     # Wait Until Element Is Visible    class:modal-title
 
-Select Jenis Aksi Pengaturan Button
+Select Jenis Aksi Buat Tombol
     Press Keys    None    TAB
     Press Keys    None    ARROW_DOWN
     Press Keys    None    ENTER
 
-Input Link Pengaturan Button
+Input Link Buat Tombol
     Press Keys    None    TAB
     [Arguments]    ${link}
     Press Keys    None    ${link}
 
-Input Label Pengaturan Button
+Input Label Buat Tombol
     Press Keys    None    TAB
     [Arguments]    ${label}
     Press Keys    None    ${label}
@@ -175,7 +179,8 @@ Click Button Simpan Buat Tombol
     Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
 
 Click Button Buat Filter
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[3]
+    Click Button    default:Buat Filter
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[3]
     Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
 
 Input Label Pengaturan Filter
@@ -214,7 +219,8 @@ Detail Template Form
 
 # Buat Element
 Click Button Buat Element
-    Click Button    xpath://*[@id="pane-0"]/div[2]/div[4]/button[1]
+    Click Button    default:Buat Element
+    # Click Button    xpath://*[@id="pane-0"]/div[2]/div[4]/button[1]
     Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
 
 Input Label Element
