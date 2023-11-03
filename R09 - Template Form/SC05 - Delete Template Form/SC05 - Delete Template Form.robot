@@ -10,10 +10,14 @@ ${BROWSER}        Chrome
 
 *** Test Cases ***
 TC01 - Delete Template Form
+    [Documentation]     SC05 - Delete Template Form
+    [Tags]  TC01 - Delete Template Form
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
     Submit Credentials
     Move To Template Form
     Delete Template Form
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser

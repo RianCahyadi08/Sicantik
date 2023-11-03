@@ -53,7 +53,8 @@ Input Field Kunci
     Press Keys    None    ${fieldKunci}
 
 Click Button Simpan Data
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[2]/button[2]
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[2]/button[2]
+    Click Button    default:Simpan Data
 
 # Canvas
 Click Button Buat Canvas

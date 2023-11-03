@@ -10,6 +10,8 @@ ${BROWSER}        Chrome
 
 *** Test Cases ***
 TC01 - View Page Template Form
+    [Documentation]     SC01 - View Page Template Form
+    [Tags]  TC01 - View Page Template Form
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -18,6 +20,8 @@ TC01 - View Page Template Form
     Capture Page Screenshot
 
 TC02 - Search Template Form
+    [Documentation]     SC01 - View Page Template Form
+    [Tags]  TC02 - Search Template Form
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -30,6 +34,8 @@ TC02 - Search Template Form
     Capture Page Screenshot
 
 TC03 - View Detail Template Form
+    [Documentation]     SC01 - View Page Template Form
+    [Tags]  TC03 - View Detail Template Form
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
