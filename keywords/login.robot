@@ -8,7 +8,7 @@ ${BROWSER}        Chrome
 
 *** Keywords ***
 Open Browser To Login Page
-    Set Selenium Speed    0.5s
+    Set Selenium Speed    0.2s
     Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
     Maximize Browser Window
     Title Should Be    SICANTIK
@@ -23,3 +23,5 @@ Input Password
 
 Submit Credentials
     Click Button    kt_sign_in_submit
+    Sleep    3s
+    Wait Until Element Is Visible    xpath://*[@id="#kt_header_menu"]/div[1]/a/span[2]
