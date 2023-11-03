@@ -18,7 +18,7 @@ TC01 - Create New Template Form (Tipe Form) dengan Tidak Otomatis Update
     Click Button Add
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Form Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table
@@ -48,7 +48,7 @@ TC02 - Create New Template Form (Tipe Form) dengan Otomatis Update
     Select Target Update Otomatis
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Form Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table
@@ -81,7 +81,7 @@ TC03 - Create New Template Form (Tipe Table)
     Click Button Simpan Pengaturan Filter
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Tabel Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table
@@ -114,7 +114,7 @@ TC04 - Create New Template Form (Tipe Tabel Grid)
     Click Button Simpan Pengaturan Filter
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Tabel Grid Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table
@@ -147,7 +147,7 @@ TC05 - Create New Template Form (Tipe Tabel Statik)
     Click Button Simpan Pengaturan Filter
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Tabel Static Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table
@@ -180,7 +180,7 @@ TC06 - Create New Template Form (Tipe Map)
     Click Button Simpan Pengaturan Filter
     Click Button Buat Canvas
     Input Tab Index Canvas    1
-    Select Tipe Canvas
+    Select Tipe Tabel Map Canvas
     Input Nama Canvas    Nama canvas
     Input Web Service Awal    ServiceAwal
     Select Data Table

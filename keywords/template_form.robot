@@ -64,8 +64,33 @@ Input Tab Index Canvas
     [Arguments]    ${tabIndexCanvas}
     Press Keys    None    ${tabIndexCanvas}
 
-Select Tipe Canvas
+Select Tipe Form Canvas
     Press Keys    None    TAB
+    Press Keys    None    Form
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Tipe Tabel Canvas
+    Press Keys    None    TAB
+    Press Keys    None    Tabel
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Tipe Tabel Grid Canvas
+    Press Keys    None    TAB
+    Press Keys    None    Form
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Tipe Tabel Static Canvas
+    Press Keys    None    TAB
+    Press Keys    None    Form
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Tipe Tabel Map Canvas
+    Press Keys    None    TAB
+    Press Keys    None    Map
     Press Keys    None    ARROW_DOWN
     Press Keys    None    ENTER
 
@@ -125,8 +150,11 @@ Click Button Simpan Buat Tab
     Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
 
 Click Button Buat Tombol
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[5]
-    Wait Until Element Is Visible    class:modal-title
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[5]
+    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[4]
+    # Click Button    name: Buat Tombol 
+    Sleep    1s
+    # Wait Until Element Is Visible    class:modal-title
 
 Select Jenis Aksi Pengaturan Button
     Press Keys    None    TAB
@@ -183,3 +211,35 @@ Delete Template Form
 Detail Template Form
     Click Element    class:fa-eye
     Sleep    3s
+
+# Buat Element
+Click Button Buat Element
+    Click Button    xpath://*[@id="pane-0"]/div[2]/div[4]/button[1]
+    Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+
+Input Label Element
+    Press Keys    None    TAB
+    Press Keys    None    TAB
+    [Arguments]    ${label}
+    Press Keys    None    ${label}
+
+Select Type Element
+    Press Keys    None    TAB
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Wajib Element
+    Press Keys    None    TAB
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Data Kolom Element
+    Press Keys    None    TAB
+    Sleep    1s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Click Button Simpan Element
+    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+
+# End Element
