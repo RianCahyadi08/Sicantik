@@ -1,0 +1,447 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231104 11:43:34.072" rpa="false" schemaversion="4">
+<suite id="s1" name="Sc03 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)" source="e:\#Freelance\Sicantik\r04 - proses permohonan\sc03 - proses pengajuan (menerima &amp; memeriksa berkas)\sc03 - proses pengajuan (menerima &amp; memeriksa berkas).robot">
+<test id="s1-t1" name="TC01 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.5s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231104 11:43:34.243" endtime="20231104 11:43:34.244"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231104 11:43:34.244" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231104 11:43:34.244" endtime="20231104 11:43:45.903"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231104 11:43:45.903" endtime="20231104 11:43:46.664"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231104 11:43:47.171" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231104 11:43:46.664" endtime="20231104 11:43:47.171"/>
+</kw>
+<status status="PASS" starttime="20231104 11:43:34.243" endtime="20231104 11:43:47.171"/>
+</kw>
+<kw name="Input Username" library="login">
+<arg>admegov</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231104 11:43:47.171" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231104 11:43:47.171" endtime="20231104 11:43:48.727"/>
+</kw>
+<status status="PASS" starttime="20231104 11:43:47.171" endtime="20231104 11:43:48.727"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Admegov789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231104 11:43:48.727" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231104 11:43:48.727" endtime="20231104 11:43:50.252"/>
+</kw>
+<status status="PASS" starttime="20231104 11:43:48.727" endtime="20231104 11:43:50.252"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:43:50.252" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231104 11:43:50.252" endtime="20231104 11:43:52.488"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231104 11:43:57.489" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231104 11:43:52.488" endtime="20231104 11:43:57.489"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[1]/a/span[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231104 11:43:57.489" endtime="20231104 11:43:58.503"/>
+</kw>
+<status status="PASS" starttime="20231104 11:43:50.252" endtime="20231104 11:43:58.503"/>
+</kw>
+<kw name="Move to Proses Permohonan" library="proses_permohonan">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[7]/span/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231104 11:43:58.503" level="INFO">Clicking element 'xpath://*[@id="#kt_header_menu"]/div[7]/span/span[2]'.</msg>
+<status status="PASS" starttime="20231104 11:43:58.503" endtime="20231104 11:43:59.723"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>link:Proses Permohonan</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20231104 11:43:59.723" level="INFO">Clicking link 'link:Proses Permohonan'.</msg>
+<status status="PASS" starttime="20231104 11:43:59.723" endtime="20231104 11:44:01.638"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>tag:h5</arg>
+<arg>Proses Pengajuan</arg>
+<arg>None</arg>
+<arg>None</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231104 11:44:01.638" endtime="20231104 11:44:02.648"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231104 11:44:04.648" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231104 11:44:02.648" endtime="20231104 11:44:04.649"/>
+</kw>
+<status status="PASS" starttime="20231104 11:43:58.503" endtime="20231104 11:44:04.649"/>
+</kw>
+<kw name="Click Icon Alur Proses Permohonan" library="proses_permohonan">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>class:fa-list-alt</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:04.650" level="INFO">Clicking element 'class:fa-list-alt'.</msg>
+<status status="PASS" starttime="20231104 11:44:04.650" endtime="20231104 11:44:05.876"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:modal-title</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231104 11:44:05.876" endtime="20231104 11:44:06.891"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:04.650" endtime="20231104 11:44:06.891"/>
+</kw>
+<kw name="Click Menerima &amp; Memeriksa Berkas" library="proses_permohonan">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:h3.text-primary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:06.891" level="INFO">Clicking element 'css:h3.text-primary'.</msg>
+<status status="PASS" starttime="20231104 11:44:06.891" endtime="20231104 11:44:08.126"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[1]/div[2]/form/div[9]/div[2]/button[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231104 11:44:08.126" endtime="20231104 11:44:10.837"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:06.891" endtime="20231104 11:44:10.837"/>
+</kw>
+<kw name="Verify Jenis Permohonan" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jenis Permohonan *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:11.344" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:10.839" endtime="20231104 11:44:11.344"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:10.838" endtime="20231104 11:44:11.344"/>
+</kw>
+<kw name="Verify Instansi" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Instansi *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:11.851" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:11.346" endtime="20231104 11:44:11.851"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:11.346" endtime="20231104 11:44:11.851"/>
+</kw>
+<kw name="Verify Unit" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Unit *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:12.358" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:11.852" endtime="20231104 11:44:12.358"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:11.852" endtime="20231104 11:44:12.358"/>
+</kw>
+<kw name="Verify Jenis Izin" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jenis Izin *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:12.865" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:12.359" endtime="20231104 11:44:12.865"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:12.359" endtime="20231104 11:44:12.865"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:12.866" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:12.866" endtime="20231104 11:44:15.095"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:12.866" endtime="20231104 11:44:15.095"/>
+</kw>
+<kw name="Verify Keterangan Lokasi" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Keterangan lokasi (bila ada)</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:15.618" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:15.096" endtime="20231104 11:44:15.618"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:15.096" endtime="20231104 11:44:15.618"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:15.619" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:15.619" endtime="20231104 11:44:17.842"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:15.619" endtime="20231104 11:44:17.842"/>
+</kw>
+<kw name="Verify Nama Lengkap" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Nama Lengkap (Tanpa Gelar) *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:18.347" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:17.843" endtime="20231104 11:44:18.347"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:17.842" endtime="20231104 11:44:18.347"/>
+</kw>
+<kw name="Verify Tipe Identitas" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Tipe Identitas *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:18.852" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:18.348" endtime="20231104 11:44:18.852"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:18.348" endtime="20231104 11:44:18.852"/>
+</kw>
+<kw name="Verify No Identitas" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>No. Identitas *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:19.358" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:18.853" endtime="20231104 11:44:19.358"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:18.852" endtime="20231104 11:44:19.358"/>
+</kw>
+<kw name="Verify NPWP" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>No. NPWP *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:19.862" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:19.359" endtime="20231104 11:44:19.862"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:19.359" endtime="20231104 11:44:19.862"/>
+</kw>
+<kw name="Verify Jenis Kelamin" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jenis Kelamin *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:20.370" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:19.862" endtime="20231104 11:44:20.370"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:19.862" endtime="20231104 11:44:20.370"/>
+</kw>
+<kw name="Verify Pekerjaan" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Pekerjaan *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:20.876" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:20.370" endtime="20231104 11:44:20.876"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:20.370" endtime="20231104 11:44:20.876"/>
+</kw>
+<kw name="Verify Tempat lahir" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Tampat Lahir (Kota) *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:21.382" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:20.877" endtime="20231104 11:44:21.382"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:20.876" endtime="20231104 11:44:21.382"/>
+</kw>
+<kw name="Verify No Telp" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>No. Telepon</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:21.889" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:21.382" endtime="20231104 11:44:21.889"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:21.382" endtime="20231104 11:44:21.889"/>
+</kw>
+<kw name="Verify No Hp" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>No. HP *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:22.395" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:21.889" endtime="20231104 11:44:22.395"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:21.889" endtime="20231104 11:44:22.395"/>
+</kw>
+<kw name="Verify Alamat Email" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Alamat Email</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:22.902" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:22.395" endtime="20231104 11:44:22.902"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:22.395" endtime="20231104 11:44:22.902"/>
+</kw>
+<kw name="Verify Provinsi" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Provinsi</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:23.408" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:22.902" endtime="20231104 11:44:23.408"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:22.902" endtime="20231104 11:44:23.408"/>
+</kw>
+<kw name="Verify Alamat Lengkap" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Alamat Lengkap *</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:23.915" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:23.408" endtime="20231104 11:44:23.915"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:23.408" endtime="20231104 11:44:23.915"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:23.915" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:23.915" endtime="20231104 11:44:26.146"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:23.915" endtime="20231104 11:44:26.146"/>
+</kw>
+<kw name="Verify Jenis Perusahaan" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jenis Perusahaan</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:26.653" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:26.146" endtime="20231104 11:44:26.653"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:26.146" endtime="20231104 11:44:26.653"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:26.653" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:26.653" endtime="20231104 11:44:28.880"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:26.653" endtime="20231104 11:44:28.880"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:28.880" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:28.880" endtime="20231104 11:44:31.108"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:28.880" endtime="20231104 11:44:31.108"/>
+</kw>
+<kw name="Verify Jenis Proyek" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jenis Proyek</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:31.614" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:31.108" endtime="20231104 11:44:31.614"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:31.108" endtime="20231104 11:44:31.614"/>
+</kw>
+<kw name="Verify Target PAD" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Target PAD</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:32.121" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:31.614" endtime="20231104 11:44:32.121"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:31.614" endtime="20231104 11:44:32.121"/>
+</kw>
+<kw name="Verify Nilai Investigasi" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Nilai Investasi</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:32.628" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:32.121" endtime="20231104 11:44:32.628"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:32.121" endtime="20231104 11:44:32.628"/>
+</kw>
+<kw name="Verify Jumlah Tenaga Kerja" library="proses_permohonan">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>css:label.form-label</arg>
+<arg>Jumlah Tenaga Kerja</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20231104 11:44:33.134" level="INFO">Current page contains element 'css:label.form-label'.</msg>
+<status status="PASS" starttime="20231104 11:44:32.628" endtime="20231104 11:44:33.134"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:32.628" endtime="20231104 11:44:33.134"/>
+</kw>
+<kw name="Click Button Selanjutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Selanjutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:33.134" level="INFO">Clicking button 'default:Selanjutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:33.134" endtime="20231104 11:44:35.363"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:33.134" endtime="20231104 11:44:35.363"/>
+</kw>
+<kw name="Click Button Proses Berikutnya" library="proses_permohonan">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Proses Berikutnya</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231104 11:44:35.363" level="INFO">Clicking button 'default:Proses Berikutnya'.</msg>
+<status status="PASS" starttime="20231104 11:44:35.363" endtime="20231104 11:44:37.603"/>
+</kw>
+<status status="PASS" starttime="20231104 11:44:35.363" endtime="20231104 11:44:37.603"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231104 11:44:38.604" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231104 11:44:37.603" endtime="20231104 11:44:38.604"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231104 11:44:39.161" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231104 11:44:38.604" endtime="20231104 11:44:39.161"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231104 11:44:39.161" endtime="20231104 11:44:42.494"/>
+</kw>
+<doc>SC03 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)</doc>
+<tag>TC01 Proses Pengajuan (Menerima &amp; Memeriksa Berkas)</tag>
+<status status="PASS" starttime="20231104 11:43:34.243" endtime="20231104 11:44:42.494"/>
+</test>
+<doc>SC03 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)</doc>
+<status status="PASS" starttime="20231104 11:43:34.076" endtime="20231104 11:44:42.494"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 Proses Pengajuan (Menerima &amp; Memeriksa Berkas)</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Sc03 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)">Sc03 - Proses Pengajuan (Menerima &amp; Memeriksa Berkas)</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -10,6 +10,8 @@ ${BROWSER}        Chrome
 
 *** Test Cases ***
 TC01 - Duplicate Template Form
+    [Documentation]     SC04 - Duplicate Template Form
+    [Tags]  TC01 - Duplicate Template Form
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#

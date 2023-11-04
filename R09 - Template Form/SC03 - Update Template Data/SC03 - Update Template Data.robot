@@ -10,6 +10,8 @@ ${BROWSER}        Chrome
 
 *** Test Cases ***
 TC01 - Update Template Form (Tipe Form) dengan Tidak Otomatis Update
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC01 - Update Template Form (Tipe Form) dengan Tidak Otomatis Update
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -17,9 +19,13 @@ TC01 - Update Template Form (Tipe Form) dengan Tidak Otomatis Update
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser
 
 TC02 - Update Template Form (Tipe Form) dengan Otomatis Update
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC02 - Update Template Form (Tipe Form) dengan Otomatis Update
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -27,9 +33,13 @@ TC02 - Update Template Form (Tipe Form) dengan Otomatis Update
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser
 
 TC03 - Update Template Form (Tipe Table)
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC03 - Update Template Form (Tipe Table)
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -37,9 +47,13 @@ TC03 - Update Template Form (Tipe Table)
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser
 
 TC04 - Update Template Form (Tipe Tabel Grid)
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC04 - Update Template Form (Tipe Tabel Grid)
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -47,9 +61,13 @@ TC04 - Update Template Form (Tipe Tabel Grid)
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser
 
 TC05 - Update Template Form (Tipe Tabel Statik)
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC05 - Update Template Form (Tipe Tabel Statik)
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -57,9 +75,13 @@ TC05 - Update Template Form (Tipe Tabel Statik)
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser
 
 TC06 - Ubah Template Form (Tipe Map)
+    [Documentation]     SC03 - Update Template Data
+    [Tags]  TC06 - Ubah Template Form (Tipe Map)
     Open Browser To Login Page
     Input Username    admegov
     Input Password    Admegov789*@#
@@ -67,4 +89,6 @@ TC06 - Ubah Template Form (Tipe Map)
     Move To Template Form
     Click Icon Edit
     Click Button Simpan Data
+    Sleep   2s
     Capture Page Screenshot
+    [Teardown]    Close Browser

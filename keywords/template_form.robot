@@ -45,7 +45,9 @@ Select Target Update Otomatis
 
 Input Nama Form
     [Arguments]    ${namaForm}
+    Sleep   1s
     Input Text    class:el-input__inner    ${namaForm}
+    # Input Text      class:el-input__wrapper     ${namaForm}
 
 Input Field Kunci
     Press Keys    None    TAB
@@ -53,7 +55,8 @@ Input Field Kunci
     Press Keys    None    ${fieldKunci}
 
 Click Button Simpan Data
-    Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[2]/button[2]
+    # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[2]/button[2]
+    Click Button    default:Simpan Data
 
 # Canvas
 Click Button Buat Canvas
@@ -220,7 +223,6 @@ Detail Template Form
 # Buat Element
 Click Button Buat Element
     Click Button    default:Buat Element
-    # Click Button    xpath://*[@id="pane-0"]/div[2]/div[4]/button[1]
     Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
 
 Input Label Element
@@ -247,5 +249,81 @@ Select Data Kolom Element
 
 Click Button Simpan Element
     Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
-
 # End Element
+
+# Edit Canvas formula
+Click Button Edit Canvas Formula
+    Click Button    default:Edit Canvas Formula
+    Wait Until Element Is Visible   xpath://*[@id="canvas-modal-formula"]/div/form/div/div[1]/h5
+
+Click Button Simpan Edit Canvas Formula
+    Wait Until Element Is Visible   class:btn-primary
+    Click Button    xpath://*[@id="canvas-modal-formula"]/div/form/div/div[3]/button[2]
+    Sleep   1s
+# End
+
+# Buat Element Formula
+Click Button Buat Element Formula
+    Click Button    default:Buat Element Formula
+    Wait Until Element Is Visible   xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+
+Input Label Element Formula
+    [Arguments]     ${label}
+    Press Keys      None    TAB
+    Press Keys      None    TAB
+    Press Keys      None    ${label}
+
+Select Tipe Element Formula
+    Press Keys  None    TAB
+    Sleep  0.5s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Wajib Element Formula
+    Press Keys  None    TAB
+    Sleep  0.5s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Data Kolom Element Formula
+    Press Keys  None    TAB
+    Sleep  0.5s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Click Button Simpan Element Formula
+    Click Button    default:Simpan
+# End
+
+# Perhitungan formula
+Click Button Perhitungan Formula
+    Click Button    default:Perhitungan Formula
+    # Click Button    xpath://*[@id="pane-0"]/div[2]/div[4]/button[4]
+
+# Grand Total
+Click Button Grand Total
+    Click Button    default:Buat Grandtotal
+    # Click BUtton    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[5]
+    Wait Until Element Is Visible   xpath://*[@id="format-grand-formula-modal"]/div/form/div/div[1]/h5
+
+Select Data Tabel Grand Total
+    Press Keys  None    TAB
+    Sleep  0.5s
+    Press Keys  None    c_pemohon
+    Sleep  0.5s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Select Data Kolom Grand Total
+    Press Keys  None    TAB
+    Press Keys  None    TAB
+    Sleep  0.5s
+    Press Keys    None    ARROW_DOWN
+    Press Keys    None    ENTER
+
+Click Button Plus Grand Total
+    Click Button    xpath://*[@id="format-grand-formula-modal"]/div/form/div/div[2]/div[2]/div[1]/div/div[1]/div/div/div[2]/button
+    Sleep   2s
+
+Click Button Simpan Grand Total
+    Click Button    xpath://*[@id="format-grand-formula-modal"]/div/form/div/div[3]/button[2]
