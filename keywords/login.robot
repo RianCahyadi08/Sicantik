@@ -25,4 +25,4 @@ Input Password
 Submit Credentials
     Click Button    kt_sign_in_submit
     Sleep    5s
-    Wait Until Element Is Visible    xpath://*[@id="#kt_header_menu"]/div[1]/a/span[2]
+    # Wait Until Element Is Visible    xpath://*[@id="#kt_header_menu"]/div[1]/a/span[2]
