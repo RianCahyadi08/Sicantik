@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231104 22:47:24.055" rpa="false" schemaversion="4">
-<suite id="s1" name="SC04 - Penolakan Permohonan Izin" source="E:\#Freelance\Sicantik\R03 - Permohonan Izin\SC04 - Penolakan Permohonan Izin\SC04 - Penolakan Permohonan Izin.robot">
-<test id="s1-t1" name="TC01 - View Detail Data Permohonan Izin" line="12">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231105 00:53:38.133" rpa="false" schemaversion="4">
+<suite id="s1" name="SC03 - Ubah Data Penomoran" source="E:\#Freelance\Sicantik\R01 - Penomoran\SC03 - Ubah Data Penomoran\SC03 - Ubah Data Penomoran.robot">
+<test id="s1-t1" name="TC01 - Ubah Data Penomoran" line="12">
 <kw name="Open Browser To Login Page" library="login">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
 <arg>0.5s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231104 22:47:24.224" endtime="20231104 22:47:24.225"/>
+<status status="PASS" starttime="20231105 00:53:38.305" endtime="20231105 00:53:38.305"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231104 22:47:24.225" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
-<status status="PASS" starttime="20231104 22:47:24.225" endtime="20231104 22:47:35.739"/>
+<msg timestamp="20231105 00:53:38.305" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231105 00:53:38.305" endtime="20231105 00:54:14.304"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231104 22:47:35.739" endtime="20231104 22:47:36.528"/>
+<status status="PASS" starttime="20231105 00:54:14.304" endtime="20231105 00:54:15.061"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>SICANTIK</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231104 22:47:37.031" level="INFO">Page title is 'SICANTIK'.</msg>
-<status status="PASS" starttime="20231104 22:47:36.528" endtime="20231104 22:47:37.031"/>
+<msg timestamp="20231105 00:54:15.563" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231105 00:54:15.061" endtime="20231105 00:54:15.563"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:24.224" endtime="20231104 22:47:37.031"/>
+<status status="PASS" starttime="20231105 00:53:38.304" endtime="20231105 00:54:15.563"/>
 </kw>
 <kw name="Input Username" library="login">
 <arg>admegov</arg>
@@ -33,10 +33,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:37.032" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
-<status status="PASS" starttime="20231104 22:47:37.031" endtime="20231104 22:47:38.586"/>
+<msg timestamp="20231105 00:54:15.564" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231105 00:54:15.563" endtime="20231105 00:54:17.115"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:37.031" endtime="20231104 22:47:38.586"/>
+<status status="PASS" starttime="20231105 00:54:15.563" endtime="20231105 00:54:17.115"/>
 </kw>
 <kw name="Input Password" library="login">
 <arg>Admegov789*@#</arg>
@@ -44,126 +44,254 @@
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:38.586" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
-<status status="PASS" starttime="20231104 22:47:38.586" endtime="20231104 22:47:40.109"/>
+<msg timestamp="20231105 00:54:17.116" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231105 00:54:17.115" endtime="20231105 00:54:18.637"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:38.586" endtime="20231104 22:47:40.109"/>
+<status status="PASS" starttime="20231105 00:54:17.115" endtime="20231105 00:54:18.637"/>
 </kw>
 <kw name="Submit Credentials" library="login">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>kt_sign_in_submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:40.109" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
-<status status="PASS" starttime="20231104 22:47:40.109" endtime="20231104 22:47:42.335"/>
+<msg timestamp="20231105 00:54:18.638" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231105 00:54:18.637" endtime="20231105 00:54:20.859"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231104 22:47:47.337" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231104 22:47:42.335" endtime="20231104 22:47:47.337"/>
+<msg timestamp="20231105 00:54:25.859" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231105 00:54:20.859" endtime="20231105 00:54:25.859"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:40.109" endtime="20231104 22:47:47.337"/>
+<status status="PASS" starttime="20231105 00:54:18.637" endtime="20231105 00:54:25.859"/>
 </kw>
-<kw name="Move To Permohonan Izin Module" library="permohonan_izin">
+<kw name="Move To Penomoran Module" library="penomoran">
 <kw name="Go To" library="SeleniumLibrary">
-<arg>https://uji.sicantik.go.id/permohonan-izin</arg>
+<arg>https://uji.sicantik.go.id/penomoran</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231104 22:47:47.337" level="INFO">Opening url 'https://uji.sicantik.go.id/permohonan-izin'</msg>
-<status status="PASS" starttime="20231104 22:47:47.337" endtime="20231104 22:47:48.205"/>
+<msg timestamp="20231105 00:54:25.860" level="INFO">Opening url 'https://uji.sicantik.go.id/penomoran'</msg>
+<status status="PASS" starttime="20231105 00:54:25.859" endtime="20231105 00:54:26.702"/>
 </kw>
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>tag:h5</arg>
-<arg>Permohonan Izin</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20231104 22:47:48.205" endtime="20231104 22:47:49.221"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231105 00:54:26.702" endtime="20231105 00:54:27.714"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:47.337" endtime="20231104 22:47:49.221"/>
+<status status="PASS" starttime="20231105 00:54:25.859" endtime="20231105 00:54:27.714"/>
 </kw>
-<kw name="Click Button Edit" library="permohonan_izin">
+<kw name="Input Search" library="penomoran">
+<arg>Lorem</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:kt_filter_search</arg>
+<arg>${search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:27.715" level="INFO">Typing text 'Lorem' into text field 'id:kt_filter_search'.</msg>
+<status status="PASS" starttime="20231105 00:54:27.715" endtime="20231105 00:54:29.235"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>css:span.text-nowrap</arg>
+<arg>Tampilkan 1 sampai</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231105 00:54:30.249" level="INFO">Element 'css:span.text-nowrap' contains text 'Tampilkan 1 sampai'.</msg>
+<status status="PASS" starttime="20231105 00:54:29.235" endtime="20231105 00:54:30.249"/>
+</kw>
+<status status="PASS" starttime="20231105 00:54:27.714" endtime="20231105 00:54:30.249"/>
+</kw>
+<kw name="Click Button Edit" library="penomoran">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>css:i.fa-edit</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:49.221" level="INFO">Clicking element 'css:i.fa-edit'.</msg>
-<status status="PASS" starttime="20231104 22:47:49.221" endtime="20231104 22:47:50.469"/>
+<msg timestamp="20231105 00:54:30.250" level="INFO">Clicking element 'css:i.fa-edit'.</msg>
+<status status="PASS" starttime="20231105 00:54:30.249" endtime="20231105 00:54:31.495"/>
 </kw>
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>xpath://*[@id="kt_create_account_stepper"]/div[1]/div/div[1]/div[1]/div[1]</arg>
-<arg>EDIT PERMOHONAN</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20231104 22:47:50.469" endtime="20231104 22:47:51.599"/>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/div/div/div/div[1]/a</arg>
+<arg>UBAH PENOMORAN</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231105 00:54:32.501" level="INFO">Element 'xpath://*[@id="kt_content_container"]/div/div/div[1]/div/div/div/div[1]/a' contains text 'UBAH PENOMORAN'.</msg>
+<status status="PASS" starttime="20231105 00:54:31.495" endtime="20231105 00:54:32.501"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:49.221" endtime="20231104 22:47:51.599"/>
+<status status="PASS" starttime="20231105 00:54:30.249" endtime="20231105 00:54:32.501"/>
 </kw>
-<kw name="Click Button Tolak Permohonan" library="permohonan_izin">
-<kw name="Click Button" library="SeleniumLibrary">
-<arg>default:Tolak Permohonan</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:51.600" level="INFO">Clicking button 'default:Tolak Permohonan'.</msg>
-<status status="PASS" starttime="20231104 22:47:51.599" endtime="20231104 22:47:53.832"/>
+<kw name="Input Deskripsi Penomoran" library="penomoran">
+<arg>Lorem</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:deskripsi</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231105 00:54:32.501" endtime="20231105 00:54:33.511"/>
 </kw>
-<kw name="Wait Until Element Contains" library="SeleniumLibrary">
-<arg>xpath://*[@id="modalCabutIzin"]/form/div/div/div[2]/div[1]/label</arg>
-<arg>Alasan</arg>
-<doc>Waits until the element ``locator`` contains ``text``.</doc>
-<status status="PASS" starttime="20231104 22:47:53.832" endtime="20231104 22:47:54.839"/>
-</kw>
-<status status="PASS" starttime="20231104 22:47:51.599" endtime="20231104 22:47:54.839"/>
-</kw>
-<kw name="Input Alasan" library="permohonan_izin">
-<arg>Salah upload file</arg>
 <kw name="Input Text" library="SeleniumLibrary">
-<arg>name:alasan</arg>
-<arg>${alasan}</arg>
+<arg>name:deskripsi</arg>
+<arg>${deskripsi}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231104 22:47:54.840" level="INFO">Typing text 'Salah upload file' into text field 'name:alasan'.</msg>
-<status status="PASS" starttime="20231104 22:47:54.839" endtime="20231104 22:47:56.375"/>
+<msg timestamp="20231105 00:54:33.511" level="INFO">Typing text 'Lorem' into text field 'name:deskripsi'.</msg>
+<status status="PASS" starttime="20231105 00:54:33.511" endtime="20231105 00:54:35.040"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:54.839" endtime="20231104 22:47:56.375"/>
+<status status="PASS" starttime="20231105 00:54:32.501" endtime="20231105 00:54:35.040"/>
 </kw>
-<kw name="Upload File Lampiran" library="permohonan_izin">
-<arg>E:\\#LearnRobotFramework\\cat.jpg</arg>
-<kw name="Choose File" library="SeleniumLibrary">
-<arg>name:file</arg>
-<arg>${lampiran}</arg>
-<doc>Inputs the ``file_path`` into the file input field ``locator``.</doc>
-<msg timestamp="20231104 22:47:56.375" level="INFO">Sending E:\#LearnRobotFramework\cat.jpg to browser.</msg>
-<status status="PASS" starttime="20231104 22:47:56.375" endtime="20231104 22:47:57.399"/>
+<kw name="Input Format Penomoran" library="penomoran">
+<arg>Format</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:formatPenomoran</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231105 00:54:35.040" endtime="20231105 00:54:36.064"/>
 </kw>
-<status status="PASS" starttime="20231104 22:47:56.375" endtime="20231104 22:47:57.399"/>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:formatPenomoran</arg>
+<arg>${format}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:36.064" level="INFO">Typing text 'Format' into text field 'name:formatPenomoran'.</msg>
+<status status="PASS" starttime="20231105 00:54:36.064" endtime="20231105 00:54:37.580"/>
+</kw>
+<status status="PASS" starttime="20231105 00:54:35.040" endtime="20231105 00:54:37.580"/>
+</kw>
+<kw name="Input Nomor Terakhir" library="penomoran">
+<arg>1</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:nomorTerakir</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231105 00:54:37.580" endtime="20231105 00:54:38.595"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:nomorTerakir</arg>
+<arg>${noTerakhir}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:38.595" level="INFO">Typing text '1' into text field 'name:nomorTerakir'.</msg>
+<status status="PASS" starttime="20231105 00:54:38.595" endtime="20231105 00:54:40.116"/>
+</kw>
+<status status="PASS" starttime="20231105 00:54:37.580" endtime="20231105 00:54:40.116"/>
+</kw>
+<kw name="Select Instansi" library="penomoran">
+<arg>Demo2</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_login_signin_form"]/div/div[4]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:40.117" level="INFO">Clicking element 'xpath://*[@id="kt_login_signin_form"]/div/div[4]/label'.</msg>
+<status status="PASS" starttime="20231105 00:54:40.116" endtime="20231105 00:54:41.333"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:41.333" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231105 00:54:41.334" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231105 00:54:41.334" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231105 00:54:41.333" endtime="20231105 00:54:41.862"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${instansi}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:41.862" level="INFO">Sending key(s) ('Demo2',) to page.</msg>
+<msg timestamp="20231105 00:54:41.863" level="INFO">Sending keys Demo2</msg>
+<status status="PASS" starttime="20231105 00:54:41.862" endtime="20231105 00:54:42.431"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
-<arg>2s</arg>
+<arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231104 22:47:59.400" level="INFO">Slept 2 seconds</msg>
-<status status="PASS" starttime="20231104 22:47:57.399" endtime="20231104 22:47:59.400"/>
+<msg timestamp="20231105 00:54:43.431" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231105 00:54:42.431" endtime="20231105 00:54:43.431"/>
 </kw>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<msg timestamp="20231104 22:47:59.957" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-15.png"&gt;&lt;img src="selenium-screenshot-15.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" starttime="20231104 22:47:59.400" endtime="20231104 22:47:59.957"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:43.432" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231105 00:54:43.432" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231105 00:54:43.432" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231105 00:54:43.431" endtime="20231105 00:54:43.941"/>
 </kw>
-<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231104 22:47:59.957" endtime="20231104 22:48:03.780"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:43.941" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231105 00:54:43.942" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231105 00:54:43.942" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231105 00:54:43.941" endtime="20231105 00:54:44.469"/>
 </kw>
-<doc>SC03 - View Detail Data Permohonan Izin</doc>
-<tag>TC01 - View Detail Data Permohonan Izin</tag>
-<status status="PASS" starttime="20231104 22:47:24.224" endtime="20231104 22:48:03.780"/>
+<status status="PASS" starttime="20231105 00:54:40.116" endtime="20231105 00:54:44.469"/>
+</kw>
+<kw name="Click Button Kategori Item" library="penomoran">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:addFieldJenisPengajuan</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:44.470" level="INFO">Clicking button 'id:addFieldJenisPengajuan'.</msg>
+<status status="PASS" starttime="20231105 00:54:44.469" endtime="20231105 00:54:48.385"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:unitKerja-0</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231105 00:54:48.385" endtime="20231105 00:54:49.397"/>
+</kw>
+<status status="PASS" starttime="20231105 00:54:44.469" endtime="20231105 00:54:49.397"/>
+</kw>
+<kw name="Select Unit Kerja" library="penomoran">
+<arg>test</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:unitKerja-0</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:49.398" level="INFO">Clicking element 'name:unitKerja-0'.</msg>
+<status status="PASS" starttime="20231105 00:54:49.397" endtime="20231105 00:54:50.756"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${unit}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:50.756" level="INFO">Sending key(s) ('test',) to page.</msg>
+<msg timestamp="20231105 00:54:50.757" level="INFO">Sending keys test</msg>
+<status status="PASS" starttime="20231105 00:54:50.756" endtime="20231105 00:54:51.645"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231105 00:54:51.645" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231105 00:54:51.646" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231105 00:54:51.646" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231105 00:54:51.645" endtime="20231105 00:54:52.302"/>
+</kw>
+<status status="PASS" starttime="20231105 00:54:49.397" endtime="20231105 00:54:52.302"/>
+</kw>
+<kw name="Input Sub Nomor Terakhir" library="penomoran">
+<arg>1</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:noterakhir-0</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<msg timestamp="20231105 00:54:52.416" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Tried to run command without establishing a connection
+</msg>
+<msg timestamp="20231105 00:54:52.416" level="FAIL">WebDriverException: Message: Failed to decode response from marionette
+</msg>
+<status status="FAIL" starttime="20231105 00:54:52.302" endtime="20231105 00:54:52.419"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:noterakhir-0</arg>
+<arg>${nomorTerakhir}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231105 00:54:52.419" endtime="20231105 00:54:52.419"/>
+</kw>
+<status status="FAIL" starttime="20231105 00:54:52.302" endtime="20231105 00:54:52.419"/>
+</kw>
+<doc>SC03 - Ubah Data Penomoran</doc>
+<tag>TC01 - Ubah Data Penomoran</tag>
+<status status="FAIL" starttime="20231105 00:53:38.304" endtime="20231105 00:54:52.420">WebDriverException: Message: Failed to decode response from marionette
+</status>
 </test>
-<doc>SC03 - View Detail Data Permohonan Izin</doc>
-<status status="PASS" starttime="20231104 22:47:24.060" endtime="20231104 22:48:03.780"/>
+<doc>SC02 - Ubah Data Penomoran</doc>
+<status status="FAIL" starttime="20231105 00:53:38.135" endtime="20231105 00:54:52.420"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="1" fail="0" skip="0">TC01 - View Detail Data Permohonan Izin</stat>
+<stat pass="0" fail="1" skip="0">TC01 - Ubah Data Penomoran</stat>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="SC04 - Penolakan Permohonan Izin">SC04 - Penolakan Permohonan Izin</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="SC03 - Ubah Data Penomoran">SC03 - Ubah Data Penomoran</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20231105 00:54:52.416" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: Tried to run command without establishing a connection
+</msg>
 </errors>
 </robot>
