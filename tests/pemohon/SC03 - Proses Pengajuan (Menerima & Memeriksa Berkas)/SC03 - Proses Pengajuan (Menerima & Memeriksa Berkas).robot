@@ -16,7 +16,7 @@ TC01 - Proses Pengajuan (Menerima & Memeriksa Berkas)
     login.Input Username      kartu1
     login.Input Password      Kartu123*@#
     login.Submit Credentials
-    pemohon.Page Should Contain Element     css:span.text-white     Home    None    None
+    Page Should Contain Element     css:span.text-white     Home    None    None
     pemohon.Move To Profile And Permohonan Izin
     pemohon.Move To Add Permohonan
     pemohon.Select Jenis Permohonan  Baru
