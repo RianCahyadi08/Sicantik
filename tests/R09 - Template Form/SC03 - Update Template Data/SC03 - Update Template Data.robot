@@ -17,6 +17,9 @@ TC01 - Update Template Form (Tipe Form) dengan Tidak Otomatis Update
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52530
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -31,6 +34,9 @@ TC02 - Update Template Form (Tipe Form) dengan Otomatis Update
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52531
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -45,6 +51,9 @@ TC03 - Update Template Form (Tipe Table)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52533
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -59,6 +68,9 @@ TC04 - Update Template Form (Tipe Tabel Grid)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52534
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -73,6 +85,9 @@ TC05 - Update Template Form (Tipe Tabel Statik)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52535
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -87,6 +102,9 @@ TC06 - Ubah Template Form (Tipe Map)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
+    template_form.Click Button Filter
+    template_form.Input ID Template    52536
+    template_form.Click Button Tampilkan Hasil
     template_form.Click Icon Edit
     template_form.Click Button Simpan Data
     Sleep   2s

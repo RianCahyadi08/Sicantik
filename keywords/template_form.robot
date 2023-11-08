@@ -10,6 +10,7 @@ ${BROWSER}        Chrome
 *** Keywords ***
 Move To Template Form
     Go To    https://uji.sicantik.go.id/template-form
+    Element Should Contain    xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5    Daftar Template Form
     Sleep    3s
 
 Click Icon Edit
@@ -30,6 +31,7 @@ Input Nama Template Form
 
 Click Button Tampilkan Hasil
     Click Button    xpath://*[@id="collapseBtnFilter"]/div/div[2]/div/button[1]
+    Sleep    2s
 
 Click Button Add
     Go To    https://uji.sicantik.go.id/template-form/add
@@ -165,6 +167,7 @@ Click Button Buat Tombol
 
 Select Jenis Aksi Buat Tombol
     Press Keys    None    TAB
+    Sleep    1s
     Press Keys    None    ARROW_DOWN
     Press Keys    None    ENTER
 

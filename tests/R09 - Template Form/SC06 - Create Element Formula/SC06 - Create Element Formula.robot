@@ -58,13 +58,13 @@ TC01 - Create Element Formula
 
 TC02 - Create Perhitungan Formula
     [Documentation]     SC06 - Create Element Formula
-    [Tags]  TC01 - Create Perhitungan Formula
+    [Tags]  TC02 - Create Perhitungan Formula
     login.Open Browser To Login Page
     login.Input Username      admegov
     login.Input Password      Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
-    template_form. Button Add
+    template_form.Click Button Add
     # buat canvas
     template_form.Click Button Buat Canvas
     template_form.Input Tab Index Canvas    1
@@ -117,7 +117,7 @@ TC02 - Create Perhitungan Formula
 
 TC03 - Create Formula Grandtotal
     [Documentation]     SC06 - Create Element Formula
-    [Tags]  TC01 - Create Perhitungan Formula
+    [Tags]  TC03 - Create Formula Grandtotal
     login.Open Browser To Login Page
     login.Input Username      admegov
     login.Input Password      Admegov789*@#
@@ -127,7 +127,7 @@ TC03 - Create Formula Grandtotal
     # buat canvas
     template_form.Click Button Buat Canvas
     template_form.Input Tab Index Canvas    1
-    template_form. Tipe Form Canvas
+    template_form.Select Tipe Form Canvas
     template_form.Input Nama Canvas    Nama canvas
     template_form.Input Web Service Awal Canvas  webServiceAwal
     template_form.Select Data Table Canvas
@@ -147,12 +147,12 @@ TC03 - Create Formula Grandtotal
     template_form.Click Button Simpan Buat Tombol
     # end
     # Buat Element
-    template_form. Button Buat Element
+    template_form.Click Button Buat Element
     template_form.Input Label Element  label
     template_form.Select Type Element
     template_form.Select Wajib Element
     template_form.Select Data Kolom Element
-    template_form. Button Simpan Element
+    template_form.Click Button Simpan Element
     # End 
     # Edit canvas Formula
     template_form.Click Button Edit Canvas Formula
