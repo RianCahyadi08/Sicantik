@@ -58,7 +58,7 @@ TC01 - Create Element Formula
 
 TC02 - Create Perhitungan Formula
     [Documentation]     SC06 - Create Element Formula
-    [Tags]  TC01 - Create Perhitungan Formula
+    [Tags]  TC02 - Create Perhitungan Formula
     login.Open Browser To Login Page
     login.Input Username      admegov
     login.Input Password      Admegov789*@#
@@ -117,7 +117,7 @@ TC02 - Create Perhitungan Formula
 
 TC03 - Create Formula Grandtotal
     [Documentation]     SC06 - Create Element Formula
-    [Tags]  TC01 - Create Perhitungan Formula
+    [Tags]  TC03 - Create Formula Grandtotal
     login.Open Browser To Login Page
     login.Input Username      admegov
     login.Input Password      Admegov789*@#

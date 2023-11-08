@@ -81,9 +81,9 @@ TC02 - Create New Template Form (Tipe Form) dengan Otomatis Update
     template_form.Input Label Buat Tombol  label
     template_form.Click Button Simpan Buat Tombol
     # end buat tombol
-    template_form.Input Nama Form    Form Rian II
+    template_form.Input Nama Form    Form Rian Type Form
     template_form.Input Field Kunci    Field Kunci
-    template_form. Button Simpan Data
+    template_form.Click Button Simpan Data
     Sleep   2s
     Capture Page Screenshot
     [Teardown]    Close Browser
@@ -96,7 +96,7 @@ TC03 - Create New Template Form (Tipe Table)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     template_form.Move To Template Form
-    template_form. Button Add
+    template_form.Click Button Add
     # Buat filter
     template_form.Click Button Buat Filter
     template_form.Input Label Pengaturan Filter    Label
@@ -105,7 +105,7 @@ TC03 - Create New Template Form (Tipe Table)
     template_form.Click Button Simpan Pengaturan Filter
     # end filter
     # Canvas
-    template_form. button buat Canvas
+    template_form.Click Button Buat Canvas
     template_form.Input Tab Index Canvas  1
     template_form.Select Tipe Tabel Canvas
     template_form.Input Nama Canvas  namaCanvas
@@ -121,12 +121,12 @@ TC03 - Create New Template Form (Tipe Table)
     # End Tab
     # Buat tombol
     template_form.Click Button Buat Tombol
-    template_form. Jenis Aksi Buat Tombol
+    template_form.Select Jenis Aksi Buat Tombol
     template_form.Input Link Buat Tombol  https://www.google.com/
     template_form.Input Label Buat Tab  label
     template_form.Click Button Simpan Buat Tombol
     # End buat tombol
-    template_form.Input Nama Form    Form Rian III
+    template_form.Input Nama Form    Form Rian Type Table
     template_form.Input Field Kunci    Field Kunci
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -169,7 +169,7 @@ TC04 - Create New Template Form (Tipe Tabel Grid)
     template_form.Input Label Buat Tombol     Label
     template_form.Click Button Simpan Buat Tombol
     # End buat tombol
-    template_form.Input Nama Form    Form Rian IV
+    template_form.Input Nama Form    Form Rian Type Table Grid
     template_form.Input Field Kunci    Field Kunci
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -212,7 +212,7 @@ TC05 - Create New Template Form (Tipe Tabel Statik)
     template_form.Input Label Buat Tombol     Label
     template_form.Click Button Simpan Buat Tombol
     # End buat tombol
-    template_form. Nama Form    Form Rian V
+    template_form.Input Nama Form    Form Rian Type Tabel Statik
     template_form.Input Field Kunci    Field Kunci
     template_form.Click Button Simpan Data
     Sleep   2s
@@ -255,7 +255,7 @@ TC06 - Create New Template Form (Tipe Map)
     template_form.Input Label Buat Tombol     Label
     template_form.Click Button Simpan Buat Tombol
     # End buat tombol
-    template_form.Input Nama Form    Form Rian VI
+    template_form.Input Nama Form    Form Rian Tipe Map
     template_form.Input Field Kunci    Field Kunci
     template_form.Click Button Simpan Data
     Sleep   2s
