@@ -1,0 +1,18 @@
+1699498361880	geckodriver	INFO	Listening on 127.0.0.1:64854
+1699498364947	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--incognito" "--remote-debugging-port" "64 ...  "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RIANC~1\\AppData\\Local\\Temp\\rust_mozprofilehGzrpX"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699498365177	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-incognito"
+1699498365229	Marionette	INFO	Listening on port 64870
+WebDriver BiDi listening on ws://127.0.0.1:64855
+Read port: 64870
+1699498365365	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:64855/devtools/browser/88af8cd9-1768-445f-94f6-10af3abb1c7c
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+1699498395187	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1699498397819	Marionette	INFO	Stopped listening on port 64870
+Dynamically enable window occlusion 1
+!!! error running onStopped callback: TypeError: callback is not a function
