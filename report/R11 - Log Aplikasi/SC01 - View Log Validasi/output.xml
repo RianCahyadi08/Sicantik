@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231109 10:26:44.143" rpa="false" schemaversion="3">
+<suite id="s1" name="SC01 - View Log Validasi" source="D:\#RIANCAHYADI\Projects\Freedom\Sicantik\tests\R11 - Log Aplikasi\SC01 - View Log Validasi\SC01 - View Log Validasi.robot">
+<test id="s1-t1" name="TC01 - View Log Validasi" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231109 10:26:44.312" endtime="20231109 10:26:44.312"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231109 10:26:44.313" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<msg timestamp="20231109 10:26:44.315" level="INFO">Firefox driver log is always forced to to: D:\#RIANCAHYADI\Projects\Freedom\Sicantik\tests\R11 - Log Aplikasi\SC01 - View Log Validasi\geckodriver-1.log</msg>
+<status status="PASS" starttime="20231109 10:26:44.312" endtime="20231109 10:26:52.154"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231109 10:26:52.154" endtime="20231109 10:26:52.713"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231109 10:26:53.016" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231109 10:26:52.713" endtime="20231109 10:26:53.016"/>
+</kw>
+<status status="PASS" starttime="20231109 10:26:44.312" endtime="20231109 10:26:53.016"/>
+</kw>
+<kw name="Input Username" library="login">
+<arg>admegov</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231109 10:26:53.017" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231109 10:26:53.017" endtime="20231109 10:26:53.967"/>
+</kw>
+<status status="PASS" starttime="20231109 10:26:53.016" endtime="20231109 10:26:53.967"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Admegov789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231109 10:26:53.968" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231109 10:26:53.968" endtime="20231109 10:26:54.888"/>
+</kw>
+<status status="PASS" starttime="20231109 10:26:53.967" endtime="20231109 10:26:54.888"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231109 10:26:54.889" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231109 10:26:54.888" endtime="20231109 10:26:56.309"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:01.310" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231109 10:26:56.309" endtime="20231109 10:27:01.310"/>
+</kw>
+<status status="PASS" starttime="20231109 10:26:54.888" endtime="20231109 10:27:01.310"/>
+</kw>
+<kw name="Move To Log Validasi Module" library="log_validasi">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[9]/span/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:01.311" level="INFO">Clicking element 'xpath://*[@id="#kt_header_menu"]/div[9]/span/span[2]'.</msg>
+<status status="PASS" starttime="20231109 10:27:01.311" endtime="20231109 10:27:02.132"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:02.632" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231109 10:27:02.132" endtime="20231109 10:27:02.632"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[9]/div/div[1]/a/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:02.632" level="INFO">Clicking element 'xpath://*[@id="#kt_header_menu"]/div[9]/div/div[1]/a/span[2]'.</msg>
+<status status="PASS" starttime="20231109 10:27:02.632" endtime="20231109 10:27:03.469"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:03.969" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231109 10:27:03.469" endtime="20231109 10:27:03.969"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231109 10:27:03.969" endtime="20231109 10:27:04.583"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5</arg>
+<arg>LOG VALIDASI</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231109 10:27:05.200" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5' contains text 'LOG VALIDASI'.</msg>
+<status status="PASS" starttime="20231109 10:27:04.583" endtime="20231109 10:27:05.200"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:01.311" endtime="20231109 10:27:05.200"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:06.200" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231109 10:27:05.200" endtime="20231109 10:27:06.200"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231109 10:27:06.567" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231109 10:27:06.200" endtime="20231109 10:27:06.567"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231109 10:27:06.568" endtime="20231109 10:27:09.811"/>
+</kw>
+<doc>SC01 - View Log Validasi</doc>
+<tag>TC01 - View Log Validasi</tag>
+<status status="PASS" starttime="20231109 10:26:44.311" endtime="20231109 10:27:09.812"/>
+</test>
+<test id="s1-t2" name="TC02 - Search Data Log Validasi" line="24">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.3s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231109 10:27:09.814" endtime="20231109 10:27:09.814"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231109 10:27:09.815" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<msg timestamp="20231109 10:27:09.815" level="INFO">Firefox driver log is always forced to to: D:\#RIANCAHYADI\Projects\Freedom\Sicantik\tests\R11 - Log Aplikasi\SC01 - View Log Validasi\geckodriver-2.log</msg>
+<status status="PASS" starttime="20231109 10:27:09.814" endtime="20231109 10:27:17.229"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231109 10:27:17.229" endtime="20231109 10:27:17.787"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231109 10:27:18.090" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231109 10:27:17.787" endtime="20231109 10:27:18.090"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:09.813" endtime="20231109 10:27:18.090"/>
+</kw>
+<kw name="Input Username" library="login">
+<arg>admegov</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:18.091" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231109 10:27:18.090" endtime="20231109 10:27:19.046"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:18.090" endtime="20231109 10:27:19.046"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Admegov789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:19.047" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231109 10:27:19.047" endtime="20231109 10:27:19.968"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:19.046" endtime="20231109 10:27:19.968"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:19.969" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231109 10:27:19.968" endtime="20231109 10:27:21.387"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:26.387" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231109 10:27:21.387" endtime="20231109 10:27:26.387"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:19.968" endtime="20231109 10:27:26.387"/>
+</kw>
+<kw name="Move To Log Validasi Module" library="log_validasi">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[9]/span/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:26.388" level="INFO">Clicking element 'xpath://*[@id="#kt_header_menu"]/div[9]/span/span[2]'.</msg>
+<status status="PASS" starttime="20231109 10:27:26.387" endtime="20231109 10:27:27.208"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:27.708" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231109 10:27:27.208" endtime="20231109 10:27:27.708"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="#kt_header_menu"]/div[9]/div/div[1]/a/span[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:27.708" level="INFO">Clicking element 'xpath://*[@id="#kt_header_menu"]/div[9]/div/div[1]/a/span[2]'.</msg>
+<status status="PASS" starttime="20231109 10:27:27.708" endtime="20231109 10:27:28.545"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:29.045" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231109 10:27:28.545" endtime="20231109 10:27:29.045"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231109 10:27:29.045" endtime="20231109 10:27:29.658"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5</arg>
+<arg>LOG VALIDASI</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231109 10:27:30.273" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/form/div[1]/h5' contains text 'LOG VALIDASI'.</msg>
+<status status="PASS" starttime="20231109 10:27:29.658" endtime="20231109 10:27:30.273"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:26.387" endtime="20231109 10:27:30.273"/>
+</kw>
+<kw name="Input Search" library="log_validasi">
+<arg>https://api-splp.layanan.go.id/retribusi/1/reklame?npwpd=200039530000</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:input[type=text]</arg>
+<arg>${search}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231109 10:27:30.274" level="INFO">Typing text 'https://api-splp.layanan.go.id/retribusi/1/reklame?npwpd=200039530000' into text field 'css:input[type=text]'.</msg>
+<status status="PASS" starttime="20231109 10:27:30.273" endtime="20231109 10:27:31.216"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:34.216" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231109 10:27:31.216" endtime="20231109 10:27:34.216"/>
+</kw>
+<status status="PASS" starttime="20231109 10:27:30.273" endtime="20231109 10:27:34.216"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231109 10:27:35.218" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231109 10:27:34.216" endtime="20231109 10:27:35.218"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231109 10:27:35.596" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231109 10:27:35.218" endtime="20231109 10:27:35.596"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231109 10:27:35.597" endtime="20231109 10:27:38.786"/>
+</kw>
+<doc>SC01 - View Log Validasi</doc>
+<tag>TC02 - Search Data Log Validasi</tag>
+<status status="PASS" starttime="20231109 10:27:09.813" endtime="20231109 10:27:38.786"/>
+</test>
+<doc>SC01 - View Log Validasi</doc>
+<status status="PASS" starttime="20231109 10:26:44.144" endtime="20231109 10:27:38.787"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Log Validasi</stat>
+<stat pass="1" fail="0" skip="0">TC02 - Search Data Log Validasi</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SC01 - View Log Validasi">SC01 - View Log Validasi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
