@@ -1,0 +1,19 @@
+1699500429922	geckodriver	INFO	Listening on 127.0.0.1:56228
+1699500432983	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--incognito" "--remote-debugging-port" "56 ...  "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RIANC~1\\AppData\\Local\\Temp\\rust_mozprofileoHpvSU"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1699500433211	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-incognito"
+1699500433263	Marionette	INFO	Listening on port 56245
+WebDriver BiDi listening on ws://127.0.0.1:56229
+Read port: 56245
+1699500433402	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:56229/devtools/browser/ca78a3bf-d5ef-46b0-8c6b-e23d6c233cc1
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+1699500455598	Marionette	INFO	Stopped listening on port 56245
+JavaScript warning: https://www.gstatic.com/recaptcha/releases/fGZmEzpfeSeqDJiApS_XZ4Y2/recaptcha__id.js, line 509: Script terminated by timeout at:
+N@https://www.gstatic.com/recaptcha/releases/fGZmEzpfeSeqDJiApS_XZ4Y2/recaptcha__id.js:509:344
+
+Dynamically enable window occlusion 1
