@@ -17,7 +17,16 @@ TC01 - Update Data Notifikasi (ex. Pendaftaran)
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     notifikasi.Move To Notification
-    notifikasi.Click Icon Detail
+    notifikasi.Click Button Filter
+    notifikasi.Input Jenis Izin    Surat Izin Kerja Tenaga Gizi COBA
+    notifikasi.Click Button Tampilkan Hasil
+    notifikasi.Click Icon Pencil
+    notifikasi.Select Tipe    Push Notifikasi
+    notifikasi.Select Penerima    Pemohon
+    notifikasi.Click Modal Edit Pesan
+    notifikasi.Input Pesan      Lorem update
+    notifikasi.Click Button Simpan In Modal
+    notifikasi.Click Button Simpan
     Sleep       2s
     Capture Page Screenshot
     [Teardown]    Close Browser
