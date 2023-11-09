@@ -9,8 +9,8 @@ ${BROWSER}        Firefox
 *** Keywords ***
 Open Browser To Login Page
     Set Selenium Speed    0.3s
-    # Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+     Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
+#    Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Title Should Be    SICANTIK
 
