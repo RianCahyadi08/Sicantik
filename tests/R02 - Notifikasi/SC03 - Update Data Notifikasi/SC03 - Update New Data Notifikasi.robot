@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       SC03 - Create New Data Notifikasi
+Documentation       SC03 - Update Data Notifikasi
 Library             SeleniumLibrary
 Resource            ../../../keywords/login.robot
 Resource            ../../../keywords/notifikasi.robot
@@ -9,9 +9,9 @@ ${LOGIN URL}      https://uji.sicantik.go.id/sign-in
 ${BROWSER}        Firefox
 
 *** Test Cases ***
-TC01 - Create New Data Notifikasi (ex. Pendaftaran)
-    [Documentation]     SC03 - Create New Data Notifikasi
-    [Tags]      TC01 - Create New Data Notifikasi (ex. Pendaftaran)
+TC01 - Update Data Notifikasi (ex. Pendaftaran)
+    [Documentation]     SC03 - Update Data Notifikasi
+    [Tags]      TC01 - Update Data Notifikasi (ex. Pendaftaran)
     Open Browser To Login Page
     login.Input Username    admegov
     login.Input Password    Admegov789*@#
