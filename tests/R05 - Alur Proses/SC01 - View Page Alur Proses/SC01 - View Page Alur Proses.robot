@@ -13,8 +13,8 @@ TC01 - View Page Alur Proses
     [Documentation]     SC01 - View Page Alur Proses
     [Tags]      TC01 - View Page Alur Proses
     login.Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     alur_proses.Move To Alur Proses Module
     Sleep       2s
@@ -25,8 +25,8 @@ TC02 - View Detail Data Alur Proses
     [Documentation]     SC01 - View Page Alur Proses
     [Tags]      TC02 - View Detail Data Alur Proses
     login.Open Browser To Login Page
-    login.input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     alur_proses.Move To Alur Proses Module
     alur_proses.Click Detail Data

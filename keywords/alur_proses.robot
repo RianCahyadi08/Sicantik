@@ -29,6 +29,7 @@ Click Button Ya Duplicate
     Wait Until Element Is Visible   class:Vue-Toastification__toast-body
 
 Click Detail Data
+    Wait Until Element Is Visible    css:i.fa-eye
     Click Element   css:i.fa-eye
     Wait Until Element Contains     css:a.text-primary-custom      DETAIL ALUR PROSES       None    None
 
@@ -91,8 +92,26 @@ Select Jenis Tanda Tangan
     Sleep           1s
     Press Keys      None    ENTER
 
+Select Jabatan 1
+    Wait Until Element Is Visible    xpath://*[@id="formAlur-0"]/div/div[9]/label
+    Click Element    xpath://*[@id="formAlur-0"]/div/div[9]/label
+    Press Keys      None    TAB
+    [Arguments]     ${jabatan1}
+    Press Keys      None    ${jabatan1}
+    Sleep    0.5s
+    Press Keys      None    ENTER
+
+Select Jabatan 2
+    Wait Until Element Is Visible    xpath://*[@id="formAlur-0"]/div/div[10]/label
+    Click Element    xpath://*[@id="formAlur-0"]/div/div[10]/label
+    Press Keys      None    TAB
+    [Arguments]     ${jabatan2}
+    Press Keys      None    ${jabatan2}
+    Sleep    0.5s
+    Press Keys      None    ENTER
+
 Click Button Simpan Data
-    Click Button    default:Simpan Data
+    Click Button    css:button[type=submit]
 
 Click Button Delete
     Click Element    css:i.fa-trash-alt

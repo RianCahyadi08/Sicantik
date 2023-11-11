@@ -13,12 +13,12 @@ TC01 - Delete Data Alur Proses
     [Documentation]     SC05 - Delete Data Alur Proses
     [Tags]      TC01 - Delete Data Alur Proses
     login.Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     alur_proses.Move To Alur Proses Module
     alur_proses.Click Button Filter
-    alur_proses.Filter Alur Proses  alurProsesRian
+    alur_proses.Filter Alur Proses  testing
     alur_proses.Click Button Delete
     alur_proses.Click Button Ya Hapus
     Sleep       1s
