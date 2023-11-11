@@ -13,8 +13,8 @@ TC01 - Create New Data Template Data dengan Tipe Keluaran Combogrid Webservice
     [Documentation]     SC04 - Create New Data Template Data
     [Tags]      TC01 - Create New Data Template Data dengan Tipe Keluaran Combogrid Webservice
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     template_data.Move To Template Data
     template_data.Move To Add Template Data
@@ -30,6 +30,7 @@ TC01 - Create New Data Template Data dengan Tipe Keluaran Combogrid Webservice
     template_data.Input Unit Id             1
     template_data.Input Instansi Id         1
     template_data.Input Custom Variable     100
+    Capture Page Screenshot
     template_data.Click Button Simpan
     Sleep       1s
     Capture Page Screenshot
@@ -39,8 +40,8 @@ TC02 - Create New Data Template Data dengan Tipe Keluaran Dokumen Cetak
     [Documentation]     SC04 - Create New Data Template Data
     [Tags]      TC02 - Create New Data Template Data dengan Tipe Keluaran Dokumen Cetak
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     template_data.Move To Template Data
     template_data.Move To Add Template Data
@@ -57,6 +58,7 @@ TC02 - Create New Data Template Data dengan Tipe Keluaran Dokumen Cetak
     template_data.Input Unit Id             1
     template_data.Input Instansi Id         1
     template_data.Input Custom Variable     100
+    Capture Page Screenshot
     template_data.Click Button Simpan
     Sleep       2s
     Capture Page Screenshot
@@ -66,8 +68,8 @@ TC03 - Create New Data Template Data dengan Tipe Keluaran JSON
     [Documentation]     SC04 - Create New Data Template Data
     [Tags]      TC03 - Create New Data Template Data dengan Tipe Keluaran JSON
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     template_data.Move To Template Data
     template_data.Move To Add Template Data
@@ -83,6 +85,7 @@ TC03 - Create New Data Template Data dengan Tipe Keluaran JSON
     template_data.Input Unit Id             1
     template_data.Input Instansi Id         1
     template_data.Input Custom Variable     100
+    Capture Page Screenshot
     template_data.Click Button Simpan
     Sleep       2s
     Capture Page Screenshot
@@ -92,8 +95,8 @@ TC04 - Create New Data Template Data dengan Tipe Keluaran XML
     [Documentation]     SC04 - Create New Data Template Data
     [Tags]      TC04 - Create New Data Template Data dengan Tipe Keluaran XML
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     template_data.Move To Template Data
     template_data.Move To Add Template Data
@@ -109,6 +112,7 @@ TC04 - Create New Data Template Data dengan Tipe Keluaran XML
     template_data.Input Unit Id             1
     template_data.Input Instansi Id         1
     template_data.Input Custom Variable     100
+    Capture Page Screenshot
     template_data.Click Button Simpan
     Sleep       2s
     Capture Page Screenshot
