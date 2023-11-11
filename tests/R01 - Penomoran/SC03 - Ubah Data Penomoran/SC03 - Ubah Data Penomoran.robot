@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation       SC02 - Ubah Data Penomoran
+Documentation       SC03 - Ubah Data Penomoran
 Library             SeleniumLibrary
 Resource            ../../../keywords/login.robot
 Resource            ../../../keywords/penomoran.robot
@@ -13,8 +13,8 @@ TC01 - Ubah Data Penomoran
     [Documentation]     SC03 - Ubah Data Penomoran
     [Tags]      TC01 - Ubah Data Penomoran
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     penomoran.Move To Penomoran Module
     penomoran.Input Search    Lorem

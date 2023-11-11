@@ -13,8 +13,8 @@ TC01 - View Data Permohonan
     [Documentation]     SC01 - View Data Permohonan
     [Tags]      TC01 - View Data Permohonan
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     penomoran.Move To Penomoran Module
     Sleep       2s
