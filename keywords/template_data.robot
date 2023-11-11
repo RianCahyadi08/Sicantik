@@ -10,7 +10,8 @@ ${BROWSER}        Chrome
 *** Keywords ***
 Move To Template Data
     Go To    https://uji.sicantik.go.id/template-data
-    Wait Until Element Contains    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Template Data
+#    Wait Until Element Contains    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Template Data
+    Wait Until Element Is Visible    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5
     
 Click Button Filter
     Click Element    xpath://*[@id="kt_content_container"]/div/div/div[2]/div/div[1]/button
@@ -21,6 +22,12 @@ Input ID Template Data
     Press Keys          None    TAB
     [Arguments]         ${id}
     Press Keys          None    ${id}
+
+Input Nama Template Data Filter
+    Click Element    xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[2]/label
+    Press Keys          None    TAB
+    [Arguments]         ${namaTemplate}
+    Press Keys          None    ${namaTemplate}
 
 Click Button Tampilkan Hasil
     Click Button    default:Tampilkan hasil

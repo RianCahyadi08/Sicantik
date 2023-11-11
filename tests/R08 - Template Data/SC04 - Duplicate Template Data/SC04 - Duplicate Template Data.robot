@@ -13,8 +13,8 @@ TC01 - Duplicate Template Data
     [Documentation]     SC04 - Duplicate Template Data
     [Tags]      TC01 - Duplicate Template Data
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     template_data.Move To Template Data
     template_data.Duplicate Template Data
