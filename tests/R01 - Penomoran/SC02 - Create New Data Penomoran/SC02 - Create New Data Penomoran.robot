@@ -13,8 +13,8 @@ TC01 - Create Data Penomoran
     [Documentation]     SC02 - Create New Data Penomoran
     [Tags]      TC01 - Create Data Penomoran
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Input Username    demo
+    login.Input Password    Demo789*@#
     login.Submit Credentials
     penomoran.Move To Penomoran Module
     penomoran.Move to Add Page
@@ -22,9 +22,11 @@ TC01 - Create Data Penomoran
     penomoran.Input Format Penomoran    Format
     penomoran.Input Nomor Terakhir    1
     penomoran.Select Instansi   Demo2
+    penomoran.Click Reset Penomoran
     penomoran.Click Button Kategori Item
     penomoran.Select Unit Kerja    test
     penomoran.Input Sub Nomor Terakhir    1
+    Capture Page Screenshot
     penomoran.Click Button Simpan
     Sleep       2s
     Capture Page Screenshot

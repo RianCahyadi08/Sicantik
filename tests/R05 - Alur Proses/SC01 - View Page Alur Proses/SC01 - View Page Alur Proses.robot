@@ -25,7 +25,7 @@ TC02 - View Detail Data Alur Proses
     [Documentation]     SC01 - View Page Alur Proses
     [Tags]      TC02 - View Detail Data Alur Proses
     login.Open Browser To Login Page
-    login. Username    admegov
+    login.input Username    admegov
     login.Input Password    Admegov789*@#
     login.Submit Credentials
     alur_proses.Move To Alur Proses Module

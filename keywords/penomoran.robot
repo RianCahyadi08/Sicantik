@@ -12,6 +12,7 @@ Move To Penomoran Module
     Wait Until Element Is Visible    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5
 
 Click Button Detail
+    Wait Until Element Is Visible    css:i.fa-eye
     Click Element    css:i.fa-eye
     Wait Until Element Contains    xpath://*[@id="kt_content_container"]/div/div/div[1]/div/div/div/div[1]/a    DETAIL PENOMORAN
 
@@ -43,6 +44,11 @@ Input Nomor Terakhir
     Clear Element Text    name:nomorTerakir
     [Arguments]     ${noTerakhir}
     Input Text    name:nomorTerakir    ${noTerakhir}
+
+Click Reset Penomoran
+    Wait Until Element Is Visible    css:span.el-switch__core
+    Click Element    css:span.el-switch__core
+    Sleep    0.5s
 
 Select Instansi
     Click Element    xpath://*[@id="kt_login_signin_form"]/div/div[4]/label
