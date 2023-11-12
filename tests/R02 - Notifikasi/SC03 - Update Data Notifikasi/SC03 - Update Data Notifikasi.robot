@@ -13,12 +13,11 @@ TC01 - Update Data Notifikasi (ex. Pendaftaran)
     [Documentation]     SC03 - Update Data Notifikasi
     [Tags]      TC01 - Update Data Notifikasi (ex. Pendaftaran)
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Login Admin Instansi
     login.Submit Credentials
     notifikasi.Move To Notification
     notifikasi.Click Button Filter
-    notifikasi.Input Jenis Izin    Surat Izin Kerja Tenaga Gizi COBA
+    notifikasi.Input Jenis Izin    tes ok demo
     notifikasi.Click Button Tampilkan Hasil
     notifikasi.Click Icon Pencil
     notifikasi.Select Tipe    Push Notifikasi

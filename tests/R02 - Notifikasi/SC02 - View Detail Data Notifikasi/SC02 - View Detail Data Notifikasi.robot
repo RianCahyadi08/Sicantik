@@ -13,8 +13,7 @@ TC01 - View Detail Data Notifikasi
     [Documentation]     SC02 - View Detail Data Notifikasi
     [Tags]      TC01 - View Detail Data Notifikasi
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Login Admin Instansi
     login.Submit Credentials
     notifikasi.Move To Notification
     notifikasi.Click Icon Detail

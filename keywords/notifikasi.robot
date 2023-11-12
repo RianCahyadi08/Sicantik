@@ -60,8 +60,7 @@ Select Penerima
 Click Modal Edit Pesan
     Wait Until Element Is Visible    xpath://*[@id="kt_customers_table"]/tbody/tr/td[4]/span/div/button
     Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr/td[4]/span/div/button
-    Wait Until Element Is Visible    xpath://*[@id="pills-288483"]/div[2]/div/div/header/span
-    Element Should Contain    xpath://*[@id="pills-288483"]/div[2]/div/div/header/span    Pesan
+    Wait Until Element Is Visible    css:textarea[name=pesan]
 
 Input Pesan
     Wait Until Element Is Visible    css:textarea[name=pesan]
@@ -70,8 +69,11 @@ Input Pesan
     Input Text    css:textarea[name=pesan]    ${pesan}
     
 Click Button Simpan In Modal
-    Wait Until Element Is Visible    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
-    Click Button    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
+#    Wait Until Element Is Visible    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
+#    Click Button    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
+
+    Wait Until Element Is Visible    css:button.el-button--primary
+    Click Button    css:button.el-button--primary
     Sleep    1s
     
 Click Button Simpan
