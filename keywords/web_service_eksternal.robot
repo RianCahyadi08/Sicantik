@@ -6,7 +6,8 @@ Library    XML
 *** Keywords ***
 Move To Web Service Eksternal
     Go To    https://uji.sicantik.go.id/service-eksternal
-    Element Should Contain    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Service Eksternal
+    Wait Until Element Contains    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5      Daftar Service Eksternal
+    Element Should Contain    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5           Daftar Service Eksternal
 
 Click Icon Eye
     Wait Until Element Is Enabled    css:i.fa-eye

@@ -13,8 +13,7 @@ TC01 - Update Data Service Eksternal (Basic Authentication)
     [Documentation]     SC03 - Update Data Service Eksternal
     [Tags]      TC01 - Update Data Service Eksternal (Basic Authentication)
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Login Admin Instansi
     login.Submit Credentials
     web_service_eksternal.Move To Web Service Eksternal
     web_service_eksternal.Input Search    Basic Auth
@@ -35,8 +34,7 @@ TC02 - Update Data Service Eksternal (Bearer Token)
     [Documentation]     SC03 - Update Data Service Eksternal
     [Tags]      TC02 - Update Data Service Eksternal (Bearer Token)
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Login Admin Instansi
     login.Submit Credentials
     web_service_eksternal.Move To Web Service Eksternal
     web_service_eksternal.Input Search    Bearer Token

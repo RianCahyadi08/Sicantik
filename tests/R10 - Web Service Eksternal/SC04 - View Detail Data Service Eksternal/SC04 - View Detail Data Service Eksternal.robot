@@ -13,8 +13,7 @@ TC01 - View Detail Data Service Eksternal
     [Documentation]     SC04 - View Detail Data Service Eksternal
     [Tags]      TC01 - View Detail Data Service Eksternal
     Open Browser To Login Page
-    login.Input Username    admegov
-    login.Input Password    Admegov789*@#
+    login.Login Admin Instansi
     login.Submit Credentials
     web_service_eksternal.Move To Web Service Eksternal
     web_service_eksternal.Click Icon Eye
