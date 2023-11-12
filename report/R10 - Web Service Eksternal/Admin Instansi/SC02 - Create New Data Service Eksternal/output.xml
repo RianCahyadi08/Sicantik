@@ -1,0 +1,699 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231112 10:06:14.514" rpa="false" schemaversion="4">
+<suite id="s1" name="SC02 - Create New Data Service Eksternal" source="E:\#Freelance\Sicantik\tests\R10 - Web Service Eksternal\SC02 - Create New Data Service Eksternal\SC02 - Create New Data Service Eksternal.robot">
+<test id="s1-t1" name="TC01 - Create New Data Service Eksternal (Tipe Otentifikasi : Basic Authentication)" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.4s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231112 10:06:14.680" endtime="20231112 10:06:14.680"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231112 10:06:14.680" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231112 10:06:14.680" endtime="20231112 10:06:22.106"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231112 10:06:22.106" endtime="20231112 10:06:22.763"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231112 10:06:23.166" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231112 10:06:22.763" endtime="20231112 10:06:23.166"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:14.680" endtime="20231112 10:06:23.166"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:23.167" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231112 10:06:23.167" endtime="20231112 10:06:24.413"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:23.166" endtime="20231112 10:06:24.413"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:24.413" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231112 10:06:24.413" endtime="20231112 10:06:25.630"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:24.413" endtime="20231112 10:06:25.630"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:23.166" endtime="20231112 10:06:25.630"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:25.631" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231112 10:06:25.630" endtime="20231112 10:06:27.457"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:06:32.457" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231112 10:06:27.457" endtime="20231112 10:06:32.457"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:25.630" endtime="20231112 10:06:32.457"/>
+</kw>
+<kw name="Move To Web Service Eksternal" library="web_service_eksternal">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/service-eksternal</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231112 10:06:32.457" level="INFO">Opening url 'https://uji.sicantik.go.id/service-eksternal'</msg>
+<status status="PASS" starttime="20231112 10:06:32.457" endtime="20231112 10:06:33.197"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<arg>Daftar Service Eksternal</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231112 10:06:33.197" endtime="20231112 10:06:34.021"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<arg>Daftar Service Eksternal</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 10:06:34.827" level="INFO">Element 'xpath://*[@id="kt_content_container"]/div/div/div[1]/h5' contains text 'Daftar Service Eksternal'.</msg>
+<status status="PASS" starttime="20231112 10:06:34.021" endtime="20231112 10:06:34.827"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:32.457" endtime="20231112 10:06:34.827"/>
+</kw>
+<kw name="Move To Web Service Eksternal Add" library="web_service_eksternal">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/service-eksternal/add</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231112 10:06:34.827" level="INFO">Opening url 'https://uji.sicantik.go.id/service-eksternal/add'</msg>
+<status status="PASS" starttime="20231112 10:06:34.827" endtime="20231112 10:06:35.581"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/div/div/div/div[1]/span</arg>
+<arg>Web Service Eksternal</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231112 10:06:35.581" endtime="20231112 10:06:36.391"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:34.827" endtime="20231112 10:06:36.391"/>
+</kw>
+<kw name="Input Nama" library="web_service_eksternal">
+<arg>Basic Authentication</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:namawebservice</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:06:36.391" endtime="20231112 10:06:37.197"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:namawebservice</arg>
+<arg>${nama}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:37.197" level="INFO">Typing text 'Basic Authentication' into text field 'name:namawebservice'.</msg>
+<status status="PASS" starttime="20231112 10:06:37.197" endtime="20231112 10:06:38.446"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:36.391" endtime="20231112 10:06:38.446"/>
+</kw>
+<kw name="Select Tipe Web Service" library="web_service_eksternal">
+<arg>External</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:tipeService</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:38.447" level="INFO">Clicking element 'name:tipeService'.</msg>
+<status status="PASS" starttime="20231112 10:06:38.446" endtime="20231112 10:06:39.470"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tipeWebService}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:39.470" level="INFO">Sending key(s) ('External',) to page.</msg>
+<msg timestamp="20231112 10:06:39.470" level="INFO">Sending keys External</msg>
+<status status="PASS" starttime="20231112 10:06:39.470" endtime="20231112 10:06:39.903"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:06:40.403" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231112 10:06:39.903" endtime="20231112 10:06:40.403"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:40.403" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231112 10:06:40.403" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231112 10:06:40.403" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231112 10:06:40.403" endtime="20231112 10:06:40.808"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:40.808" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 10:06:40.808" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 10:06:40.808" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 10:06:40.808" endtime="20231112 10:06:41.222"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:38.446" endtime="20231112 10:06:41.222"/>
+</kw>
+<kw name="Select Tipe Otentikasi" library="web_service_eksternal">
+<arg>Basic</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:otentikasi</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 10:06:41.222" endtime="20231112 10:06:42.037"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:otentikasi</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:42.037" level="INFO">Clicking element 'name:otentikasi'.</msg>
+<status status="PASS" starttime="20231112 10:06:42.037" endtime="20231112 10:06:43.053"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${otentifikasi}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:43.053" level="INFO">Sending key(s) ('Basic',) to page.</msg>
+<msg timestamp="20231112 10:06:43.053" level="INFO">Sending keys Basic</msg>
+<status status="PASS" starttime="20231112 10:06:43.053" endtime="20231112 10:06:43.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:06:43.978" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231112 10:06:43.478" endtime="20231112 10:06:43.978"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:43.978" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231112 10:06:43.978" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231112 10:06:43.978" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231112 10:06:43.978" endtime="20231112 10:06:44.383"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:06:44.383" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 10:06:44.383" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 10:06:44.383" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 10:06:44.383" endtime="20231112 10:06:44.808"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:41.222" endtime="20231112 10:06:44.808"/>
+</kw>
+<kw name="Input Base Url" library="web_service_eksternal">
+<arg>www.webserviceeksternal.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:baseUrl</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:06:44.808" endtime="20231112 10:06:45.615"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:baseUrl</arg>
+<arg>${baseUrl}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:45.615" level="INFO">Typing text 'www.webserviceeksternal.com' into text field 'name:baseUrl'.</msg>
+<status status="PASS" starttime="20231112 10:06:45.615" endtime="20231112 10:06:46.855"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:44.808" endtime="20231112 10:06:46.855"/>
+</kw>
+<kw name="Input Username" library="web_service_eksternal">
+<arg>rian</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:06:46.855" endtime="20231112 10:06:47.662"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:47.662" level="INFO">Typing text 'rian' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20231112 10:06:47.662" endtime="20231112 10:06:48.890"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:46.855" endtime="20231112 10:06:48.890"/>
+</kw>
+<kw name="Input Password" library="web_service_eksternal">
+<arg>P@55word</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:06:48.890" endtime="20231112 10:06:49.697"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:49.697" level="INFO">Typing text 'P@55word' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20231112 10:06:49.697" endtime="20231112 10:06:50.916"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:48.890" endtime="20231112 10:06:50.916"/>
+</kw>
+<kw name="Input Deskripsi" library="web_service_eksternal">
+<arg>Lorem</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:deskripsi</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:06:50.916" endtime="20231112 10:06:51.721"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:deskripsi</arg>
+<arg>${deskripsi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:51.721" level="INFO">Typing text 'Lorem' into text field 'name:deskripsi'.</msg>
+<status status="PASS" starttime="20231112 10:06:51.721" endtime="20231112 10:06:52.937"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:50.916" endtime="20231112 10:06:52.937"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231112 10:06:53.385" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231112 10:06:52.937" endtime="20231112 10:06:53.385"/>
+</kw>
+<kw name="Click Button Simpan" library="web_service_eksternal">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 10:06:53.386" level="INFO">Clicking button 'default:Simpan'.</msg>
+<status status="PASS" starttime="20231112 10:06:53.385" endtime="20231112 10:06:55.206"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:Vue-Toastification__toast-body</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 10:06:55.206" endtime="20231112 10:06:56.620"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>class:Vue-Toastification__toast-body</arg>
+<arg>Service eksternal berhasil disimpan.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 10:06:57.429" level="INFO">Element 'class:Vue-Toastification__toast-body' contains text 'Service eksternal berhasil disimpan.'.</msg>
+<status status="PASS" starttime="20231112 10:06:56.620" endtime="20231112 10:06:57.429"/>
+</kw>
+<status status="PASS" starttime="20231112 10:06:53.385" endtime="20231112 10:06:57.429"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:06:58.429" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231112 10:06:57.429" endtime="20231112 10:06:58.429"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231112 10:06:58.880" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231112 10:06:58.429" endtime="20231112 10:06:58.880"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231112 10:06:58.880" endtime="20231112 10:07:02.322"/>
+</kw>
+<doc>SC02 - Create New Data Service Eksternal</doc>
+<tag>TC01 - Create New Data Service Eksternal (Tipe Otentifikasi : Basic Authentication)</tag>
+<status status="PASS" starttime="20231112 10:06:14.679" endtime="20231112 10:07:02.322"/>
+</test>
+<test id="s1-t2" name="TC02 - Create New Data Service Eksternal (Tipe Otentifikasi : Bearer Token)" line="33">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.4s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231112 10:07:02.323" endtime="20231112 10:07:02.323"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231112 10:07:02.324" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231112 10:07:02.323" endtime="20231112 10:07:10.731"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231112 10:07:10.731" endtime="20231112 10:07:11.387"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231112 10:07:11.789" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231112 10:07:11.387" endtime="20231112 10:07:11.789"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:02.323" endtime="20231112 10:07:11.789"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:11.790" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231112 10:07:11.789" endtime="20231112 10:07:13.034"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:11.789" endtime="20231112 10:07:13.034"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:13.034" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231112 10:07:13.034" endtime="20231112 10:07:14.252"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:13.034" endtime="20231112 10:07:14.252"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:11.789" endtime="20231112 10:07:14.252"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:14.253" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231112 10:07:14.252" endtime="20231112 10:07:16.073"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:07:21.074" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231112 10:07:16.073" endtime="20231112 10:07:21.074"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:14.252" endtime="20231112 10:07:21.074"/>
+</kw>
+<kw name="Move To Web Service Eksternal" library="web_service_eksternal">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/service-eksternal</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231112 10:07:21.074" level="INFO">Opening url 'https://uji.sicantik.go.id/service-eksternal'</msg>
+<status status="PASS" starttime="20231112 10:07:21.074" endtime="20231112 10:07:21.790"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<arg>Daftar Service Eksternal</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231112 10:07:21.790" endtime="20231112 10:07:22.610"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<arg>Daftar Service Eksternal</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 10:07:23.417" level="INFO">Element 'xpath://*[@id="kt_content_container"]/div/div/div[1]/h5' contains text 'Daftar Service Eksternal'.</msg>
+<status status="PASS" starttime="20231112 10:07:22.610" endtime="20231112 10:07:23.417"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:21.074" endtime="20231112 10:07:23.417"/>
+</kw>
+<kw name="Move To Web Service Eksternal Add" library="web_service_eksternal">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/service-eksternal/add</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231112 10:07:23.417" level="INFO">Opening url 'https://uji.sicantik.go.id/service-eksternal/add'</msg>
+<status status="PASS" starttime="20231112 10:07:23.417" endtime="20231112 10:07:24.153"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/div/div/div/div[1]/span</arg>
+<arg>Web Service Eksternal</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231112 10:07:24.154" endtime="20231112 10:07:24.963"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:23.417" endtime="20231112 10:07:24.963"/>
+</kw>
+<kw name="Input Nama" library="web_service_eksternal">
+<arg>Bearer Token</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:namawebservice</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:07:24.964" endtime="20231112 10:07:25.769"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:namawebservice</arg>
+<arg>${nama}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:25.769" level="INFO">Typing text 'Bearer Token' into text field 'name:namawebservice'.</msg>
+<status status="PASS" starttime="20231112 10:07:25.769" endtime="20231112 10:07:27.024"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:24.963" endtime="20231112 10:07:27.024"/>
+</kw>
+<kw name="Select Tipe Web Service" library="web_service_eksternal">
+<arg>Validasi</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:tipeService</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:27.025" level="INFO">Clicking element 'name:tipeService'.</msg>
+<status status="PASS" starttime="20231112 10:07:27.024" endtime="20231112 10:07:28.044"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tipeWebService}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:28.044" level="INFO">Sending key(s) ('Validasi',) to page.</msg>
+<msg timestamp="20231112 10:07:28.044" level="INFO">Sending keys Validasi</msg>
+<status status="PASS" starttime="20231112 10:07:28.044" endtime="20231112 10:07:28.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:07:28.978" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231112 10:07:28.478" endtime="20231112 10:07:28.978"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:28.979" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231112 10:07:28.979" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231112 10:07:28.979" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231112 10:07:28.978" endtime="20231112 10:07:29.384"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:29.384" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 10:07:29.384" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 10:07:29.384" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 10:07:29.384" endtime="20231112 10:07:29.824"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:27.024" endtime="20231112 10:07:29.824"/>
+</kw>
+<kw name="Select Tipe Integrasi" library="web_service_eksternal">
+<arg>SPLP</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:tipe_integrasi</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:29.824" level="INFO">Clicking element 'name:tipe_integrasi'.</msg>
+<status status="PASS" starttime="20231112 10:07:29.824" endtime="20231112 10:07:30.848"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tipeIntegrasi}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:30.848" level="INFO">Sending key(s) ('SPLP',) to page.</msg>
+<msg timestamp="20231112 10:07:30.848" level="INFO">Sending keys SPLP</msg>
+<status status="PASS" starttime="20231112 10:07:30.848" endtime="20231112 10:07:31.268"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:07:31.768" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231112 10:07:31.268" endtime="20231112 10:07:31.768"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:31.768" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231112 10:07:31.768" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231112 10:07:31.768" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231112 10:07:31.768" endtime="20231112 10:07:32.172"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:32.172" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 10:07:32.172" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 10:07:32.172" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 10:07:32.172" endtime="20231112 10:07:32.587"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:29.824" endtime="20231112 10:07:32.587"/>
+</kw>
+<kw name="Select Tipe Otentikasi" library="web_service_eksternal">
+<arg>With Auth</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:otentikasi</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 10:07:32.587" endtime="20231112 10:07:33.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:otentikasi</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:33.399" level="INFO">Clicking element 'name:otentikasi'.</msg>
+<status status="PASS" starttime="20231112 10:07:33.399" endtime="20231112 10:07:34.425"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${otentifikasi}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:34.425" level="INFO">Sending key(s) ('With Auth',) to page.</msg>
+<msg timestamp="20231112 10:07:34.425" level="INFO">Sending keys With Auth</msg>
+<status status="PASS" starttime="20231112 10:07:34.425" endtime="20231112 10:07:34.861"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:07:35.362" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231112 10:07:34.862" endtime="20231112 10:07:35.362"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:35.362" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231112 10:07:35.362" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231112 10:07:35.362" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231112 10:07:35.362" endtime="20231112 10:07:35.767"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 10:07:35.768" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 10:07:35.768" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 10:07:35.768" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 10:07:35.767" endtime="20231112 10:07:36.201"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:32.587" endtime="20231112 10:07:36.201"/>
+</kw>
+<kw name="Input Base Url" library="web_service_eksternal">
+<arg>www.webserviceeksternal.com</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:baseUrl</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:07:36.201" endtime="20231112 10:07:37.008"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:baseUrl</arg>
+<arg>${baseUrl}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:37.008" level="INFO">Typing text 'www.webserviceeksternal.com' into text field 'name:baseUrl'.</msg>
+<status status="PASS" starttime="20231112 10:07:37.008" endtime="20231112 10:07:38.243"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:36.201" endtime="20231112 10:07:38.243"/>
+</kw>
+<kw name="Input Username" library="web_service_eksternal">
+<arg>rian</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:07:38.244" endtime="20231112 10:07:39.051"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:39.051" level="INFO">Typing text 'rian' into text field 'name:username'.</msg>
+<status status="PASS" starttime="20231112 10:07:39.051" endtime="20231112 10:07:40.270"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:38.243" endtime="20231112 10:07:40.270"/>
+</kw>
+<kw name="Input Password" library="web_service_eksternal">
+<arg>P@55word</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:07:40.270" endtime="20231112 10:07:41.076"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:41.076" level="INFO">Typing text 'P@55word' into text field 'name:password'.</msg>
+<status status="PASS" starttime="20231112 10:07:41.076" endtime="20231112 10:07:42.294"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:40.270" endtime="20231112 10:07:42.294"/>
+</kw>
+<kw name="Input Deskripsi" library="web_service_eksternal">
+<arg>Lorem</arg>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>name:deskripsi</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 10:07:42.294" endtime="20231112 10:07:43.100"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>name:deskripsi</arg>
+<arg>${deskripsi}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:43.100" level="INFO">Typing text 'Lorem' into text field 'name:deskripsi'.</msg>
+<status status="PASS" starttime="20231112 10:07:43.100" endtime="20231112 10:07:44.316"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:42.294" endtime="20231112 10:07:44.316"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231112 10:07:44.770" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231112 10:07:44.316" endtime="20231112 10:07:44.770"/>
+</kw>
+<kw name="Click Button Simpan" library="web_service_eksternal">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 10:07:44.771" level="INFO">Clicking button 'default:Simpan'.</msg>
+<status status="PASS" starttime="20231112 10:07:44.770" endtime="20231112 10:07:46.597"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:Vue-Toastification__toast-body</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 10:07:46.597" endtime="20231112 10:07:47.409"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>class:Vue-Toastification__toast-body</arg>
+<arg>Service eksternal berhasil disimpan.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 10:07:48.216" level="INFO">Element 'class:Vue-Toastification__toast-body' contains text 'Service eksternal berhasil disimpan.'.</msg>
+<status status="PASS" starttime="20231112 10:07:47.409" endtime="20231112 10:07:48.216"/>
+</kw>
+<status status="PASS" starttime="20231112 10:07:44.770" endtime="20231112 10:07:48.216"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 10:07:49.216" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231112 10:07:48.216" endtime="20231112 10:07:49.216"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231112 10:07:49.676" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231112 10:07:49.216" endtime="20231112 10:07:49.676"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231112 10:07:49.676" endtime="20231112 10:07:53.097"/>
+</kw>
+<doc>SC02 - Create New Data Service Eksternal</doc>
+<tag>TC02 - Create New Data Service Eksternal (Tipe Otentifikasi : Bearer Token)</tag>
+<status status="PASS" starttime="20231112 10:07:02.323" endtime="20231112 10:07:53.097"/>
+</test>
+<doc>SC02 - Create New Data Service Eksternal</doc>
+<status status="PASS" starttime="20231112 10:06:14.515" endtime="20231112 10:07:53.098"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Create New Data Service Eksternal (Tipe Otentifikasi : Basic Authentication)</stat>
+<stat pass="1" fail="0" skip="0">TC02 - Create New Data Service Eksternal (Tipe Otentifikasi : Bearer Token)</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" skip="0" id="s1" name="SC02 - Create New Data Service Eksternal">SC02 - Create New Data Service Eksternal</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

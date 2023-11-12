@@ -14,6 +14,14 @@ Open Browser To Login Page
     Maximize Browser Window
     Title Should Be    SICANTIK
 
+Login Admin Instansi
+    Input Username    demo
+    Input Password    Demo789*@#
+
+Login Admin Pusat
+    Input Username    admegov
+    Input Password    Admegov789*@#
+
 Input Username
     [Arguments]    ${username}
     Input Text    username    ${username}
