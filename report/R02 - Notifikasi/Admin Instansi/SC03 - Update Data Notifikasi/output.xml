@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231112 16:25:54.684" rpa="false" schemaversion="4">
+<suite id="s1" name="SC03 - Update Data Notifikasi" source="E:\#Freelance\Sicantik\tests\R02 - Notifikasi\SC03 - Update Data Notifikasi\SC03 - Update Data Notifikasi.robot">
+<test id="s1-t1" name="TC01 - Update Data Notifikasi (ex. Pendaftaran)" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.4s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231112 16:25:54.845" endtime="20231112 16:25:54.845"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231112 16:25:54.846" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231112 16:25:54.846" endtime="20231112 16:26:02.790"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231112 16:26:02.790" endtime="20231112 16:26:03.445"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231112 16:26:03.847" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231112 16:26:03.445" endtime="20231112 16:26:03.847"/>
+</kw>
+<status status="PASS" starttime="20231112 16:25:54.845" endtime="20231112 16:26:03.847"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:03.848" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231112 16:26:03.847" endtime="20231112 16:26:05.096"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:03.847" endtime="20231112 16:26:05.096"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:05.096" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231112 16:26:05.096" endtime="20231112 16:26:06.313"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:05.096" endtime="20231112 16:26:06.313"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:03.847" endtime="20231112 16:26:06.313"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:06.314" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231112 16:26:06.313" endtime="20231112 16:26:08.136"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 16:26:13.136" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231112 16:26:08.136" endtime="20231112 16:26:13.136"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:06.313" endtime="20231112 16:26:13.136"/>
+</kw>
+<kw name="Move To Notification" library="notifikasi">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/notifikasi</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231112 16:26:13.136" level="INFO">Opening url 'https://uji.sicantik.go.id/notifikasi'</msg>
+<status status="PASS" starttime="20231112 16:26:13.136" endtime="20231112 16:26:13.872"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div/div/div[1]/h5</arg>
+<arg>Daftar Jenis Izin</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 16:26:14.688" level="INFO">Element 'xpath://*[@id="kt_content_container"]/div/div/div[1]/h5' contains text 'Daftar Jenis Izin'.</msg>
+<status status="PASS" starttime="20231112 16:26:13.872" endtime="20231112 16:26:14.688"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:13.136" endtime="20231112 16:26:14.688"/>
+</kw>
+<kw name="Click Button Filter" library="notifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.btn-white</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:14.688" endtime="20231112 16:26:15.499"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button.btn-white</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:15.499" level="INFO">Clicking button 'css:button.btn-white'.</msg>
+<status status="PASS" starttime="20231112 16:26:15.499" endtime="20231112 16:26:17.721"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:17.721" endtime="20231112 16:26:18.533"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:14.688" endtime="20231112 16:26:18.533"/>
+</kw>
+<kw name="Input Jenis Izin" library="notifikasi">
+<arg>tes ok demo</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:18.533" endtime="20231112 16:26:19.344"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:19.344" level="INFO">Clicking element 'xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label'.</msg>
+<status status="PASS" starttime="20231112 16:26:19.344" endtime="20231112 16:26:20.355"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:20.355" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231112 16:26:20.355" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231112 16:26:20.355" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231112 16:26:20.355" endtime="20231112 16:26:20.769"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${jenisIzin}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:20.769" level="INFO">Sending key(s) ('tes ok demo',) to page.</msg>
+<msg timestamp="20231112 16:26:20.769" level="INFO">Sending keys tes ok demo</msg>
+<status status="PASS" starttime="20231112 16:26:20.769" endtime="20231112 16:26:21.185"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:18.533" endtime="20231112 16:26:21.185"/>
+</kw>
+<kw name="Click Button Tampilkan Hasil" library="notifikasi">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Tampilkan hasil</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:21.186" level="INFO">Clicking button 'default:Tampilkan hasil'.</msg>
+<status status="PASS" starttime="20231112 16:26:21.185" endtime="20231112 16:26:23.031"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 16:26:25.032" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231112 16:26:23.031" endtime="20231112 16:26:25.032"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:21.185" endtime="20231112 16:26:25.032"/>
+</kw>
+<kw name="Click Icon Pencil" library="notifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:i.fa-edit</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:25.032" endtime="20231112 16:26:25.843"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>css:i.fa-edit</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:25.843" level="INFO">Clicking element 'css:i.fa-edit'.</msg>
+<status status="PASS" starttime="20231112 16:26:25.843" endtime="20231112 16:26:26.871"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[1]/div/div[1]/div/div/div/div[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:26.871" endtime="20231112 16:26:27.758"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[1]/div/div[1]/div/div/div/div[1]/a</arg>
+<arg>Notifikasi</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231112 16:26:28.566" level="INFO">Element 'xpath://*[@id="kt_content_container"]/div[1]/div/div[1]/div/div/div/div[1]/a' contains text 'Notifikasi'.</msg>
+<status status="PASS" starttime="20231112 16:26:27.758" endtime="20231112 16:26:28.566"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:25.032" endtime="20231112 16:26:28.566"/>
+</kw>
+<kw name="Select Tipe" library="notifikasi">
+<arg>Push Notifikasi</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:tipe</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:28.566" endtime="20231112 16:26:29.381"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:tipe</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:29.381" level="INFO">Clicking element 'name:tipe'.</msg>
+<status status="PASS" starttime="20231112 16:26:29.381" endtime="20231112 16:26:30.416"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tipe}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:30.416" level="INFO">Sending key(s) ('Push Notifikasi',) to page.</msg>
+<msg timestamp="20231112 16:26:30.416" level="INFO">Sending keys Push Notifikasi</msg>
+<status status="PASS" starttime="20231112 16:26:30.416" endtime="20231112 16:26:30.882"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:30.882" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 16:26:30.882" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 16:26:30.882" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 16:26:30.882" endtime="20231112 16:26:31.298"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:28.566" endtime="20231112 16:26:31.298"/>
+</kw>
+<kw name="Select Penerima" library="notifikasi">
+<arg>Pemohon</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>name:tipepenerima</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:31.298" endtime="20231112 16:26:32.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>name:tipepenerima</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:32.110" level="INFO">Clicking element 'name:tipepenerima'.</msg>
+<status status="PASS" starttime="20231112 16:26:32.110" endtime="20231112 16:26:33.132"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tipePenerima}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:33.132" level="INFO">Sending key(s) ('Pemohon',) to page.</msg>
+<msg timestamp="20231112 16:26:33.132" level="INFO">Sending keys Pemohon</msg>
+<status status="PASS" starttime="20231112 16:26:33.132" endtime="20231112 16:26:33.558"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231112 16:26:33.558" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231112 16:26:33.558" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231112 16:26:33.558" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231112 16:26:33.558" endtime="20231112 16:26:33.977"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:31.298" endtime="20231112 16:26:33.977"/>
+</kw>
+<kw name="Click Modal Edit Pesan" library="notifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_customers_table"]/tbody/tr/td[4]/span/div/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:33.977" endtime="20231112 16:26:34.790"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_customers_table"]/tbody/tr/td[4]/span/div/button</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:34.790" level="INFO">Clicking element 'xpath://*[@id="kt_customers_table"]/tbody/tr/td[4]/span/div/button'.</msg>
+<status status="PASS" starttime="20231112 16:26:34.790" endtime="20231112 16:26:35.818"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:textarea[name=pesan]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:35.818" endtime="20231112 16:26:36.628"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:33.977" endtime="20231112 16:26:36.628"/>
+</kw>
+<kw name="Input Pesan" library="notifikasi">
+<arg>Lorem update</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:textarea[name=pesan]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:36.628" endtime="20231112 16:26:37.440"/>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<arg>css:textarea[name=pesan]</arg>
+<doc>Clears the value of the text-input-element identified by ``locator``.</doc>
+<status status="PASS" starttime="20231112 16:26:37.440" endtime="20231112 16:26:38.246"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>css:textarea[name=pesan]</arg>
+<arg>${pesan}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:38.246" level="INFO">Typing text 'Lorem update' into text field 'css:textarea[name=pesan]'.</msg>
+<status status="PASS" starttime="20231112 16:26:38.246" endtime="20231112 16:26:39.473"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:36.628" endtime="20231112 16:26:39.473"/>
+</kw>
+<kw name="Click Button Simpan In Modal" library="notifikasi">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>css:button.el-button--primary</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:39.473" endtime="20231112 16:26:40.284"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button.el-button--primary</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:40.284" level="INFO">Clicking button 'css:button.el-button--primary'.</msg>
+<status status="PASS" starttime="20231112 16:26:40.284" endtime="20231112 16:26:42.518"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 16:26:43.519" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231112 16:26:42.518" endtime="20231112 16:26:43.519"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:39.473" endtime="20231112 16:26:43.519"/>
+</kw>
+<kw name="Click Button Simpan" library="notifikasi">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[3]/div/div/div/div/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231112 16:26:43.520" level="INFO">Clicking button 'xpath://*[@id="kt_content_container"]/div[3]/div/div/div/div/button'.</msg>
+<status status="PASS" starttime="20231112 16:26:43.519" endtime="20231112 16:26:45.739"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>class:Vue-Toastification__toast-body</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231112 16:26:45.739" endtime="20231112 16:26:46.555"/>
+</kw>
+<status status="PASS" starttime="20231112 16:26:43.519" endtime="20231112 16:26:46.555"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231112 16:26:48.556" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231112 16:26:46.555" endtime="20231112 16:26:48.556"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231112 16:26:49.008" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231112 16:26:48.556" endtime="20231112 16:26:49.008"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231112 16:26:49.008" endtime="20231112 16:26:52.384"/>
+</kw>
+<doc>SC03 - Update Data Notifikasi</doc>
+<tag>TC01 - Update Data Notifikasi (ex. Pendaftaran)</tag>
+<status status="PASS" starttime="20231112 16:25:54.844" endtime="20231112 16:26:52.384"/>
+</test>
+<doc>SC03 - Update Data Notifikasi</doc>
+<status status="PASS" starttime="20231112 16:25:54.685" endtime="20231112 16:26:52.385"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Update Data Notifikasi (ex. Pendaftaran)</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC03 - Update Data Notifikasi">SC03 - Update Data Notifikasi</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
