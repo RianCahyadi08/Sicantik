@@ -6,6 +6,10 @@ Library           SeleniumLibrary
 Move To Alur Proses Module
     Go To       https://uji.sicantik.go.id/alur-proses
     Wait Until Element Contains     xpath://*[@id="kt_content_container"]/div/div/div[1]/h5     Daftar Alur Proses      None    None
+    Wait Until Element Is Visible    xpath://*[@id="kt_customers_table"]/thead/tr/th[1]
+    Sleep    3s
+#    Wait Until Element Is Enabled    xpath://*[@id="kt_customers_table"]/thead/tr/th[1]
+#    Sleep    10s
 
 Click Button Filter
     Click Button    default:Filter
@@ -120,3 +124,20 @@ Click Button Delete
 Click Button Ya Hapus
     Click Button    default:Ya, Hapus
     Wait Until Element Is Visible   class:Vue-Toastification__toast-body
+
+#Click Table
+#    Click Element    css:div.table-container
+#    Sleep    0.5s
+
+#Scroll Down
+#    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[3]/td[2]
+##    Execute Javascript      window.scrollTo(0, 1000)
+#    Execute Javascript      window.scrollTo(0, 2000)
+
+Scroll Down
+    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[6]/td[2]
+    FOR    ${counter}    IN RANGE    10
+        Log    ${counter}
+        Press Keys      None    ARROW_DOWN
+        Sleep    0.5s
+    END

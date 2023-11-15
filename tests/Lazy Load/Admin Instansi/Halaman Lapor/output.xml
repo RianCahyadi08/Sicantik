@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.2 on win32)" generated="20231115 14:43:06.008" rpa="false" schemaversion="3">
+<suite id="s1" name="SC01 - Lazy load halaman lapor" source="D:\#RIANCAHYADI\Projects\Freedom\Sicantik\tests\Lazy Load\Halaman Lapor\SC01 - Lazy load halaman lapor.robot">
+<test id="s1-t1" name="TC01 - Lazy Load Halaman Lapor" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231115 14:43:06.184" endtime="20231115 14:43:06.184"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231115 14:43:06.185" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<msg timestamp="20231115 14:43:06.187" level="INFO">Firefox driver log is always forced to to: D:\#RIANCAHYADI\Projects\Freedom\Sicantik\tests\Lazy Load\Halaman Lapor\geckodriver-1.log</msg>
+<status status="PASS" starttime="20231115 14:43:06.184" endtime="20231115 14:43:14.963"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231115 14:43:14.963" endtime="20231115 14:43:15.423"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231115 14:43:15.626" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231115 14:43:15.423" endtime="20231115 14:43:15.626"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:06.184" endtime="20231115 14:43:15.626"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231115 14:43:15.627" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231115 14:43:15.627" endtime="20231115 14:43:16.279"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:15.627" endtime="20231115 14:43:16.279"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231115 14:43:16.279" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231115 14:43:16.279" endtime="20231115 14:43:16.898"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:16.279" endtime="20231115 14:43:16.898"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231115 14:43:16.898" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231115 14:43:16.898" endtime="20231115 14:43:17.919"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:22.919" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231115 14:43:17.919" endtime="20231115 14:43:22.919"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:16.898" endtime="20231115 14:43:22.919"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
+<arg>DEMO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231115 14:43:23.337" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231115 14:43:22.919" endtime="20231115 14:43:23.337"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:15.626" endtime="20231115 14:43:23.337"/>
+</kw>
+<kw name="Move To Lapor Aduan" library="aduan">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/aduan</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231115 14:43:23.337" level="INFO">Opening url 'https://uji.sicantik.go.id/aduan'</msg>
+<status status="PASS" starttime="20231115 14:43:23.337" endtime="20231115 14:43:23.994"/>
+</kw>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
+<arg>Lapor Aduan</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231115 14:43:23.994" endtime="20231115 14:43:24.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:27.403" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231115 14:43:24.403" endtime="20231115 14:43:27.403"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:23.337" endtime="20231115 14:43:27.403"/>
+</kw>
+<kw name="Scroll Down" library="aduan">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_customers_table"]/tbody/tr[6]/td[5]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231115 14:43:27.404" level="INFO">Clicking element 'xpath://*[@id="kt_customers_table"]/tbody/tr[6]/td[5]'.</msg>
+<status status="PASS" starttime="20231115 14:43:27.403" endtime="20231115 14:43:28.026"/>
+</kw>
+<for flavor="IN RANGE">
+<var>${counter}</var>
+<value>20</value>
+<iter>
+<var name="${counter}">0</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:28.026" level="INFO">0</msg>
+<status status="PASS" starttime="20231115 14:43:28.026" endtime="20231115 14:43:28.026"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:28.027" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:28.027" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:28.027" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:28.026" endtime="20231115 14:43:28.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:28.735" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:28.234" endtime="20231115 14:43:28.735"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:28.026" endtime="20231115 14:43:28.735"/>
+</iter>
+<iter>
+<var name="${counter}">1</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:28.735" level="INFO">1</msg>
+<status status="PASS" starttime="20231115 14:43:28.735" endtime="20231115 14:43:28.735"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:28.736" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:28.736" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:28.736" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:28.735" endtime="20231115 14:43:28.941"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:29.441" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:28.941" endtime="20231115 14:43:29.441"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:28.735" endtime="20231115 14:43:29.441"/>
+</iter>
+<iter>
+<var name="${counter}">2</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:29.441" level="INFO">2</msg>
+<status status="PASS" starttime="20231115 14:43:29.441" endtime="20231115 14:43:29.441"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:29.442" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:29.442" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:29.442" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:29.441" endtime="20231115 14:43:29.645"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:30.146" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:29.645" endtime="20231115 14:43:30.146"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:29.441" endtime="20231115 14:43:30.146"/>
+</iter>
+<iter>
+<var name="${counter}">3</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:30.146" level="INFO">3</msg>
+<status status="PASS" starttime="20231115 14:43:30.146" endtime="20231115 14:43:30.146"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:30.147" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:30.147" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:30.147" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:30.146" endtime="20231115 14:43:30.351"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:30.851" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:30.351" endtime="20231115 14:43:30.851"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:30.146" endtime="20231115 14:43:30.851"/>
+</iter>
+<iter>
+<var name="${counter}">4</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:30.851" level="INFO">4</msg>
+<status status="PASS" starttime="20231115 14:43:30.851" endtime="20231115 14:43:30.851"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:30.852" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:30.852" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:30.852" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:30.851" endtime="20231115 14:43:31.057"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:31.558" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:31.057" endtime="20231115 14:43:31.558"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:30.851" endtime="20231115 14:43:31.558"/>
+</iter>
+<iter>
+<var name="${counter}">5</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:31.558" level="INFO">5</msg>
+<status status="PASS" starttime="20231115 14:43:31.558" endtime="20231115 14:43:31.558"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:31.559" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:31.559" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:31.559" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:31.558" endtime="20231115 14:43:31.763"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:32.264" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:31.763" endtime="20231115 14:43:32.264"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:31.558" endtime="20231115 14:43:32.264"/>
+</iter>
+<iter>
+<var name="${counter}">6</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:32.264" level="INFO">6</msg>
+<status status="PASS" starttime="20231115 14:43:32.264" endtime="20231115 14:43:32.264"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:32.265" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:32.265" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:32.265" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:32.264" endtime="20231115 14:43:32.469"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:32.969" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:32.469" endtime="20231115 14:43:32.969"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:32.264" endtime="20231115 14:43:32.969"/>
+</iter>
+<iter>
+<var name="${counter}">7</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:32.969" level="INFO">7</msg>
+<status status="PASS" starttime="20231115 14:43:32.969" endtime="20231115 14:43:32.969"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:32.970" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:32.970" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:32.970" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:32.969" endtime="20231115 14:43:33.174"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:33.674" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:33.174" endtime="20231115 14:43:33.674"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:32.969" endtime="20231115 14:43:33.674"/>
+</iter>
+<iter>
+<var name="${counter}">8</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:33.674" level="INFO">8</msg>
+<status status="PASS" starttime="20231115 14:43:33.674" endtime="20231115 14:43:33.674"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:33.675" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:33.675" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:33.675" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:33.674" endtime="20231115 14:43:33.880"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:34.381" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:33.880" endtime="20231115 14:43:34.381"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:33.674" endtime="20231115 14:43:34.381"/>
+</iter>
+<iter>
+<var name="${counter}">9</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:34.381" level="INFO">9</msg>
+<status status="PASS" starttime="20231115 14:43:34.381" endtime="20231115 14:43:34.381"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:34.382" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:34.382" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:34.382" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:34.381" endtime="20231115 14:43:34.601"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:35.102" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:34.601" endtime="20231115 14:43:35.102"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:34.381" endtime="20231115 14:43:35.102"/>
+</iter>
+<iter>
+<var name="${counter}">10</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:35.102" level="INFO">10</msg>
+<status status="PASS" starttime="20231115 14:43:35.102" endtime="20231115 14:43:35.102"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:35.103" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:35.103" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:35.103" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:35.102" endtime="20231115 14:43:35.307"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:35.807" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:35.307" endtime="20231115 14:43:35.807"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:35.102" endtime="20231115 14:43:35.807"/>
+</iter>
+<iter>
+<var name="${counter}">11</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:35.807" level="INFO">11</msg>
+<status status="PASS" starttime="20231115 14:43:35.807" endtime="20231115 14:43:35.807"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:35.808" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:35.808" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:35.808" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:35.807" endtime="20231115 14:43:36.014"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:36.514" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:36.014" endtime="20231115 14:43:36.514"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:35.807" endtime="20231115 14:43:36.514"/>
+</iter>
+<iter>
+<var name="${counter}">12</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:36.514" level="INFO">12</msg>
+<status status="PASS" starttime="20231115 14:43:36.514" endtime="20231115 14:43:36.514"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:36.515" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:36.515" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:36.515" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:36.514" endtime="20231115 14:43:36.719"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:37.219" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:36.719" endtime="20231115 14:43:37.219"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:36.514" endtime="20231115 14:43:37.219"/>
+</iter>
+<iter>
+<var name="${counter}">13</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:37.219" level="INFO">13</msg>
+<status status="PASS" starttime="20231115 14:43:37.219" endtime="20231115 14:43:37.219"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:37.220" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:37.220" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:37.220" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:37.219" endtime="20231115 14:43:37.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:37.925" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:37.424" endtime="20231115 14:43:37.925"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:37.219" endtime="20231115 14:43:37.925"/>
+</iter>
+<iter>
+<var name="${counter}">14</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:37.925" level="INFO">14</msg>
+<status status="PASS" starttime="20231115 14:43:37.925" endtime="20231115 14:43:37.925"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:37.926" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:37.926" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:37.926" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:37.925" endtime="20231115 14:43:38.154"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:38.654" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:38.154" endtime="20231115 14:43:38.654"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:37.925" endtime="20231115 14:43:38.654"/>
+</iter>
+<iter>
+<var name="${counter}">15</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:38.654" level="INFO">15</msg>
+<status status="PASS" starttime="20231115 14:43:38.654" endtime="20231115 14:43:38.654"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:38.655" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:38.655" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:38.655" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:38.654" endtime="20231115 14:43:38.859"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:39.359" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:38.859" endtime="20231115 14:43:39.359"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:38.654" endtime="20231115 14:43:39.359"/>
+</iter>
+<iter>
+<var name="${counter}">16</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:39.359" level="INFO">16</msg>
+<status status="PASS" starttime="20231115 14:43:39.359" endtime="20231115 14:43:39.359"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:39.360" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:39.360" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:39.360" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:39.359" endtime="20231115 14:43:39.564"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:40.064" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:39.564" endtime="20231115 14:43:40.064"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:39.359" endtime="20231115 14:43:40.064"/>
+</iter>
+<iter>
+<var name="${counter}">17</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:40.064" level="INFO">17</msg>
+<status status="PASS" starttime="20231115 14:43:40.064" endtime="20231115 14:43:40.064"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:40.065" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:40.065" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:40.065" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:40.064" endtime="20231115 14:43:40.364"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:40.865" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:40.364" endtime="20231115 14:43:40.865"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:40.064" endtime="20231115 14:43:40.865"/>
+</iter>
+<iter>
+<var name="${counter}">18</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:40.865" level="INFO">18</msg>
+<status status="PASS" starttime="20231115 14:43:40.865" endtime="20231115 14:43:40.865"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:40.866" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:40.866" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:40.866" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:40.865" endtime="20231115 14:43:41.070"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:41.570" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:41.070" endtime="20231115 14:43:41.570"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:40.865" endtime="20231115 14:43:41.570"/>
+</iter>
+<iter>
+<var name="${counter}">19</var>
+<kw name="Log" library="BuiltIn">
+<arg>${counter}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231115 14:43:41.570" level="INFO">19</msg>
+<status status="PASS" starttime="20231115 14:43:41.570" endtime="20231115 14:43:41.570"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231115 14:43:41.571" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231115 14:43:41.571" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231115 14:43:41.571" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231115 14:43:41.570" endtime="20231115 14:43:41.775"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:42.275" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231115 14:43:41.775" endtime="20231115 14:43:42.275"/>
+</kw>
+<status status="PASS" starttime="20231115 14:43:41.570" endtime="20231115 14:43:42.275"/>
+</iter>
+<status status="PASS" starttime="20231115 14:43:28.026" endtime="20231115 14:43:42.275"/>
+</for>
+<status status="PASS" starttime="20231115 14:43:27.403" endtime="20231115 14:43:42.275"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231115 14:43:45.276" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231115 14:43:42.275" endtime="20231115 14:43:45.276"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231115 14:43:45.535" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231115 14:43:45.276" endtime="20231115 14:43:45.535"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231115 14:43:45.535" endtime="20231115 14:43:48.571"/>
+</kw>
+<doc>SC01 - Lazy Load Halaman lapor</doc>
+<tag>TC01 - Lazy Load Halaman Lapor</tag>
+<status status="PASS" starttime="20231115 14:43:06.183" endtime="20231115 14:43:48.571"/>
+</test>
+<doc>SC01 - Lazy load halaman lapor</doc>
+<status status="PASS" starttime="20231115 14:43:06.009" endtime="20231115 14:43:48.572"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Lazy Load Halaman Lapor</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - Lazy load halaman lapor">SC01 - Lazy load halaman lapor</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

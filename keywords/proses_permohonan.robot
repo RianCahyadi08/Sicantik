@@ -4,10 +4,11 @@ Library           SeleniumLibrary
 
 *** Keywords ***
 Move to Proses Permohonan
-    Click Element       xpath://*[@id="#kt_header_menu"]/div[7]/span/span[2]
-    Click Link          link:Proses Permohonan
+#    Click Element       xpath://*[@id="#kt_header_menu"]/div[7]/span/span[2]
+#    Click Link          link:Proses Permohonan
+    Go To    https://uji.sicantik.go.id/proses-pengajuan
     Wait Until Element Contains     tag:h5      Proses Pengajuan    None    None
-    Sleep   2s
+    Sleep   3s
 
 Click Button Filter
     Click Element       xpath://*[@id="kt_content_container"]/div[1]/div/div[2]/div/div[1]/button
@@ -112,3 +113,11 @@ Verify Jumlah Tenaga Kerja
 
 Click Button Proses Berikutnya
     Click Button        default:Proses Berikutnya
+
+Scroll Down
+    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[3]/td[7]
+    FOR    ${counter}    IN RANGE    20
+        Log    ${counter}
+        Press Keys      None    ARROW_DOWN
+        Sleep    0.5s
+    END

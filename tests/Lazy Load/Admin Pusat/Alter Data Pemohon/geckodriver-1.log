@@ -1,0 +1,18 @@
+1700039827562	geckodriver	INFO	Listening on 127.0.0.1:59039
+1700039830640	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--incognito" "--remote-debugging-port" "59 ...  "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RIANC~1\\AppData\\Local\\Temp\\rust_mozprofilecD6QnW"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700039830887	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-incognito"
+1700039830940	Marionette	INFO	Listening on port 59056
+WebDriver BiDi listening on ws://127.0.0.1:59040
+Read port: 59056
+1700039831077	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:59040/devtools/browser/61ebd0d6-3817-4c00-9c24-bd01a1da34f7
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+JavaScript error: https://uji.sicantik.go.id/js/app.a3fac3ef.js, line 1: TypeError: e.response is undefined
+1700039860904	addons.xpi	ERROR	System addon update list error SyntaxError: XMLHttpRequest.open: 'http://%(server)s/dummy-system-addons.xml' is not a valid URL.
+1700039866383	Marionette	INFO	Stopped listening on port 59056
+Dynamically enable window occlusion 1
