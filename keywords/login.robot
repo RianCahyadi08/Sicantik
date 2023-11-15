@@ -8,7 +8,7 @@ ${BROWSER}        Firefox
 
 *** Keywords ***
 Open Browser To Login Page
-    Set Selenium Speed    0.4s
+    Set Selenium Speed    0.2s
      Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
 #    Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
@@ -17,10 +17,14 @@ Open Browser To Login Page
 Login Admin Instansi
     Input Username    demo
     Input Password    Demo789*@#
-
+    Submit Credentials
+    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    DEMO
+    
 Login Admin Pusat
     Input Username    admegov
     Input Password    Admegov789*@#
+    Submit Credentials
+    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]    Admin Utama
 
 Input Username
     [Arguments]    ${username}

@@ -12,6 +12,8 @@ Move To Template Data
     Go To    https://uji.sicantik.go.id/template-data
 #    Wait Until Element Contains    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Template Data
     Wait Until Element Is Visible    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5
+    Wait Until Element Is Visible    xpath://*[@id="kt_customers_table"]/tbody/tr[4]/td[3]
+    Sleep    3s
     
 Click Button Filter
     Click Element    xpath://*[@id="kt_content_container"]/div/div/div[2]/div/div[1]/button
@@ -136,3 +138,11 @@ Click Icon Pencil
     Wait Until Element Is Visible    css:i.fa-edit
     Click Element    css:i.fa-edit
     Element Should Contain    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a      Ubah Template data
+
+Scroll Down
+    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[8]/td[4]
+    FOR    ${counter}    IN RANGE    20
+        Log    ${counter}
+        Press Keys      None    ARROW_DOWN
+        Sleep    0.5s
+    END

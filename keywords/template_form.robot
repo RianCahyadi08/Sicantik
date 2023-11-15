@@ -330,3 +330,12 @@ Click Button Plus Grand Total
 
 Click Button Simpan Grand Total
     Click Button    xpath://*[@id="format-grand-formula-modal"]/div/form/div/div[3]/button[2]
+
+Scroll Down
+    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[8]/td[3]
+#    Execute Javascript      window.scrollTo(0, 2000)
+    FOR    ${counter}    IN RANGE    10
+        Log    ${counter}
+        Press Keys      None    ARROW_DOWN
+        Sleep    0.5s
+    END

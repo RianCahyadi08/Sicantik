@@ -10,6 +10,7 @@ ${BROWSER}        Firefox
 Move To Permohonan Izin Module
     Go To   https://uji.sicantik.go.id/permohonan-izin
     Wait Until Element Contains    tag:h5    Permohonan Izin
+    Sleep    3s
 
 Click Button Filter
     Click Element    css:button.btn-white
@@ -48,3 +49,11 @@ Upload File Lampiran
 Click Button Simpan
     Click Button    default:Simpan
     Wait Until Element Is Visible    class:Vue-Toastification__toast-body
+
+Scroll Down
+    Click Element    xpath://*[@id="kt_customers_table"]/tbody/tr[2]/td[8]
+    FOR    ${counter}    IN RANGE    30
+        Log    ${counter}
+        Press Keys      None    ARROW_DOWN
+        Sleep    0.5s
+    END
