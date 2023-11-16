@@ -1,0 +1,16 @@
+1700136698290	geckodriver	INFO	Listening on 127.0.0.1:50665
+1700136701386	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "--incognito" "--remote-debugging-port" "50 ... "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\RIANCA~1\\AppData\\Local\\Temp\\rust_mozprofileB1JLVt"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+1700136702570	Marionette	INFO	Marionette enabled
+Dynamically enable window occlusion 0
+console.error: "Warning: unrecognized command line flag" "-incognito"
+1700136703561	Marionette	INFO	Listening on port 50673
+WebDriver BiDi listening on ws://127.0.0.1:50666
+Read port: 50673
+1700136704074	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:50666/devtools/browser/678967a8-1840-44f8-865a-13b790e0d1b6
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+console.warn: LoginRecipes: "Falling back to a synchronous message for: https://uji.sicantik.go.id."
+1700136729180	Marionette	INFO	Stopped listening on port 50673
+Dynamically enable window occlusion 1

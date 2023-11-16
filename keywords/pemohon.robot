@@ -152,4 +152,12 @@ Verify Proyek
 
 Click Button Simpan
     Click Button    default:Simpan
-    
+
+Click Lonceng Notifikasi
+    Click Element    css:i.fa-bell
+    Wait Until Element Is Visible    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[1]/div[2]/div[1]/div/h3
+    Sleep    1s
+
+Click Informasi Tab In Notifikasi
+    Click Element    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[1]/div[2]/div[1]/div/ul/li[2]/a
+#    Wait Until Element Contains    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[1]/div[2]/div[1]/div/ul/li[2]/a    Notifikasi
