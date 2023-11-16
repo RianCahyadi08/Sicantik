@@ -26,6 +26,12 @@ Login Admin Pusat
     Submit Credentials
     Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]    Admin Utama
 
+Login Jabatan Satu
+    Input Username    riancahyadi
+    Input Password    P@55word
+    Submit Credentials
+    Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    RIANCAHYADI
+
 Input Username
     [Arguments]    ${username}
     Input Text    username    ${username}
