@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231125 12:27:01.839" rpa="false" schemaversion="4">
+<suite id="s1" name="SC01 - View Data Tanda Tangan Elektronik" source="E:\#Freelance\Sicantik\tests\R06 - Tanda Tangan Elektronik\Admin Pusat\SC01 - View Data Tanda Tangan Elektronik\SC01 - View Data Tanda Tangan Elektronik.robot">
+<test id="s1-t1" name="TC01 - View Data Tanda Tangan Elektronik" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231125 12:27:02.004" endtime="20231125 12:27:02.004"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 12:27:02.005" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231125 12:27:02.004" endtime="20231125 12:27:10.247"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231125 12:27:10.247" endtime="20231125 12:27:10.703"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231125 12:27:10.905" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231125 12:27:10.703" endtime="20231125 12:27:10.905"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:02.004" endtime="20231125 12:27:10.905"/>
+</kw>
+<kw name="Login Admin Pusat" library="login">
+<kw name="Input Username" library="login">
+<arg>admegov</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 12:27:10.906" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231125 12:27:10.905" endtime="20231125 12:27:11.554"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:10.905" endtime="20231125 12:27:11.554"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Admegov789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 12:27:11.554" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231125 12:27:11.554" endtime="20231125 12:27:12.172"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:11.554" endtime="20231125 12:27:12.172"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 12:27:12.172" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231125 12:27:12.172" endtime="20231125 12:27:13.195"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 12:27:18.196" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 12:27:13.195" endtime="20231125 12:27:18.196"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:12.172" endtime="20231125 12:27:18.196"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]</arg>
+<arg>Admin Utama</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 12:27:18.611" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]' contains text 'Admin Utama'.</msg>
+<status status="PASS" starttime="20231125 12:27:18.196" endtime="20231125 12:27:18.611"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:10.905" endtime="20231125 12:27:18.611"/>
+</kw>
+<kw name="Move To TTE" library="tte">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/signature-tte</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 12:27:18.611" level="INFO">Opening url 'https://uji.sicantik.go.id/signature-tte'</msg>
+<status status="PASS" starttime="20231125 12:27:18.611" endtime="20231125 12:27:19.689"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 12:27:22.690" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231125 12:27:19.689" endtime="20231125 12:27:22.690"/>
+</kw>
+<status status="PASS" starttime="20231125 12:27:18.611" endtime="20231125 12:27:22.690"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 12:27:24.691" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231125 12:27:22.690" endtime="20231125 12:27:24.691"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231125 12:27:24.946" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231125 12:27:24.691" endtime="20231125 12:27:24.946"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 12:27:24.946" endtime="20231125 12:27:27.910"/>
+</kw>
+<doc>SC01 - View Data Tanda Tangan Elektronik</doc>
+<tag>TC01 - View Data Tanda Tangan Elektronik</tag>
+<status status="PASS" starttime="20231125 12:27:02.003" endtime="20231125 12:27:27.910"/>
+</test>
+<doc>SC01 - View Data Tanda Tangan Elektronik</doc>
+<status status="PASS" starttime="20231125 12:27:01.840" endtime="20231125 12:27:27.911"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - View Data Tanda Tangan Elektronik</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC01 - View Data Tanda Tangan Elektronik">SC01 - View Data Tanda Tangan Elektronik</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

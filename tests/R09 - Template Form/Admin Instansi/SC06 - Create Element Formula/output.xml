@@ -1,0 +1,743 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231125 09:48:27.393" rpa="false" schemaversion="4">
+<suite id="s1" name="SC06 - Create Element Formula" source="E:\#Freelance\Sicantik\tests\R09 - Template Form\Admin Instansi\SC06 - Create Element Formula\SC06 - Create Element Formula.robot">
+<test id="s1-t1" name="TC01 - Create Element Formula" line="13">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231125 09:48:27.555" endtime="20231125 09:48:27.556"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 09:48:27.556" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231125 09:48:27.556" endtime="20231125 09:48:31.571"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231125 09:48:31.571" endtime="20231125 09:48:31.889"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231125 09:48:32.093" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231125 09:48:31.889" endtime="20231125 09:48:32.093"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:27.555" endtime="20231125 09:48:32.093"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:32.094" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:32.754"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:32.754"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:32.754" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231125 09:48:32.754" endtime="20231125 09:48:33.409"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:32.754" endtime="20231125 09:48:33.409"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:33.409" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231125 09:48:33.409" endtime="20231125 09:48:34.249"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:48:39.250" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 09:48:34.249" endtime="20231125 09:48:39.250"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:33.409" endtime="20231125 09:48:39.250"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
+<arg>DEMO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:48:39.667" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231125 09:48:39.250" endtime="20231125 09:48:39.667"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:39.667"/>
+</kw>
+<kw name="Move To Template Form" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:48:39.667" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231125 09:48:39.667" endtime="20231125 09:48:40.163"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
+<arg>Daftar Template Form</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:48:40.579" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231125 09:48:40.163" endtime="20231125 09:48:40.579"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:48:43.580" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231125 09:48:40.579" endtime="20231125 09:48:43.580"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:39.667" endtime="20231125 09:48:43.580"/>
+</kw>
+<kw name="Click Button Add" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form/add</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:48:43.580" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231125 09:48:43.580" endtime="20231125 09:48:44.932"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 09:48:44.932" endtime="20231125 09:48:45.351"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:43.580" endtime="20231125 09:48:45.351"/>
+</kw>
+<kw name="Click Button Buat Canvas" library="template_form">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Canvas</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:45.352" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231125 09:48:45.351" endtime="20231125 09:48:46.431"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231125 09:48:52.033" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231125 09:48:52.033" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231125 09:48:46.431" endtime="20231125 09:48:52.034"/>
+</kw>
+<status status="FAIL" starttime="20231125 09:48:45.351" endtime="20231125 09:48:52.034"/>
+</kw>
+<kw name="Input Tab Index Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.034" endtime="20231125 09:48:52.034"/>
+</kw>
+<kw name="Select Tipe Form Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.034" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Input Nama Canvas" library="template_form">
+<arg>Nama canvas</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Input Web Service Awal Canvas" library="template_form">
+<arg>webServiceAwal</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Select Data Table Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Input No Urut Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Click Button Simpan Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+</kw>
+<kw name="Click Button Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Input Label Buat Tab" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Click Button Simpan Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Click Button Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Input Link Buat Tombol" library="template_form">
+<arg>https://www.google.com/</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+</kw>
+<kw name="Input Label Buat Tombol" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Click Button Simpan Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Click Button Buat Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Input Label Element" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Select Type Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Select Wajib Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Select Data Kolom Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+</kw>
+<kw name="Click Button Simpan Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Input Nama Form" library="template_form">
+<arg>Form Rian I</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Input Field Kunci" library="template_form">
+<arg>Field Kunci</arg>
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Click Button Simpan Data" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 09:48:52.038" endtime="20231125 09:48:54.294"/>
+</kw>
+<doc>SC06 - Create Element Formula</doc>
+<tag>TC01 - Create Element Formula</tag>
+<status status="FAIL" starttime="20231125 09:48:27.555" endtime="20231125 09:48:54.294">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t2" name="TC02 - Create Perhitungan Formula" line="57">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:54.295"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 09:48:54.296" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:57.808"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231125 09:48:57.808" endtime="20231125 09:48:58.122"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231125 09:48:58.326" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231125 09:48:58.122" endtime="20231125 09:48:58.326"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:58.326"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:58.327" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:48:58.987"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:48:58.987"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:58.987" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231125 09:48:58.987" endtime="20231125 09:48:59.641"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:58.987" endtime="20231125 09:48:59.641"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:48:59.642" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231125 09:48:59.641" endtime="20231125 09:49:00.480"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:49:05.480" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 09:49:00.480" endtime="20231125 09:49:05.480"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:59.641" endtime="20231125 09:49:05.480"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
+<arg>DEMO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:49:05.899" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231125 09:49:05.480" endtime="20231125 09:49:05.899"/>
+</kw>
+<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:49:05.899"/>
+</kw>
+<kw name="Move To Template Form" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:49:05.899" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231125 09:49:05.899" endtime="20231125 09:49:06.412"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
+<arg>Daftar Template Form</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:49:06.826" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231125 09:49:06.412" endtime="20231125 09:49:06.826"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:49:09.827" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231125 09:49:06.826" endtime="20231125 09:49:09.827"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:05.899" endtime="20231125 09:49:09.827"/>
+</kw>
+<kw name="Click Button Add" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form/add</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:49:09.827" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231125 09:49:09.827" endtime="20231125 09:49:10.291"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 09:49:10.291" endtime="20231125 09:49:10.709"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:09.827" endtime="20231125 09:49:10.709"/>
+</kw>
+<kw name="Click Button Buat Canvas" library="template_form">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Canvas</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:49:10.710" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231125 09:49:10.709" endtime="20231125 09:49:11.799"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231125 09:49:17.405" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231125 09:49:17.405" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231125 09:49:11.799" endtime="20231125 09:49:17.405"/>
+</kw>
+<status status="FAIL" starttime="20231125 09:49:10.709" endtime="20231125 09:49:17.405"/>
+</kw>
+<kw name="Input Tab Index Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Select Tipe Form Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Input Nama Canvas" library="template_form">
+<arg>Nama canvas</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Input Web Service Awal Canvas" library="template_form">
+<arg>webServiceAwal</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Select Data Table Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Input No Urut Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Click Button Simpan Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+</kw>
+<kw name="Click Button Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Input Label Buat Tab" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Click Button Simpan Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Click Button Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Input Link Buat Tombol" library="template_form">
+<arg>https://www.google.com/</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Input Label Buat Tombol" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+</kw>
+<kw name="Click Button Simpan Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Click Button Buat Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Input Label Element" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Select Type Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Select Wajib Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Select Data Kolom Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Click Button Simpan Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Click Button Edit Canvas Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+</kw>
+<kw name="Click Button Simpan Edit Canvas Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Click Button Buat Element Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Input Label Element Formula" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Select Tipe Element Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Select Wajib Element Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Select Data Kolom Element Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Click Button Simpan Element Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Input Nama Form" library="template_form">
+<arg>Form Rian II</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+</kw>
+<kw name="Input Field Kunci" library="template_form">
+<arg>Field Kunci</arg>
+<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+</kw>
+<kw name="Click Button Simpan Data" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 09:49:17.410" endtime="20231125 09:49:19.662"/>
+</kw>
+<doc>SC06 - Create Element Formula</doc>
+<tag>TC02 - Create Perhitungan Formula</tag>
+<status status="FAIL" starttime="20231125 09:48:54.295" endtime="20231125 09:49:19.662">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+</test>
+<test id="s1-t3" name="TC03 - Create Formula Grandtotal" line="114">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:19.663"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>options=add_argument("--incognito")</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231125 09:49:19.664" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:24.321"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231125 09:49:24.321" endtime="20231125 09:49:24.635"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231125 09:49:24.839" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231125 09:49:24.635" endtime="20231125 09:49:24.839"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:24.839"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:49:24.840" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:25.499"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:25.499"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231125 09:49:25.499" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231125 09:49:25.499" endtime="20231125 09:49:26.153"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:25.499" endtime="20231125 09:49:26.153"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:49:26.153" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231125 09:49:26.153" endtime="20231125 09:49:26.992"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:49:31.992" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231125 09:49:26.992" endtime="20231125 09:49:31.992"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:26.153" endtime="20231125 09:49:31.992"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
+<arg>DEMO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:49:32.411" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231125 09:49:31.992" endtime="20231125 09:49:32.411"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:32.411"/>
+</kw>
+<kw name="Move To Template Form" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:49:32.411" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231125 09:49:32.411" endtime="20231125 09:49:32.906"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
+<arg>Daftar Template Form</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231125 09:49:33.320" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231125 09:49:32.906" endtime="20231125 09:49:33.320"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231125 09:49:36.321" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231125 09:49:33.320" endtime="20231125 09:49:36.321"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:32.411" endtime="20231125 09:49:36.321"/>
+</kw>
+<kw name="Click Button Add" library="template_form">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/template-form/add</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231125 09:49:36.321" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231125 09:49:36.321" endtime="20231125 09:49:36.857"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231125 09:49:36.857" endtime="20231125 09:49:37.273"/>
+</kw>
+<status status="PASS" starttime="20231125 09:49:36.321" endtime="20231125 09:49:37.273"/>
+</kw>
+<kw name="Click Button Buat Canvas" library="template_form">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Canvas</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231125 09:49:37.274" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231125 09:49:37.273" endtime="20231125 09:49:38.361"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<msg timestamp="20231125 09:49:43.961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231125 09:49:43.961" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
+<status status="FAIL" starttime="20231125 09:49:38.361" endtime="20231125 09:49:43.961"/>
+</kw>
+<status status="FAIL" starttime="20231125 09:49:37.273" endtime="20231125 09:49:43.961"/>
+</kw>
+<kw name="Input Tab Index Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.961" endtime="20231125 09:49:43.961"/>
+</kw>
+<kw name="Select Tipe Form Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Input Nama Canvas" library="template_form">
+<arg>Nama canvas</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Input Web Service Awal Canvas" library="template_form">
+<arg>webServiceAwal</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Select Data Table Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Input No Urut Canvas" library="template_form">
+<arg>1</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Click Button Simpan Canvas" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Click Button Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+</kw>
+<kw name="Input Label Buat Tab" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Click Button Simpan Buat Tab" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Click Button Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Input Link Buat Tombol" library="template_form">
+<arg>https://www.google.com/</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Input Label Buat Tombol" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Click Button Simpan Buat Tombol" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Click Button Buat Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+</kw>
+<kw name="Input Label Element" library="template_form">
+<arg>label</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Select Type Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Select Wajib Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Select Data Kolom Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Click Button Simpan Element" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Click Button Edit Canvas Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Click Button Simpan Edit Canvas Formula" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Click Button Grand Total" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+</kw>
+<kw name="Select Data Tabel Grand Total" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Select Data Kolom Grand Total" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Click Button Plus Grand Total" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Click Button Simpan Grand Total" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Input Nama Form" library="template_form">
+<arg>Form Rian III</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Input Field Kunci" library="template_form">
+<arg>Field Kunci</arg>
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Click Button Simpan Data" library="template_form">
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.966"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231125 09:49:43.966" endtime="20231125 09:49:43.966"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231125 09:49:43.966" endtime="20231125 09:49:46.208"/>
+</kw>
+<doc>SC06 - Create Element Formula</doc>
+<tag>TC03 - Create Formula Grandtotal</tag>
+<status status="FAIL" starttime="20231125 09:49:19.663" endtime="20231125 09:49:46.208">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+</test>
+<doc>Simple example using SeleniumLibrary.</doc>
+<status status="FAIL" starttime="20231125 09:48:27.394" endtime="20231125 09:49:46.209"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC01 - Create Element Formula</stat>
+<stat pass="0" fail="1" skip="0">TC02 - Create Perhitungan Formula</stat>
+<stat pass="0" fail="1" skip="0">TC03 - Create Formula Grandtotal</stat>
+</tag>
+<suite>
+<stat pass="0" fail="3" skip="0" id="s1" name="SC06 - Create Element Formula">SC06 - Create Element Formula</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -5,7 +5,6 @@ Library           SeleniumLibrary
 *** Keywords ***
 Move To TTE
     Go To    https://uji.sicantik.go.id/signature-tte
-    Wait Until Element Contains    xpath://*[@id="breadScrumbs"]/div/span    Daftar TTE
     Sleep    3s
 
 Scroll Down
