@@ -64,9 +64,12 @@ Click Button Simpan Data
 Click Button Buat Canvas
     # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[1]
     Click Button    default:Buat Canvas
-    Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+#    Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+    Wait Until Element Contains    css:h4[class="text-uppercase text-start text-white"]    CANVAS
 
 Input Tab Index Canvas
+    Press Keys    None    TAB
+    Sleep    0.5s
     Press Keys    None    TAB
     [Arguments]    ${tabIndexCanvas}
     Press Keys    None    ${tabIndexCanvas}
@@ -124,7 +127,8 @@ Input No Urut Canvas
     Press Keys    None    ${nourutCanvas}
 
 Click Button Simpan Canvas
-    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
 # End Canvas
 
 
@@ -150,22 +154,27 @@ Click Button Simpan Buat Canvas Formula
 Click Button Buat Tab
     Click Button    default:Buat Tab
     # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[2]
-    Wait Until Element Is Visible    class:modal-title
+#    Wait Until Element Is Visible    class:modal-title
 
 Input Label Buat Tab
+    Press Keys    None    TAB
+    Sleep    0.5s
     Press Keys    None    TAB
     [Arguments]    ${label}
     Press Keys    None    ${label}
 
 Click Button Simpan Buat Tab
-    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
 
 Click Button Buat Tombol
     Click Button    default:Buat Tombol
     Sleep    1s
     # Wait Until Element Is Visible    class:modal-title
 
-Select Jenis Aksi Buat Tombol
+Select Jenis Aksi Buat
+    Press Keys    None    TAB
+    Sleep    0.5s
     Press Keys    None    TAB
     Sleep    1s
     Press Keys    None    ARROW_DOWN
@@ -182,14 +191,18 @@ Input Label Buat Tombol
     Press Keys    None    ${label}
 
 Click Button Simpan Buat Tombol
-    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
 
 Click Button Buat Filter
     Click Button    default:Buat Filter
     # Click Button    xpath://*[@id="kt_content_container"]/div[1]/form/div/div[4]/button[3]
-    Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+#    Wait Until Element Is Visible    xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5
+    Wait Until Element Contains    css:h4[class="text-uppercase text-start text-white"]    PENGATURAN FILTER
 
 Input Label Pengaturan Filter
+    Press Keys    None    TAB
+    Sleep    0.5s
     Press Keys    None    TAB
     [Arguments]    ${label}
     Press Keys    None    ${label}
@@ -205,7 +218,8 @@ Select Tipe Pengaturan Filter
     Press Keys    None    ENTER
 
 Click Button Simpan Pengaturan Filter
-    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
 
 Duplicate Template Form
     Click Element    class:fa-file
@@ -251,7 +265,8 @@ Select Data Kolom Element
     Press Keys    None    ENTER
 
 Click Button Simpan Element
-    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
 # End Element
 
 # Edit Canvas formula
@@ -261,7 +276,8 @@ Click Button Edit Canvas Formula
 
 Click Button Simpan Edit Canvas Formula
     Wait Until Element Is Visible   class:btn-primary
-    Click Button    xpath://*[@id="canvas-modal-formula"]/div/form/div/div[3]/button[2]
+#    Click Button    xpath://*[@id="canvas-modal-formula"]/div/form/div/div[3]/button[2]
+    Click Button    css:button[class="el-button el-button--primary"]
     Sleep   1s
 # End
 
