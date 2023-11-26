@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231126 21:30:50.327" rpa="false" schemaversion="4">
+<suite id="s1" name="SC02 - Create Data Nomenklatur Unit" source="E:\#Freelance\Sicantik\tests\R07 - Nomkletur Unit\Admin Pusat\SC02 - Create Data Nomenklatur Unit\SC02 - Create Data Nomenklatur Unit.robot">
+<test id="s1-t1" name="TC01 - Create Data Nomenklatur Unit" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231126 21:30:50.487" endtime="20231126 21:30:50.487"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231126 21:30:50.487" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231126 21:30:50.487" endtime="20231126 21:30:58.880"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231126 21:30:58.880" endtime="20231126 21:30:59.349"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231126 21:30:59.551" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231126 21:30:59.349" endtime="20231126 21:30:59.551"/>
+</kw>
+<status status="PASS" starttime="20231126 21:30:50.487" endtime="20231126 21:30:59.551"/>
+</kw>
+<kw name="Login Admin Pusat" library="login">
+<kw name="Input Username" library="login">
+<arg>admegov</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:30:59.552" level="INFO">Typing text 'admegov' into text field 'username'.</msg>
+<status status="PASS" starttime="20231126 21:30:59.551" endtime="20231126 21:31:00.196"/>
+</kw>
+<status status="PASS" starttime="20231126 21:30:59.551" endtime="20231126 21:31:00.196"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Admegov789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:00.196" level="INFO">Typing text 'Admegov789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231126 21:31:00.196" endtime="20231126 21:31:00.816"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:00.196" endtime="20231126 21:31:00.816"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:00.816" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231126 21:31:00.816" endtime="20231126 21:31:01.832"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 21:31:06.833" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231126 21:31:01.832" endtime="20231126 21:31:06.833"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:00.816" endtime="20231126 21:31:06.833"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]</arg>
+<arg>Admin Utama</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231126 21:31:07.250" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]' contains text 'Admin Utama'.</msg>
+<status status="PASS" starttime="20231126 21:31:06.833" endtime="20231126 21:31:07.250"/>
+</kw>
+<status status="PASS" starttime="20231126 21:30:59.551" endtime="20231126 21:31:07.250"/>
+</kw>
+<kw name="Move To Nomenklatur" library="nomenklatur">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/form/list/32106</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231126 21:31:07.250" level="INFO">Opening url 'https://uji.sicantik.go.id/form/list/32106'</msg>
+<status status="PASS" starttime="20231126 21:31:07.250" endtime="20231126 21:31:07.814"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Nomenklatur Admin</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 21:31:07.814" endtime="20231126 21:31:08.422"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 21:31:11.423" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231126 21:31:08.422" endtime="20231126 21:31:11.423"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:07.250" endtime="20231126 21:31:11.423"/>
+</kw>
+<kw name="Click Btn Tambah" library="nomenklatur">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary mx-1"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:11.423" endtime="20231126 21:31:11.849"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary mx-1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:11.849" level="INFO">Clicking button '//*[@class="btn btn-primary mx-1"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:11.849" endtime="20231126 21:31:13.088"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Tambah Nomenklatur Unit Admin</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 21:31:13.088" endtime="20231126 21:31:13.696"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:11.423" endtime="20231126 21:31:13.696"/>
+</kw>
+<kw name="Input Id Unit" library="nomenklatur">
+<arg>1</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan ID Unit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:13.696" endtime="20231126 21:31:14.107"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan ID Unit"]</arg>
+<arg>${idUnit}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:14.107" level="INFO">Typing text '1' into text field '//*[@placeholder="Masukan ID Unit"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:14.107" endtime="20231126 21:31:14.750"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:13.696" endtime="20231126 21:31:14.750"/>
+</kw>
+<kw name="Input Nama Singkatan" library="nomenklatur">
+<arg>namaSingkatanRian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Singkatan (Contoh DPMPTSP Kabupaten Demo)"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:14.750" endtime="20231126 21:31:15.160"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Singkatan (Contoh DPMPTSP Kabupaten Demo)"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:15.160" level="INFO">Typing text 'namaSingkatanRian' into text field '//*[@placeholder="Masukan Nama Singkatan (Contoh DPMPTSP Kabupaten Demo)"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:15.160" endtime="20231126 21:31:15.778"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:14.750" endtime="20231126 21:31:15.778"/>
+</kw>
+<kw name="Input Nama Uraian" library="nomenklatur">
+<arg>namaUraianRian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Uraian (Contoh Dinas Penanaman Modal Terpadu Satu Pintu Kabupaten Demo)"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:15.778" endtime="20231126 21:31:16.189"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Uraian (Contoh Dinas Penanaman Modal Terpadu Satu Pintu Kabupaten Demo)"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:16.189" level="INFO">Typing text 'namaUraianRian' into text field '//*[@placeholder="Masukan Nama Uraian (Contoh Dinas Penanaman Modal Terpadu Satu Pintu Kabupaten Demo)"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:16.189" endtime="20231126 21:31:16.805"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:15.778" endtime="20231126 21:31:16.805"/>
+</kw>
+<kw name="Input Nama Daerah" library="nomenklatur">
+<arg>namaDaerahRian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Daerah Provinsi/Kabupaten/Kota (Contoh Kabupaten Demo)"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:16.805" endtime="20231126 21:31:17.216"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Nama Daerah Provinsi/Kabupaten/Kota (Contoh Kabupaten Demo)"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:17.216" level="INFO">Typing text 'namaDaerahRian' into text field '//*[@placeholder="Masukan Nama Daerah Provinsi/Kabupaten/Kota (Contoh Kabupaten Demo)"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:17.216" endtime="20231126 21:31:17.839"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:16.805" endtime="20231126 21:31:17.839"/>
+</kw>
+<kw name="Input Alamat Unit" library="nomenklatur">
+<arg>alamatUnitRian</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Alamat Unit"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:17.839" endtime="20231126 21:31:18.250"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Alamat Unit"]</arg>
+<arg>${param}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:18.250" level="INFO">Typing text 'alamatUnitRian' into text field '//*[@placeholder="Masukan Alamat Unit"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:18.250" endtime="20231126 21:31:18.869"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:17.839" endtime="20231126 21:31:18.869"/>
+</kw>
+<kw name="Click Btn Simpan" library="nomenklatur">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary mx-1"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:31:18.869" endtime="20231126 21:31:19.280"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="btn btn-primary mx-1"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 21:31:19.280" level="INFO">Clicking button '//*[@class="btn btn-primary mx-1"]'.</msg>
+<status status="PASS" starttime="20231126 21:31:19.280" endtime="20231126 21:31:20.529"/>
+</kw>
+<status status="PASS" starttime="20231126 21:31:18.869" endtime="20231126 21:31:20.529"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 21:31:22.530" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231126 21:31:20.529" endtime="20231126 21:31:22.530"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20231126 21:31:22.782" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231126 21:31:22.530" endtime="20231126 21:31:22.782"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231126 21:31:22.782" endtime="20231126 21:31:25.872"/>
+</kw>
+<doc>SC02 - Create Data Nomenklatur Unit</doc>
+<tag>TC01 - Create Data Nomenklatur Unit</tag>
+<status status="PASS" starttime="20231126 21:30:50.486" endtime="20231126 21:31:25.872"/>
+</test>
+<doc>SC02 - Create Data Nomenklatur Unit</doc>
+<status status="PASS" starttime="20231126 21:30:50.328" endtime="20231126 21:31:25.873"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">TC01 - Create Data Nomenklatur Unit</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="SC02 - Create Data Nomenklatur Unit">SC02 - Create Data Nomenklatur Unit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
