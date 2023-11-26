@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231126 21:40:35.885" rpa="false" schemaversion="4">
+<suite id="s1" name="SC02 - Update Nomenklatur Unit" source="E:\#Freelance\Sicantik\tests\R07 - Nomkletur Unit\Admin Instansi\SC02 - Update Nomenklatur Unit\SC02 - Update Nomenklatur Unit.robot">
+<test id="s1-t1" name="TC01 - Update Nomenklatur Unit" line="12">
+<kw name="Open Browser To Login Page" library="login">
+<kw name="Set Selenium Speed" library="SeleniumLibrary">
+<arg>0.2s</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" starttime="20231126 21:40:36.057" endtime="20231126 21:40:36.057"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${LOGIN URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231126 21:40:36.058" level="INFO">Opening browser 'Firefox' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231126 21:40:36.057" endtime="20231126 21:40:43.991"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231126 21:40:43.991" endtime="20231126 21:40:44.458"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>SICANTIK</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20231126 21:40:44.660" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231126 21:40:44.458" endtime="20231126 21:40:44.660"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:36.057" endtime="20231126 21:40:44.660"/>
+</kw>
+<kw name="Login Admin Instansi" library="login">
+<kw name="Input Username" library="login">
+<arg>demo</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>username</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:40:44.661" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231126 21:40:44.661" endtime="20231126 21:40:45.307"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:44.660" endtime="20231126 21:40:45.307"/>
+</kw>
+<kw name="Input Password" library="login">
+<arg>Demo789*@#</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231126 21:40:45.308" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231126 21:40:45.307" endtime="20231126 21:40:45.925"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:45.307" endtime="20231126 21:40:45.925"/>
+</kw>
+<kw name="Submit Credentials" library="login">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>kt_sign_in_submit</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 21:40:45.926" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231126 21:40:45.925" endtime="20231126 21:40:46.950"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 21:40:51.951" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231126 21:40:46.950" endtime="20231126 21:40:51.951"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:45.925" endtime="20231126 21:40:51.951"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
+<arg>DEMO</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20231126 21:40:52.368" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231126 21:40:51.951" endtime="20231126 21:40:52.368"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:44.660" endtime="20231126 21:40:52.368"/>
+</kw>
+<kw name="Move To Nomenklatur Adm Instansi" library="nomenklatur">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>https://uji.sicantik.go.id/form/list/32033</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20231126 21:40:52.369" level="INFO">Opening url 'https://uji.sicantik.go.id/form/list/32033'</msg>
+<status status="PASS" starttime="20231126 21:40:52.368" endtime="20231126 21:40:52.892"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Daftar Nomenklatur</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20231126 21:40:52.892" endtime="20231126 21:40:53.096"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231126 21:40:58.097" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231126 21:40:53.096" endtime="20231126 21:40:58.097"/>
+</kw>
+<status status="PASS" starttime="20231126 21:40:52.368" endtime="20231126 21:40:58.097"/>
+</kw>
+<kw name="Click Btn Edit" library="nomenklatur">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="far fa-edit text-info me-3 pe-auto el-tooltip__trigger el-tooltip__trigger"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231126 21:40:58.097" endtime="20231126 21:40:58.511"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>//*[@class="far fa-edit text-info me-3 pe-auto el-tooltip__trigger el-tooltip__trigger"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231126 21:40:58.511" level="INFO">Clicking button '//*[@class="far fa-edit text-info me-3 pe-auto el-tooltip__trigger el-tooltip__trigger"]'.</msg>
+<msg timestamp="20231126 21:40:59.564" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg timestamp="20231126 21:40:59.564" level="FAIL">Button with locator '//*[@class="far fa-edit text-info me-3 pe-auto el-tooltip__trigger el-tooltip__trigger"]' not found.</msg>
+<status status="FAIL" starttime="20231126 21:40:58.511" endtime="20231126 21:40:59.565"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>Nomenklatur Unit</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="NOT RUN" starttime="20231126 21:40:59.566" endtime="20231126 21:40:59.566"/>
+</kw>
+<status status="FAIL" starttime="20231126 21:40:58.097" endtime="20231126 21:40:59.566"/>
+</kw>
+<kw name="Click Btn Simpan" library="nomenklatur">
+<status status="NOT RUN" starttime="20231126 21:40:59.566" endtime="20231126 21:40:59.566"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" starttime="20231126 21:40:59.566" endtime="20231126 21:40:59.566"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" starttime="20231126 21:40:59.566" endtime="20231126 21:40:59.566"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20231126 21:40:59.567" endtime="20231126 21:41:02.888"/>
+</kw>
+<doc>SC02 - Update Nomenklatur Unit</doc>
+<tag>TC01 - Update Nomenklatur Unit</tag>
+<status status="FAIL" starttime="20231126 21:40:36.056" endtime="20231126 21:41:02.888">Button with locator '//*[@class="far fa-edit text-info me-3 pe-auto el-tooltip__trigger el-tooltip__trigger"]' not found.</status>
+</test>
+<doc>SC02 - Update Nomenklatur Unit</doc>
+<status status="FAIL" starttime="20231126 21:40:35.887" endtime="20231126 21:41:02.888"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">TC01 - Update Nomenklatur Unit</stat>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="SC02 - Update Nomenklatur Unit">SC02 - Update Nomenklatur Unit</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
