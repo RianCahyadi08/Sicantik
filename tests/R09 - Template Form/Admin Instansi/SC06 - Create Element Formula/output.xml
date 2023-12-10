@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231125 09:48:27.393" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.12.0 on win32)" generated="20231210 21:09:48.266" rpa="false" schemaversion="4">
 <suite id="s1" name="SC06 - Create Element Formula" source="E:\#Freelance\Sicantik\tests\R09 - Template Form\Admin Instansi\SC06 - Create Element Formula\SC06 - Create Element Formula.robot">
-<test id="s1-t1" name="TC01 - Create Element Formula" line="13">
+<test id="s1-t1" name="TC01 - Create Element Formula" line="7">
 <kw name="Open Browser To Login Page" library="login">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.2s</arg>
+<arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231125 09:48:27.555" endtime="20231125 09:48:27.556"/>
+<status status="PASS" starttime="20231210 21:09:48.425" endtime="20231210 21:09:48.425"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_argument("--incognito")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231125 09:48:27.556" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
-<status status="PASS" starttime="20231125 09:48:27.556" endtime="20231125 09:48:31.571"/>
+<msg timestamp="20231210 21:09:48.425" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231210 21:09:48.425" endtime="20231210 21:09:52.843"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231125 09:48:31.571" endtime="20231125 09:48:31.889"/>
+<status status="PASS" starttime="20231210 21:09:52.843" endtime="20231210 21:09:53.261"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>SICANTIK</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231125 09:48:32.093" level="INFO">Page title is 'SICANTIK'.</msg>
-<status status="PASS" starttime="20231125 09:48:31.889" endtime="20231125 09:48:32.093"/>
+<msg timestamp="20231210 21:09:53.565" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231210 21:09:53.261" endtime="20231210 21:09:53.565"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:27.555" endtime="20231125 09:48:32.093"/>
+<status status="PASS" starttime="20231210 21:09:48.425" endtime="20231210 21:09:53.565"/>
 </kw>
 <kw name="Login Admin Instansi" library="login">
 <kw name="Input Username" library="login">
@@ -35,10 +35,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:32.094" level="INFO">Typing text 'demo' into text field 'username'.</msg>
-<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:32.754"/>
+<msg timestamp="20231210 21:09:53.565" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231210 21:09:53.565" endtime="20231210 21:09:54.527"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:32.754"/>
+<status status="PASS" starttime="20231210 21:09:53.565" endtime="20231210 21:09:54.527"/>
 </kw>
 <kw name="Input Password" library="login">
 <arg>Demo789*@#</arg>
@@ -46,212 +46,702 @@
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:32.754" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
-<status status="PASS" starttime="20231125 09:48:32.754" endtime="20231125 09:48:33.409"/>
+<msg timestamp="20231210 21:09:54.527" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231210 21:09:54.527" endtime="20231210 21:09:55.481"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:32.754" endtime="20231125 09:48:33.409"/>
+<status status="PASS" starttime="20231210 21:09:54.527" endtime="20231210 21:09:55.481"/>
 </kw>
 <kw name="Submit Credentials" library="login">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>kt_sign_in_submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:33.409" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
-<status status="PASS" starttime="20231125 09:48:33.409" endtime="20231125 09:48:34.249"/>
+<msg timestamp="20231210 21:09:55.481" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231210 21:09:55.481" endtime="20231210 21:09:56.721"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:48:39.250" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231125 09:48:34.249" endtime="20231125 09:48:39.250"/>
+<msg timestamp="20231210 21:10:01.721" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231210 21:09:56.721" endtime="20231210 21:10:01.721"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:33.409" endtime="20231125 09:48:39.250"/>
+<status status="PASS" starttime="20231210 21:09:55.481" endtime="20231210 21:10:01.721"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
 <arg>DEMO</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:48:39.667" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
-<status status="PASS" starttime="20231125 09:48:39.250" endtime="20231125 09:48:39.667"/>
+<msg timestamp="20231210 21:10:02.341" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231210 21:10:01.721" endtime="20231210 21:10:02.341"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:32.093" endtime="20231125 09:48:39.667"/>
+<status status="PASS" starttime="20231210 21:09:53.565" endtime="20231210 21:10:02.341"/>
 </kw>
 <kw name="Move To Template Form" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:48:39.667" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
-<status status="PASS" starttime="20231125 09:48:39.667" endtime="20231125 09:48:40.163"/>
+<msg timestamp="20231210 21:10:02.341" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231210 21:10:02.341" endtime="20231210 21:10:03.002"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
 <arg>Daftar Template Form</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:48:40.579" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
-<status status="PASS" starttime="20231125 09:48:40.163" endtime="20231125 09:48:40.579"/>
+<msg timestamp="20231210 21:10:03.616" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231210 21:10:03.002" endtime="20231210 21:10:03.616"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:48:43.580" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231125 09:48:40.579" endtime="20231125 09:48:43.580"/>
+<msg timestamp="20231210 21:10:06.617" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231210 21:10:03.616" endtime="20231210 21:10:06.617"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:39.667" endtime="20231125 09:48:43.580"/>
+<status status="PASS" starttime="20231210 21:10:02.341" endtime="20231210 21:10:06.617"/>
 </kw>
 <kw name="Click Button Add" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form/add</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:48:43.580" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
-<status status="PASS" starttime="20231125 09:48:43.580" endtime="20231125 09:48:44.932"/>
+<msg timestamp="20231210 21:10:06.617" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231210 21:10:06.617" endtime="20231210 21:10:07.362"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231125 09:48:44.932" endtime="20231125 09:48:45.351"/>
+<status status="PASS" starttime="20231210 21:10:07.362" endtime="20231210 21:10:07.979"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:43.580" endtime="20231125 09:48:45.351"/>
+<status status="PASS" starttime="20231210 21:10:06.617" endtime="20231210 21:10:07.979"/>
 </kw>
 <kw name="Click Button Buat Canvas" library="template_form">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>default:Buat Canvas</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:45.352" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
-<status status="PASS" starttime="20231125 09:48:45.351" endtime="20231125 09:48:46.431"/>
+<msg timestamp="20231210 21:10:07.979" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231210 21:10:07.979" endtime="20231210 21:10:09.215"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231125 09:48:52.033" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231125 09:48:52.033" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20231125 09:48:46.431" endtime="20231125 09:48:52.034"/>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>css:h4[class="text-uppercase text-start text-white"]</arg>
+<arg>CANVAS</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231210 21:10:09.215" endtime="20231210 21:10:09.862"/>
 </kw>
-<status status="FAIL" starttime="20231125 09:48:45.351" endtime="20231125 09:48:52.034"/>
+<status status="PASS" starttime="20231210 21:10:07.979" endtime="20231210 21:10:09.862"/>
 </kw>
 <kw name="Input Tab Index Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.034" endtime="20231125 09:48:52.034"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:09.862" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:09.862" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:09.862" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:09.862" endtime="20231210 21:10:10.169"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:10.670" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:10.169" endtime="20231210 21:10:10.670"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:10.670" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:10.670" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:10.670" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:10.670" endtime="20231210 21:10:10.976"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tabIndexCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:10.976" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:10:10.976" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:10:10.976" endtime="20231210 21:10:11.282"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:09.862" endtime="20231210 21:10:11.282"/>
 </kw>
 <kw name="Select Tipe Form Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.034" endtime="20231125 09:48:52.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:11.283" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:11.283" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:11.283" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:11.282" endtime="20231210 21:10:11.594"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>Form</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:11.594" level="INFO">Sending key(s) ('Form',) to page.</msg>
+<msg timestamp="20231210 21:10:11.594" level="INFO">Sending keys Form</msg>
+<status status="PASS" starttime="20231210 21:10:11.594" endtime="20231210 21:10:11.912"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:11.912" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:11.912" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:11.912" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:11.912" endtime="20231210 21:10:12.217"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:12.217" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:12.217" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:12.217" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:12.217" endtime="20231210 21:10:12.530"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:11.282" endtime="20231210 21:10:12.530"/>
 </kw>
 <kw name="Input Nama Canvas" library="template_form">
 <arg>Nama canvas</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:12.530" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:12.530" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:12.530" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:12.530" endtime="20231210 21:10:12.841"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${namaCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:12.841" level="INFO">Sending key(s) ('Nama canvas',) to page.</msg>
+<msg timestamp="20231210 21:10:12.841" level="INFO">Sending keys Nama canvas</msg>
+<status status="PASS" starttime="20231210 21:10:12.841" endtime="20231210 21:10:13.162"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:12.530" endtime="20231210 21:10:13.162"/>
 </kw>
 <kw name="Input Web Service Awal Canvas" library="template_form">
 <arg>webServiceAwal</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:13.163" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:13.163" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:13.163" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:13.162" endtime="20231210 21:10:13.468"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${webServiceAwal}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:13.468" level="INFO">Sending key(s) ('webServiceAwal',) to page.</msg>
+<msg timestamp="20231210 21:10:13.468" level="INFO">Sending keys webServiceAwal</msg>
+<status status="PASS" starttime="20231210 21:10:13.468" endtime="20231210 21:10:13.791"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:13.162" endtime="20231210 21:10:13.791"/>
 </kw>
 <kw name="Select Data Table Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:13.792" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:13.792" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:13.792" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:13.791" endtime="20231210 21:10:14.098"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:15.098" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:14.098" endtime="20231210 21:10:15.098"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:15.098" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:15.098" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:15.098" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:15.098" endtime="20231210 21:10:15.403"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:16.404" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:15.403" endtime="20231210 21:10:16.404"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:16.404" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:16.404" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:16.404" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:16.404" endtime="20231210 21:10:16.713"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:13.791" endtime="20231210 21:10:16.713"/>
 </kw>
 <kw name="Input No Urut Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:16.713" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:16.713" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:16.713" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:16.713" endtime="20231210 21:10:17.022"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${nourutCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:17.022" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:10:17.022" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:10:17.022" endtime="20231210 21:10:17.328"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:16.713" endtime="20231210 21:10:17.328"/>
 </kw>
 <kw name="Click Button Simpan Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.035" endtime="20231125 09:48:52.035"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:17.329" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:17.328" endtime="20231210 21:10:18.876"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:17.328" endtime="20231210 21:10:18.876"/>
 </kw>
 <kw name="Click Button Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tab</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:18.876" level="INFO">Clicking button 'default:Buat Tab'.</msg>
+<status status="PASS" starttime="20231210 21:10:18.876" endtime="20231210 21:10:20.118"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:18.876" endtime="20231210 21:10:20.118"/>
 </kw>
 <kw name="Input Label Buat Tab" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:20.118" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:20.118" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:20.118" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:20.118" endtime="20231210 21:10:20.424"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:20.924" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:20.424" endtime="20231210 21:10:20.924"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:20.924" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:20.924" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:20.924" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:20.924" endtime="20231210 21:10:21.229"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:21.229" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:10:21.229" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:10:21.229" endtime="20231210 21:10:21.541"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:20.118" endtime="20231210 21:10:21.541"/>
 </kw>
 <kw name="Click Button Simpan Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:21.542" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:21.541" endtime="20231210 21:10:23.083"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:21.541" endtime="20231210 21:10:23.083"/>
 </kw>
 <kw name="Click Button Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tombol</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:23.083" level="INFO">Clicking button 'default:Buat Tombol'.</msg>
+<status status="PASS" starttime="20231210 21:10:23.083" endtime="20231210 21:10:24.321"/>
 </kw>
-<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:25.321" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:24.321" endtime="20231210 21:10:25.321"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:23.083" endtime="20231210 21:10:25.321"/>
+</kw>
+<kw name="Select Jenis Aksi Buat" library="template_form">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:25.322" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:25.322" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:25.322" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:25.321" endtime="20231210 21:10:25.626"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:26.126" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:25.626" endtime="20231210 21:10:26.126"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:26.126" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:26.126" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:26.126" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:26.126" endtime="20231210 21:10:26.436"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:27.436" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:26.436" endtime="20231210 21:10:27.436"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:27.436" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:27.436" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:27.436" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:27.436" endtime="20231210 21:10:27.740"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:27.740" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:27.740" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:27.740" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:27.740" endtime="20231210 21:10:28.049"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:25.321" endtime="20231210 21:10:28.049"/>
 </kw>
 <kw name="Input Link Buat Tombol" library="template_form">
 <arg>https://www.google.com/</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.036" endtime="20231125 09:48:52.036"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:28.049" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:28.049" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:28.049" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:28.049" endtime="20231210 21:10:28.356"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${link}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:28.356" level="INFO">Sending key(s) ('https://www.google.com/',) to page.</msg>
+<msg timestamp="20231210 21:10:28.356" level="INFO">Sending keys https://www.google.com/</msg>
+<status status="PASS" starttime="20231210 21:10:28.356" endtime="20231210 21:10:28.693"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:28.049" endtime="20231210 21:10:28.693"/>
 </kw>
 <kw name="Input Label Buat Tombol" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:28.694" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:28.694" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:28.694" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:28.693" endtime="20231210 21:10:29.000"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:29.000" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:10:29.000" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:10:29.000" endtime="20231210 21:10:29.311"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:28.693" endtime="20231210 21:10:29.311"/>
 </kw>
 <kw name="Click Button Simpan Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:29.311" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:29.311" endtime="20231210 21:10:30.865"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:29.311" endtime="20231210 21:10:30.865"/>
 </kw>
 <kw name="Click Button Buat Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Element</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:30.865" level="INFO">Clicking button 'default:Buat Element'.</msg>
+<status status="PASS" starttime="20231210 21:10:30.865" endtime="20231210 21:10:32.104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="text-uppercase text-start text-white"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:10:32.104" endtime="20231210 21:10:32.755"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:30.865" endtime="20231210 21:10:32.755"/>
 </kw>
 <kw name="Input Label Element" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:10:32.755" endtime="20231210 21:10:33.368"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<arg>${label}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:33.368" level="INFO">Typing text 'label' into text field '//*[@placeholder="Masukan Label"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:33.368" endtime="20231210 21:10:34.321"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:32.755" endtime="20231210 21:10:34.321"/>
 </kw>
 <kw name="Select Type Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:10:34.321" endtime="20231210 21:10:34.935"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:34.935" level="INFO">Clicking element '//*[@placeholder="Pilih Tipe"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:34.935" endtime="20231210 21:10:35.567"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:35.567" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:35.567" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:35.567" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:35.567" endtime="20231210 21:10:35.874"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:36.375" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:35.874" endtime="20231210 21:10:36.375"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:36.375" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:36.375" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:36.375" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:36.375" endtime="20231210 21:10:36.685"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:34.321" endtime="20231210 21:10:36.685"/>
 </kw>
 <kw name="Select Wajib Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:10:36.685" endtime="20231210 21:10:37.302"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:37.302" level="INFO">Clicking element '//*[@placeholder="Pilih Wajib"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:37.302" endtime="20231210 21:10:37.930"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:38.431" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:37.930" endtime="20231210 21:10:38.431"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:38.431" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:38.431" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:38.431" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:38.431" endtime="20231210 21:10:38.735"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:39.235" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:10:38.735" endtime="20231210 21:10:39.235"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:39.235" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:39.235" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:39.235" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:39.235" endtime="20231210 21:10:39.544"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:36.685" endtime="20231210 21:10:39.544"/>
 </kw>
 <kw name="Select Data Kolom Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.037" endtime="20231125 09:48:52.037"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:10:39.545" endtime="20231210 21:10:40.160"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:40.160" level="INFO">Clicking element '//*[@placeholder="Masukan Data Kolom"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:40.160" endtime="20231210 21:10:40.786"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:41.787" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:40.786" endtime="20231210 21:10:41.787"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:41.787" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:10:41.787" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:10:41.787" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:10:41.787" endtime="20231210 21:10:42.091"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:43.092" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:42.091" endtime="20231210 21:10:43.092"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:43.092" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:10:43.092" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:10:43.092" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:10:43.092" endtime="20231210 21:10:43.402"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:39.544" endtime="20231210 21:10:43.402"/>
 </kw>
 <kw name="Click Button Simpan Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:43.402" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:10:43.402" endtime="20231210 21:10:44.962"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:43.402" endtime="20231210 21:10:44.962"/>
 </kw>
 <kw name="Input Nama Form" library="template_form">
 <arg>Form Rian I</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:10:45.962" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:10:44.962" endtime="20231210 21:10:45.962"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:el-input__inner</arg>
+<arg>${namaForm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:45.962" level="INFO">Typing text 'Form Rian I' into text field 'class:el-input__inner'.</msg>
+<status status="PASS" starttime="20231210 21:10:45.962" endtime="20231210 21:10:46.918"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:44.962" endtime="20231210 21:10:46.918"/>
 </kw>
 <kw name="Input Field Kunci" library="template_form">
 <arg>Field Kunci</arg>
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:46.919" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:10:46.919" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:10:46.919" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:10:46.918" endtime="20231210 21:10:47.225"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${fieldKunci}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:10:47.225" level="INFO">Sending key(s) ('Field Kunci',) to page.</msg>
+<msg timestamp="20231210 21:10:47.225" level="INFO">Sending keys Field Kunci</msg>
+<status status="PASS" starttime="20231210 21:10:47.225" endtime="20231210 21:10:47.548"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:46.918" endtime="20231210 21:10:47.548"/>
 </kw>
 <kw name="Click Button Simpan Data" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan Data</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:10:47.548" level="INFO">Clicking button 'default:Simpan Data'.</msg>
+<status status="PASS" starttime="20231210 21:10:47.548" endtime="20231210 21:10:48.786"/>
+</kw>
+<status status="PASS" starttime="20231210 21:10:47.548" endtime="20231210 21:10:48.786"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<msg timestamp="20231210 21:10:50.786" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231210 21:10:48.786" endtime="20231210 21:10:50.786"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20231125 09:48:52.038" endtime="20231125 09:48:52.038"/>
+<msg timestamp="20231210 21:10:51.208" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231210 21:10:50.786" endtime="20231210 21:10:51.208"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231125 09:48:52.038" endtime="20231125 09:48:54.294"/>
+<status status="PASS" starttime="20231210 21:10:51.208" endtime="20231210 21:10:53.547"/>
 </kw>
 <doc>SC06 - Create Element Formula</doc>
 <tag>TC01 - Create Element Formula</tag>
-<status status="FAIL" starttime="20231125 09:48:27.555" endtime="20231125 09:48:54.294">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+<status status="PASS" starttime="20231210 21:09:48.425" endtime="20231210 21:10:53.547"/>
 </test>
-<test id="s1-t2" name="TC02 - Create Perhitungan Formula" line="57">
+<test id="s1-t2" name="TC02 - Create Perhitungan Formula" line="51">
 <kw name="Open Browser To Login Page" library="login">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.2s</arg>
+<arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:54.295"/>
+<status status="PASS" starttime="20231210 21:10:53.548" endtime="20231210 21:10:53.548"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_argument("--incognito")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231125 09:48:54.296" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
-<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:57.808"/>
+<msg timestamp="20231210 21:10:53.549" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231210 21:10:53.548" endtime="20231210 21:10:57.227"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231125 09:48:57.808" endtime="20231125 09:48:58.122"/>
+<status status="PASS" starttime="20231210 21:10:57.227" endtime="20231210 21:10:57.649"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>SICANTIK</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231125 09:48:58.326" level="INFO">Page title is 'SICANTIK'.</msg>
-<status status="PASS" starttime="20231125 09:48:58.122" endtime="20231125 09:48:58.326"/>
+<msg timestamp="20231210 21:10:57.953" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231210 21:10:57.649" endtime="20231210 21:10:57.953"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:54.295" endtime="20231125 09:48:58.326"/>
+<status status="PASS" starttime="20231210 21:10:53.548" endtime="20231210 21:10:57.953"/>
 </kw>
 <kw name="Login Admin Instansi" library="login">
 <kw name="Input Username" library="login">
@@ -260,10 +750,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:58.327" level="INFO">Typing text 'demo' into text field 'username'.</msg>
-<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:48:58.987"/>
+<msg timestamp="20231210 21:10:57.953" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231210 21:10:57.953" endtime="20231210 21:10:58.917"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:48:58.987"/>
+<status status="PASS" starttime="20231210 21:10:57.953" endtime="20231210 21:10:58.917"/>
 </kw>
 <kw name="Input Password" library="login">
 <arg>Demo789*@#</arg>
@@ -271,237 +761,1039 @@
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:58.987" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
-<status status="PASS" starttime="20231125 09:48:58.987" endtime="20231125 09:48:59.641"/>
+<msg timestamp="20231210 21:10:58.917" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231210 21:10:58.917" endtime="20231210 21:10:59.871"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:58.987" endtime="20231125 09:48:59.641"/>
+<status status="PASS" starttime="20231210 21:10:58.917" endtime="20231210 21:10:59.871"/>
 </kw>
 <kw name="Submit Credentials" library="login">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>kt_sign_in_submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:48:59.642" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
-<status status="PASS" starttime="20231125 09:48:59.641" endtime="20231125 09:49:00.480"/>
+<msg timestamp="20231210 21:10:59.872" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231210 21:10:59.871" endtime="20231210 21:11:01.113"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:49:05.480" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231125 09:49:00.480" endtime="20231125 09:49:05.480"/>
+<msg timestamp="20231210 21:11:06.113" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231210 21:11:01.113" endtime="20231210 21:11:06.113"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:59.641" endtime="20231125 09:49:05.480"/>
+<status status="PASS" starttime="20231210 21:10:59.871" endtime="20231210 21:11:06.113"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
 <arg>DEMO</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:49:05.899" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
-<status status="PASS" starttime="20231125 09:49:05.480" endtime="20231125 09:49:05.899"/>
+<msg timestamp="20231210 21:11:06.733" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231210 21:11:06.113" endtime="20231210 21:11:06.733"/>
 </kw>
-<status status="PASS" starttime="20231125 09:48:58.326" endtime="20231125 09:49:05.899"/>
+<status status="PASS" starttime="20231210 21:10:57.953" endtime="20231210 21:11:06.733"/>
 </kw>
 <kw name="Move To Template Form" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:49:05.899" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
-<status status="PASS" starttime="20231125 09:49:05.899" endtime="20231125 09:49:06.412"/>
+<msg timestamp="20231210 21:11:06.733" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231210 21:11:06.733" endtime="20231210 21:11:07.343"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
 <arg>Daftar Template Form</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:49:06.826" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
-<status status="PASS" starttime="20231125 09:49:06.412" endtime="20231125 09:49:06.826"/>
+<msg timestamp="20231210 21:11:07.957" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231210 21:11:07.343" endtime="20231210 21:11:07.957"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:49:09.827" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231125 09:49:06.826" endtime="20231125 09:49:09.827"/>
+<msg timestamp="20231210 21:11:10.958" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231210 21:11:07.957" endtime="20231210 21:11:10.958"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:05.899" endtime="20231125 09:49:09.827"/>
+<status status="PASS" starttime="20231210 21:11:06.733" endtime="20231210 21:11:10.958"/>
 </kw>
 <kw name="Click Button Add" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form/add</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:49:09.827" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
-<status status="PASS" starttime="20231125 09:49:09.827" endtime="20231125 09:49:10.291"/>
+<msg timestamp="20231210 21:11:10.958" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231210 21:11:10.958" endtime="20231210 21:11:12.076"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231125 09:49:10.291" endtime="20231125 09:49:10.709"/>
+<status status="PASS" starttime="20231210 21:11:12.076" endtime="20231210 21:11:12.693"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:09.827" endtime="20231125 09:49:10.709"/>
+<status status="PASS" starttime="20231210 21:11:10.958" endtime="20231210 21:11:12.693"/>
 </kw>
 <kw name="Click Button Buat Canvas" library="template_form">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>default:Buat Canvas</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:49:10.710" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
-<status status="PASS" starttime="20231125 09:49:10.709" endtime="20231125 09:49:11.799"/>
+<msg timestamp="20231210 21:11:12.693" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231210 21:11:12.693" endtime="20231210 21:11:13.933"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231125 09:49:17.405" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231125 09:49:17.405" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20231125 09:49:11.799" endtime="20231125 09:49:17.405"/>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>css:h4[class="text-uppercase text-start text-white"]</arg>
+<arg>CANVAS</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231210 21:11:13.933" endtime="20231210 21:11:14.586"/>
 </kw>
-<status status="FAIL" starttime="20231125 09:49:10.709" endtime="20231125 09:49:17.405"/>
+<status status="PASS" starttime="20231210 21:11:12.693" endtime="20231210 21:11:14.586"/>
 </kw>
 <kw name="Input Tab Index Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:14.587" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:14.587" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:14.587" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:14.586" endtime="20231210 21:11:14.891"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:15.392" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:14.891" endtime="20231210 21:11:15.392"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:15.392" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:15.392" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:15.392" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:15.392" endtime="20231210 21:11:15.698"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tabIndexCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:15.698" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:11:15.698" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:11:15.698" endtime="20231210 21:11:16.005"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:14.586" endtime="20231210 21:11:16.005"/>
 </kw>
 <kw name="Select Tipe Form Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:16.006" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:16.006" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:16.006" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:16.005" endtime="20231210 21:11:16.317"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>Form</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:16.317" level="INFO">Sending key(s) ('Form',) to page.</msg>
+<msg timestamp="20231210 21:11:16.317" level="INFO">Sending keys Form</msg>
+<status status="PASS" starttime="20231210 21:11:16.317" endtime="20231210 21:11:16.631"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:16.631" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:16.631" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:16.631" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:16.631" endtime="20231210 21:11:16.936"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:16.936" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:16.936" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:16.936" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:16.936" endtime="20231210 21:11:17.247"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:16.005" endtime="20231210 21:11:17.247"/>
 </kw>
 <kw name="Input Nama Canvas" library="template_form">
 <arg>Nama canvas</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:17.247" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:17.247" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:17.247" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:17.247" endtime="20231210 21:11:17.557"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${namaCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:17.557" level="INFO">Sending key(s) ('Nama canvas',) to page.</msg>
+<msg timestamp="20231210 21:11:17.557" level="INFO">Sending keys Nama canvas</msg>
+<status status="PASS" starttime="20231210 21:11:17.557" endtime="20231210 21:11:17.879"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:17.247" endtime="20231210 21:11:17.879"/>
 </kw>
 <kw name="Input Web Service Awal Canvas" library="template_form">
 <arg>webServiceAwal</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:17.880" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:17.880" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:17.880" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:17.879" endtime="20231210 21:11:18.185"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${webServiceAwal}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:18.185" level="INFO">Sending key(s) ('webServiceAwal',) to page.</msg>
+<msg timestamp="20231210 21:11:18.185" level="INFO">Sending keys webServiceAwal</msg>
+<status status="PASS" starttime="20231210 21:11:18.185" endtime="20231210 21:11:18.508"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:17.879" endtime="20231210 21:11:18.508"/>
 </kw>
 <kw name="Select Data Table Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:18.509" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:18.509" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:18.509" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:18.508" endtime="20231210 21:11:18.816"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:19.816" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:18.816" endtime="20231210 21:11:19.816"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:19.816" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:19.816" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:19.816" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:19.816" endtime="20231210 21:11:20.121"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:21.121" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:20.121" endtime="20231210 21:11:21.121"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:21.121" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:21.121" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:21.121" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:21.121" endtime="20231210 21:11:21.430"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:18.508" endtime="20231210 21:11:21.430"/>
 </kw>
 <kw name="Input No Urut Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:21.430" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:21.430" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:21.430" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:21.430" endtime="20231210 21:11:21.739"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${nourutCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:21.739" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:11:21.739" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:11:21.739" endtime="20231210 21:11:22.045"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:21.430" endtime="20231210 21:11:22.045"/>
 </kw>
 <kw name="Click Button Simpan Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.406" endtime="20231125 09:49:17.406"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:22.046" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:22.045" endtime="20231210 21:11:23.593"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:22.045" endtime="20231210 21:11:23.593"/>
 </kw>
 <kw name="Click Button Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tab</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:23.593" level="INFO">Clicking button 'default:Buat Tab'.</msg>
+<status status="PASS" starttime="20231210 21:11:23.593" endtime="20231210 21:11:24.836"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:23.593" endtime="20231210 21:11:24.836"/>
 </kw>
 <kw name="Input Label Buat Tab" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:24.836" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:24.836" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:24.836" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:24.836" endtime="20231210 21:11:25.143"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:25.644" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:25.143" endtime="20231210 21:11:25.644"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:25.644" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:25.644" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:25.644" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:25.644" endtime="20231210 21:11:25.952"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:25.952" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:11:25.952" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:11:25.952" endtime="20231210 21:11:26.265"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:24.836" endtime="20231210 21:11:26.265"/>
 </kw>
 <kw name="Click Button Simpan Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:26.266" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:26.265" endtime="20231210 21:11:27.807"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:26.265" endtime="20231210 21:11:27.807"/>
 </kw>
 <kw name="Click Button Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tombol</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:27.807" level="INFO">Clicking button 'default:Buat Tombol'.</msg>
+<status status="PASS" starttime="20231210 21:11:27.807" endtime="20231210 21:11:29.046"/>
 </kw>
-<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:30.046" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:29.046" endtime="20231210 21:11:30.046"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:27.807" endtime="20231210 21:11:30.046"/>
+</kw>
+<kw name="Select Jenis Aksi Buat" library="template_form">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:30.047" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:30.047" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:30.047" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:30.046" endtime="20231210 21:11:30.351"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:30.851" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:30.351" endtime="20231210 21:11:30.851"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:30.851" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:30.851" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:30.851" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:30.851" endtime="20231210 21:11:31.162"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:32.163" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:31.162" endtime="20231210 21:11:32.163"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:32.163" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:32.163" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:32.163" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:32.163" endtime="20231210 21:11:32.467"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:32.467" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:32.467" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:32.467" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:32.467" endtime="20231210 21:11:32.777"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:30.046" endtime="20231210 21:11:32.777"/>
 </kw>
 <kw name="Input Link Buat Tombol" library="template_form">
 <arg>https://www.google.com/</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:32.778" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:32.778" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:32.778" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:32.778" endtime="20231210 21:11:33.084"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${link}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:33.084" level="INFO">Sending key(s) ('https://www.google.com/',) to page.</msg>
+<msg timestamp="20231210 21:11:33.084" level="INFO">Sending keys https://www.google.com/</msg>
+<status status="PASS" starttime="20231210 21:11:33.084" endtime="20231210 21:11:33.419"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:32.778" endtime="20231210 21:11:33.419"/>
 </kw>
 <kw name="Input Label Buat Tombol" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.407"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:33.420" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:33.420" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:33.420" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:33.419" endtime="20231210 21:11:33.726"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:33.726" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:11:33.726" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:11:33.726" endtime="20231210 21:11:34.038"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:33.419" endtime="20231210 21:11:34.038"/>
 </kw>
 <kw name="Click Button Simpan Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.407" endtime="20231125 09:49:17.408"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:34.039" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:34.038" endtime="20231210 21:11:35.593"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:34.038" endtime="20231210 21:11:35.593"/>
 </kw>
 <kw name="Click Button Buat Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Element</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:35.593" level="INFO">Clicking button 'default:Buat Element'.</msg>
+<status status="PASS" starttime="20231210 21:11:35.593" endtime="20231210 21:11:36.833"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="text-uppercase text-start text-white"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:11:36.833" endtime="20231210 21:11:37.478"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:35.593" endtime="20231210 21:11:37.478"/>
 </kw>
 <kw name="Input Label Element" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:11:37.478" endtime="20231210 21:11:38.093"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<arg>${label}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:38.093" level="INFO">Typing text 'label' into text field '//*[@placeholder="Masukan Label"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:38.093" endtime="20231210 21:11:39.046"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:37.478" endtime="20231210 21:11:39.046"/>
 </kw>
 <kw name="Select Type Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:11:39.046" endtime="20231210 21:11:39.661"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:39.661" level="INFO">Clicking element '//*[@placeholder="Pilih Tipe"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:39.661" endtime="20231210 21:11:40.292"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:40.292" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:40.292" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:40.292" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:40.292" endtime="20231210 21:11:40.597"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:41.097" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:40.597" endtime="20231210 21:11:41.097"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:41.097" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:41.097" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:41.097" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:41.097" endtime="20231210 21:11:41.407"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:39.046" endtime="20231210 21:11:41.407"/>
 </kw>
 <kw name="Select Wajib Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:11:41.407" endtime="20231210 21:11:42.023"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:42.023" level="INFO">Clicking element '//*[@placeholder="Pilih Wajib"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:42.023" endtime="20231210 21:11:42.654"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:43.154" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:42.654" endtime="20231210 21:11:43.154"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:43.154" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:43.154" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:43.154" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:43.154" endtime="20231210 21:11:43.459"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:43.959" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:43.459" endtime="20231210 21:11:43.959"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:43.959" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:43.959" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:43.959" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:43.959" endtime="20231210 21:11:44.268"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:41.407" endtime="20231210 21:11:44.268"/>
 </kw>
 <kw name="Select Data Kolom Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:11:44.268" endtime="20231210 21:11:44.885"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:44.885" level="INFO">Clicking element '//*[@placeholder="Masukan Data Kolom"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:44.885" endtime="20231210 21:11:45.513"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:46.513" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:45.513" endtime="20231210 21:11:46.513"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:46.513" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:11:46.513" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:11:46.513" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:11:46.513" endtime="20231210 21:11:46.818"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:47.818" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:46.818" endtime="20231210 21:11:47.818"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:47.818" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:47.818" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:47.818" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:47.818" endtime="20231210 21:11:48.127"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:44.268" endtime="20231210 21:11:48.127"/>
 </kw>
 <kw name="Click Button Simpan Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:48.128" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:48.127" endtime="20231210 21:11:49.687"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:48.127" endtime="20231210 21:11:49.687"/>
 </kw>
 <kw name="Click Button Edit Canvas Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.408" endtime="20231125 09:49:17.408"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Edit Canvas Formula</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:49.687" level="INFO">Clicking button 'default:Edit Canvas Formula'.</msg>
+<status status="PASS" starttime="20231210 21:11:49.687" endtime="20231210 21:11:50.937"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:51.938" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:50.937" endtime="20231210 21:11:51.938"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:49.687" endtime="20231210 21:11:51.938"/>
 </kw>
 <kw name="Click Button Simpan Edit Canvas Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:51.939" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:51.939" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:51.939" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:51.938" endtime="20231210 21:11:52.244"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:52.744" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:52.244" endtime="20231210 21:11:52.744"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:52.744" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:52.744" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:52.744" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:52.744" endtime="20231210 21:11:53.049"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:53.550" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:53.049" endtime="20231210 21:11:53.550"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:53.550" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:11:53.551" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:11:53.551" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:11:53.550" endtime="20231210 21:11:53.855"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:54.356" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:53.855" endtime="20231210 21:11:54.356"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:11:54.356" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:11:54.356" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:11:54.356" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:11:54.356" endtime="20231210 21:11:54.677"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:55.177" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:11:54.677" endtime="20231210 21:11:55.177"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:56.178" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:55.177" endtime="20231210 21:11:56.178"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:51.938" endtime="20231210 21:11:56.178"/>
 </kw>
 <kw name="Click Button Buat Element Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Element Formula</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:56.179" level="INFO">Clicking button 'default:Buat Element Formula'.</msg>
+<status status="PASS" starttime="20231210 21:11:56.178" endtime="20231210 21:11:57.416"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:11:58.416" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:11:57.416" endtime="20231210 21:11:58.416"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:56.178" endtime="20231210 21:11:58.416"/>
 </kw>
 <kw name="Input Label Element Formula" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231210 21:11:58.416" endtime="20231210 21:11:59.334"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<arg>${label}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:11:59.334" level="INFO">Typing text 'label' into text field '//*[@placeholder="Masukan Label"]'.</msg>
+<status status="PASS" starttime="20231210 21:11:59.334" endtime="20231210 21:12:00.280"/>
+</kw>
+<status status="PASS" starttime="20231210 21:11:58.416" endtime="20231210 21:12:00.280"/>
 </kw>
 <kw name="Select Tipe Element Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+<arg>label</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:00.281" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:00.281" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:00.281" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:00.281" endtime="20231210 21:12:00.591"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:01.092" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:00.591" endtime="20231210 21:12:01.092"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${param}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:01.092" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:12:01.092" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:12:01.092" endtime="20231210 21:12:01.406"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:01.906" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:01.406" endtime="20231210 21:12:01.906"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:01.906" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:12:01.906" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:12:01.906" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:12:01.906" endtime="20231210 21:12:02.211"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:02.711" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:02.211" endtime="20231210 21:12:02.711"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:02.711" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:02.711" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:02.711" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:02.711" endtime="20231210 21:12:03.020"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:03.520" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:03.020" endtime="20231210 21:12:03.520"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:00.280" endtime="20231210 21:12:03.520"/>
 </kw>
 <kw name="Select Wajib Element Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
+<arg>Ya</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:03.521" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:03.522" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:03.522" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:03.520" endtime="20231210 21:12:03.830"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:04.331" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:03.830" endtime="20231210 21:12:04.331"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${param}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:04.331" level="INFO">Sending key(s) ('Ya',) to page.</msg>
+<msg timestamp="20231210 21:12:04.331" level="INFO">Sending keys Ya</msg>
+<status status="PASS" starttime="20231210 21:12:04.331" endtime="20231210 21:12:04.642"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:05.143" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:04.642" endtime="20231210 21:12:05.143"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:05.143" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:12:05.143" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:12:05.143" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:12:05.143" endtime="20231210 21:12:05.448"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:05.949" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:05.448" endtime="20231210 21:12:05.949"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:05.949" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:05.949" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:05.949" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:05.949" endtime="20231210 21:12:06.258"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:06.758" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:06.258" endtime="20231210 21:12:06.758"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:03.520" endtime="20231210 21:12:06.758"/>
 </kw>
 <kw name="Select Data Kolom Element Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
-</kw>
-<kw name="Click Button Simpan Element Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
-</kw>
-<kw name="Input Nama Form" library="template_form">
-<arg>Form Rian II</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.409" endtime="20231125 09:49:17.409"/>
-</kw>
-<kw name="Input Field Kunci" library="template_form">
-<arg>Field Kunci</arg>
-<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
-</kw>
-<kw name="Click Button Simpan Data" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:06.759" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:06.759" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:06.759" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:06.758" endtime="20231210 21:12:07.065"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+<msg timestamp="20231210 21:12:09.066" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231210 21:12:07.065" endtime="20231210 21:12:09.066"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:09.066" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:12:09.066" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:12:09.066" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:12:09.066" endtime="20231210 21:12:09.372"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:09.872" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:09.372" endtime="20231210 21:12:09.872"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:09.872" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:09.872" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:09.872" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:09.872" endtime="20231210 21:12:10.181"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:10.681" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:10.181" endtime="20231210 21:12:10.681"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:06.758" endtime="20231210 21:12:10.681"/>
+</kw>
+<kw name="Click Button Simpan Element Formula" library="template_form">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:10.682" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:10.682" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:10.682" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:10.681" endtime="20231210 21:12:10.988"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:11.489" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:10.988" endtime="20231210 21:12:11.489"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:11.489" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:11.489" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:11.489" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:11.489" endtime="20231210 21:12:11.794"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:12.295" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:11.794" endtime="20231210 21:12:12.295"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:12.295" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:12.295" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:12.295" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:12.295" endtime="20231210 21:12:12.634"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:13.134" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:12.634" endtime="20231210 21:12:13.134"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:10.681" endtime="20231210 21:12:13.134"/>
+</kw>
+<kw name="Input Nama Form" library="template_form">
+<arg>Form Rian II</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:14.135" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:12:13.134" endtime="20231210 21:12:14.135"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:el-input__inner</arg>
+<arg>${namaForm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:14.135" level="INFO">Typing text 'Form Rian II' into text field 'class:el-input__inner'.</msg>
+<status status="PASS" starttime="20231210 21:12:14.135" endtime="20231210 21:12:15.096"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:13.134" endtime="20231210 21:12:15.096"/>
+</kw>
+<kw name="Input Field Kunci" library="template_form">
+<arg>Field Kunci</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:15.097" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:15.097" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:15.097" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:15.096" endtime="20231210 21:12:15.404"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${fieldKunci}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:15.404" level="INFO">Sending key(s) ('Field Kunci',) to page.</msg>
+<msg timestamp="20231210 21:12:15.404" level="INFO">Sending keys Field Kunci</msg>
+<status status="PASS" starttime="20231210 21:12:15.404" endtime="20231210 21:12:15.727"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:15.096" endtime="20231210 21:12:15.727"/>
+</kw>
+<kw name="Click Button Simpan Data" library="template_form">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan Data</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:15.728" level="INFO">Clicking button 'default:Simpan Data'.</msg>
+<status status="PASS" starttime="20231210 21:12:15.727" endtime="20231210 21:12:16.967"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:15.727" endtime="20231210 21:12:16.967"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:18.967" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231210 21:12:16.967" endtime="20231210 21:12:18.967"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20231125 09:49:17.410" endtime="20231125 09:49:17.410"/>
+<msg timestamp="20231210 21:12:19.406" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231210 21:12:18.967" endtime="20231210 21:12:19.406"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231125 09:49:17.410" endtime="20231125 09:49:19.662"/>
+<status status="PASS" starttime="20231210 21:12:19.406" endtime="20231210 21:12:21.739"/>
 </kw>
 <doc>SC06 - Create Element Formula</doc>
 <tag>TC02 - Create Perhitungan Formula</tag>
-<status status="FAIL" starttime="20231125 09:48:54.295" endtime="20231125 09:49:19.662">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+<status status="PASS" starttime="20231210 21:10:53.548" endtime="20231210 21:12:21.739"/>
 </test>
-<test id="s1-t3" name="TC03 - Create Formula Grandtotal" line="114">
+<test id="s1-t3" name="TC03 - Create Formula Grandtotal" line="107">
 <kw name="Open Browser To Login Page" library="login">
 <kw name="Set Selenium Speed" library="SeleniumLibrary">
-<arg>0.2s</arg>
+<arg>0.3s</arg>
 <doc>Sets the delay that is waited after each Selenium command.</doc>
-<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:19.663"/>
+<status status="PASS" starttime="20231210 21:12:21.739" endtime="20231210 21:12:21.739"/>
 </kw>
 <kw name="Open Browser" library="SeleniumLibrary">
 <arg>${LOGIN URL}</arg>
 <arg>${BROWSER}</arg>
 <arg>options=add_argument("--incognito")</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20231125 09:49:19.664" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
-<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:24.321"/>
+<msg timestamp="20231210 21:12:21.739" level="INFO">Opening browser 'Chrome' to base url 'https://uji.sicantik.go.id/sign-in'.</msg>
+<status status="PASS" starttime="20231210 21:12:21.739" endtime="20231210 21:12:26.407"/>
 </kw>
 <kw name="Maximize Browser Window" library="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" starttime="20231125 09:49:24.321" endtime="20231125 09:49:24.635"/>
+<status status="PASS" starttime="20231210 21:12:26.407" endtime="20231210 21:12:26.824"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>SICANTIK</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20231125 09:49:24.839" level="INFO">Page title is 'SICANTIK'.</msg>
-<status status="PASS" starttime="20231125 09:49:24.635" endtime="20231125 09:49:24.839"/>
+<msg timestamp="20231210 21:12:27.127" level="INFO">Page title is 'SICANTIK'.</msg>
+<status status="PASS" starttime="20231210 21:12:26.824" endtime="20231210 21:12:27.127"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:19.663" endtime="20231125 09:49:24.839"/>
+<status status="PASS" starttime="20231210 21:12:21.739" endtime="20231210 21:12:27.127"/>
 </kw>
 <kw name="Login Admin Instansi" library="login">
 <kw name="Input Username" library="login">
@@ -510,10 +1802,10 @@
 <arg>username</arg>
 <arg>${username}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:49:24.840" level="INFO">Typing text 'demo' into text field 'username'.</msg>
-<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:25.499"/>
+<msg timestamp="20231210 21:12:27.127" level="INFO">Typing text 'demo' into text field 'username'.</msg>
+<status status="PASS" starttime="20231210 21:12:27.127" endtime="20231210 21:12:28.090"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:25.499"/>
+<status status="PASS" starttime="20231210 21:12:27.127" endtime="20231210 21:12:28.090"/>
 </kw>
 <kw name="Input Password" library="login">
 <arg>Demo789*@#</arg>
@@ -521,221 +1813,957 @@
 <arg>password</arg>
 <arg>${password}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20231125 09:49:25.499" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
-<status status="PASS" starttime="20231125 09:49:25.499" endtime="20231125 09:49:26.153"/>
+<msg timestamp="20231210 21:12:28.090" level="INFO">Typing text 'Demo789*@#' into text field 'password'.</msg>
+<status status="PASS" starttime="20231210 21:12:28.090" endtime="20231210 21:12:29.043"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:25.499" endtime="20231125 09:49:26.153"/>
+<status status="PASS" starttime="20231210 21:12:28.090" endtime="20231210 21:12:29.043"/>
 </kw>
 <kw name="Submit Credentials" library="login">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>kt_sign_in_submit</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:49:26.153" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
-<status status="PASS" starttime="20231125 09:49:26.153" endtime="20231125 09:49:26.992"/>
+<msg timestamp="20231210 21:12:29.043" level="INFO">Clicking button 'kt_sign_in_submit'.</msg>
+<status status="PASS" starttime="20231210 21:12:29.043" endtime="20231210 21:12:30.285"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>5s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:49:31.992" level="INFO">Slept 5 seconds</msg>
-<status status="PASS" starttime="20231125 09:49:26.992" endtime="20231125 09:49:31.992"/>
+<msg timestamp="20231210 21:12:35.285" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20231210 21:12:30.285" endtime="20231210 21:12:35.285"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:26.153" endtime="20231125 09:49:31.992"/>
+<status status="PASS" starttime="20231210 21:12:29.043" endtime="20231210 21:12:35.285"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]</arg>
 <arg>DEMO</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:49:32.411" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
-<status status="PASS" starttime="20231125 09:49:31.992" endtime="20231125 09:49:32.411"/>
+<msg timestamp="20231210 21:12:35.904" level="INFO">Element 'xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]' contains text 'DEMO'.</msg>
+<status status="PASS" starttime="20231210 21:12:35.285" endtime="20231210 21:12:35.904"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:24.839" endtime="20231125 09:49:32.411"/>
+<status status="PASS" starttime="20231210 21:12:27.127" endtime="20231210 21:12:35.904"/>
 </kw>
 <kw name="Move To Template Form" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:49:32.411" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
-<status status="PASS" starttime="20231125 09:49:32.411" endtime="20231125 09:49:32.906"/>
+<msg timestamp="20231210 21:12:35.904" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form'</msg>
+<status status="PASS" starttime="20231210 21:12:35.904" endtime="20231210 21:12:36.503"/>
 </kw>
 <kw name="Element Should Contain" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5</arg>
 <arg>Daftar Template Form</arg>
 <doc>Verifies that element ``locator`` contains text ``expected``.</doc>
-<msg timestamp="20231125 09:49:33.320" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
-<status status="PASS" starttime="20231125 09:49:32.906" endtime="20231125 09:49:33.320"/>
+<msg timestamp="20231210 21:12:37.117" level="INFO">Element 'xpath://*[@id="kt_profile_details_view"]/div/div[1]/h5' contains text 'Daftar Template Form'.</msg>
+<status status="PASS" starttime="20231210 21:12:36.503" endtime="20231210 21:12:37.117"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>3s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<msg timestamp="20231125 09:49:36.321" level="INFO">Slept 3 seconds</msg>
-<status status="PASS" starttime="20231125 09:49:33.320" endtime="20231125 09:49:36.321"/>
+<msg timestamp="20231210 21:12:40.117" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20231210 21:12:37.117" endtime="20231210 21:12:40.117"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:32.411" endtime="20231125 09:49:36.321"/>
+<status status="PASS" starttime="20231210 21:12:35.904" endtime="20231210 21:12:40.117"/>
 </kw>
 <kw name="Click Button Add" library="template_form">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>https://uji.sicantik.go.id/template-form/add</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20231125 09:49:36.321" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
-<status status="PASS" starttime="20231125 09:49:36.321" endtime="20231125 09:49:36.857"/>
+<msg timestamp="20231210 21:12:40.117" level="INFO">Opening url 'https://uji.sicantik.go.id/template-form/add'</msg>
+<status status="PASS" starttime="20231210 21:12:40.117" endtime="20231210 21:12:41.421"/>
 </kw>
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>xpath://*[@id="kt_content_container"]/div[1]/form/div/div[1]/div/div/div[1]/div[1]/a</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20231125 09:49:36.857" endtime="20231125 09:49:37.273"/>
+<status status="PASS" starttime="20231210 21:12:41.421" endtime="20231210 21:12:42.038"/>
 </kw>
-<status status="PASS" starttime="20231125 09:49:36.321" endtime="20231125 09:49:37.273"/>
+<status status="PASS" starttime="20231210 21:12:40.117" endtime="20231210 21:12:42.038"/>
 </kw>
 <kw name="Click Button Buat Canvas" library="template_form">
 <kw name="Click Button" library="SeleniumLibrary">
 <arg>default:Buat Canvas</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<msg timestamp="20231125 09:49:37.274" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
-<status status="PASS" starttime="20231125 09:49:37.273" endtime="20231125 09:49:38.361"/>
+<msg timestamp="20231210 21:12:42.038" level="INFO">Clicking button 'default:Buat Canvas'.</msg>
+<status status="PASS" starttime="20231210 21:12:42.038" endtime="20231210 21:12:43.281"/>
 </kw>
-<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
-<arg>xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5</arg>
-<doc>Waits until the element ``locator`` is visible.</doc>
-<msg timestamp="20231125 09:49:43.961" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg timestamp="20231125 09:49:43.961" level="FAIL">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</msg>
-<status status="FAIL" starttime="20231125 09:49:38.361" endtime="20231125 09:49:43.961"/>
+<kw name="Wait Until Element Contains" library="SeleniumLibrary">
+<arg>css:h4[class="text-uppercase text-start text-white"]</arg>
+<arg>CANVAS</arg>
+<doc>Waits until the element ``locator`` contains ``text``.</doc>
+<status status="PASS" starttime="20231210 21:12:43.281" endtime="20231210 21:12:43.928"/>
 </kw>
-<status status="FAIL" starttime="20231125 09:49:37.273" endtime="20231125 09:49:43.961"/>
+<status status="PASS" starttime="20231210 21:12:42.038" endtime="20231210 21:12:43.928"/>
 </kw>
 <kw name="Input Tab Index Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.961" endtime="20231125 09:49:43.961"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:43.929" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:43.929" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:43.929" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:43.928" endtime="20231210 21:12:44.234"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:44.734" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:44.234" endtime="20231210 21:12:44.734"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:44.734" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:44.734" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:44.734" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:44.734" endtime="20231210 21:12:45.040"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${tabIndexCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:45.040" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:12:45.040" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:12:45.040" endtime="20231210 21:12:45.348"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:43.928" endtime="20231210 21:12:45.348"/>
 </kw>
 <kw name="Select Tipe Form Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:45.349" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:45.349" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:45.349" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:45.348" endtime="20231210 21:12:45.659"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>Form</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:45.659" level="INFO">Sending key(s) ('Form',) to page.</msg>
+<msg timestamp="20231210 21:12:45.659" level="INFO">Sending keys Form</msg>
+<status status="PASS" starttime="20231210 21:12:45.659" endtime="20231210 21:12:45.976"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:45.976" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:12:45.976" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:12:45.976" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:12:45.976" endtime="20231210 21:12:46.281"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:46.281" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:46.281" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:46.281" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:46.281" endtime="20231210 21:12:46.591"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:45.348" endtime="20231210 21:12:46.591"/>
 </kw>
 <kw name="Input Nama Canvas" library="template_form">
 <arg>Nama canvas</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:46.592" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:46.592" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:46.592" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:46.592" endtime="20231210 21:12:46.900"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${namaCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:46.900" level="INFO">Sending key(s) ('Nama canvas',) to page.</msg>
+<msg timestamp="20231210 21:12:46.900" level="INFO">Sending keys Nama canvas</msg>
+<status status="PASS" starttime="20231210 21:12:46.900" endtime="20231210 21:12:47.221"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:46.591" endtime="20231210 21:12:47.221"/>
 </kw>
 <kw name="Input Web Service Awal Canvas" library="template_form">
 <arg>webServiceAwal</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:47.222" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:47.222" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:47.222" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:47.221" endtime="20231210 21:12:47.527"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${webServiceAwal}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:47.527" level="INFO">Sending key(s) ('webServiceAwal',) to page.</msg>
+<msg timestamp="20231210 21:12:47.527" level="INFO">Sending keys webServiceAwal</msg>
+<status status="PASS" starttime="20231210 21:12:47.527" endtime="20231210 21:12:47.851"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:47.221" endtime="20231210 21:12:47.851"/>
 </kw>
 <kw name="Select Data Table Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:47.852" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:47.852" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:47.852" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:47.851" endtime="20231210 21:12:48.157"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:49.158" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:12:48.157" endtime="20231210 21:12:49.158"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:49.158" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:12:49.158" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:12:49.158" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:12:49.158" endtime="20231210 21:12:49.463"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:50.464" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:12:49.463" endtime="20231210 21:12:50.464"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:50.464" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:12:50.464" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:12:50.464" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:12:50.464" endtime="20231210 21:12:50.773"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:47.851" endtime="20231210 21:12:50.773"/>
 </kw>
 <kw name="Input No Urut Canvas" library="template_form">
 <arg>1</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:50.773" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:50.773" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:50.773" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:50.773" endtime="20231210 21:12:51.082"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${nourutCanvas}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:51.082" level="INFO">Sending key(s) ('1',) to page.</msg>
+<msg timestamp="20231210 21:12:51.082" level="INFO">Sending key 1</msg>
+<status status="PASS" starttime="20231210 21:12:51.082" endtime="20231210 21:12:51.389"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:50.773" endtime="20231210 21:12:51.389"/>
 </kw>
 <kw name="Click Button Simpan Canvas" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:51.389" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:12:51.389" endtime="20231210 21:12:52.940"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:51.389" endtime="20231210 21:12:52.940"/>
 </kw>
 <kw name="Click Button Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.962" endtime="20231125 09:49:43.962"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tab</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:52.941" level="INFO">Clicking button 'default:Buat Tab'.</msg>
+<status status="PASS" starttime="20231210 21:12:52.941" endtime="20231210 21:12:54.184"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:52.940" endtime="20231210 21:12:54.184"/>
 </kw>
 <kw name="Input Label Buat Tab" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:54.184" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:54.184" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:54.184" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:54.184" endtime="20231210 21:12:54.491"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:54.992" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:54.491" endtime="20231210 21:12:54.992"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:54.992" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:54.992" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:54.992" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:54.992" endtime="20231210 21:12:55.297"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:55.297" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:12:55.297" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:12:55.297" endtime="20231210 21:12:55.608"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:54.184" endtime="20231210 21:12:55.608"/>
 </kw>
 <kw name="Click Button Simpan Buat Tab" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:55.608" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:12:55.608" endtime="20231210 21:12:57.151"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:55.608" endtime="20231210 21:12:57.151"/>
 </kw>
 <kw name="Click Button Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Tombol</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:12:57.151" level="INFO">Clicking button 'default:Buat Tombol'.</msg>
+<status status="PASS" starttime="20231210 21:12:57.151" endtime="20231210 21:12:58.391"/>
 </kw>
-<kw name="Select Jenis Aksi Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:12:59.391" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:12:58.391" endtime="20231210 21:12:59.391"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:57.151" endtime="20231210 21:12:59.391"/>
+</kw>
+<kw name="Select Jenis Aksi Buat" library="template_form">
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:12:59.392" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:12:59.392" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:12:59.392" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:12:59.391" endtime="20231210 21:12:59.697"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:00.197" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:12:59.697" endtime="20231210 21:13:00.197"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:00.197" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:00.197" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:00.197" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:00.197" endtime="20231210 21:13:00.506"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:01.506" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:00.506" endtime="20231210 21:13:01.506"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:01.506" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:01.506" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:01.507" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:01.506" endtime="20231210 21:13:01.810"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:01.810" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:01.810" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:01.810" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:01.810" endtime="20231210 21:13:02.119"/>
+</kw>
+<status status="PASS" starttime="20231210 21:12:59.391" endtime="20231210 21:13:02.119"/>
 </kw>
 <kw name="Input Link Buat Tombol" library="template_form">
 <arg>https://www.google.com/</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:02.119" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:02.119" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:02.119" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:02.119" endtime="20231210 21:13:02.426"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${link}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:02.426" level="INFO">Sending key(s) ('https://www.google.com/',) to page.</msg>
+<msg timestamp="20231210 21:13:02.426" level="INFO">Sending keys https://www.google.com/</msg>
+<status status="PASS" starttime="20231210 21:13:02.426" endtime="20231210 21:13:02.763"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:02.119" endtime="20231210 21:13:02.763"/>
 </kw>
 <kw name="Input Label Buat Tombol" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:02.764" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:02.764" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:02.764" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:02.763" endtime="20231210 21:13:03.069"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${label}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:03.069" level="INFO">Sending key(s) ('label',) to page.</msg>
+<msg timestamp="20231210 21:13:03.069" level="INFO">Sending keys label</msg>
+<status status="PASS" starttime="20231210 21:13:03.069" endtime="20231210 21:13:03.384"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:02.763" endtime="20231210 21:13:03.384"/>
 </kw>
 <kw name="Click Button Simpan Buat Tombol" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:03.385" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:03.384" endtime="20231210 21:13:04.938"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:03.384" endtime="20231210 21:13:04.938"/>
 </kw>
 <kw name="Click Button Buat Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.963" endtime="20231125 09:49:43.963"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Element</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:04.938" level="INFO">Clicking button 'default:Buat Element'.</msg>
+<status status="PASS" starttime="20231210 21:13:04.938" endtime="20231210 21:13:06.179"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@class="text-uppercase text-start text-white"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:06.179" endtime="20231210 21:13:06.827"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:04.938" endtime="20231210 21:13:06.827"/>
 </kw>
 <kw name="Input Label Element" library="template_form">
 <arg>label</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:06.827" endtime="20231210 21:13:07.440"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Label"]</arg>
+<arg>${label}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:07.440" level="INFO">Typing text 'label' into text field '//*[@placeholder="Masukan Label"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:07.440" endtime="20231210 21:13:08.394"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:06.827" endtime="20231210 21:13:08.394"/>
 </kw>
 <kw name="Select Type Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:08.394" endtime="20231210 21:13:09.007"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Tipe"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:09.007" level="INFO">Clicking element '//*[@placeholder="Pilih Tipe"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:09.007" endtime="20231210 21:13:09.640"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:09.640" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:09.640" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:09.640" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:09.640" endtime="20231210 21:13:09.946"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:10.447" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:09.946" endtime="20231210 21:13:10.447"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:10.447" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:10.447" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:10.447" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:10.447" endtime="20231210 21:13:10.757"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:08.394" endtime="20231210 21:13:10.757"/>
 </kw>
 <kw name="Select Wajib Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:10.757" endtime="20231210 21:13:11.372"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Pilih Wajib"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:11.372" level="INFO">Clicking element '//*[@placeholder="Pilih Wajib"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:11.372" endtime="20231210 21:13:12.001"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:12.502" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:12.001" endtime="20231210 21:13:12.502"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:12.502" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:12.502" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:12.502" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:12.502" endtime="20231210 21:13:12.806"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:13.306" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:12.806" endtime="20231210 21:13:13.306"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:13.307" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:13.307" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:13.307" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:13.306" endtime="20231210 21:13:13.621"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:10.757" endtime="20231210 21:13:13.621"/>
 </kw>
 <kw name="Select Data Kolom Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:13.621" endtime="20231210 21:13:14.239"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//*[@placeholder="Masukan Data Kolom"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:14.239" level="INFO">Clicking element '//*[@placeholder="Masukan Data Kolom"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:14.239" endtime="20231210 21:13:14.865"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:15.865" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:14.865" endtime="20231210 21:13:15.865"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:15.865" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:15.865" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:15.865" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:15.865" endtime="20231210 21:13:16.170"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:17.170" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:16.170" endtime="20231210 21:13:17.170"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:17.170" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:17.170" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:17.170" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:17.170" endtime="20231210 21:13:17.479"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:13.621" endtime="20231210 21:13:17.479"/>
 </kw>
 <kw name="Click Button Simpan Element" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>css:button[class="el-button el-button--primary"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:17.479" level="INFO">Clicking button 'css:button[class="el-button el-button--primary"]'.</msg>
+<status status="PASS" starttime="20231210 21:13:17.479" endtime="20231210 21:13:19.042"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:17.479" endtime="20231210 21:13:19.042"/>
 </kw>
 <kw name="Click Button Edit Canvas Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Edit Canvas Formula</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:19.043" level="INFO">Clicking button 'default:Edit Canvas Formula'.</msg>
+<status status="PASS" starttime="20231210 21:13:19.043" endtime="20231210 21:13:20.293"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:21.294" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:20.293" endtime="20231210 21:13:21.294"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:19.043" endtime="20231210 21:13:21.294"/>
 </kw>
 <kw name="Click Button Simpan Edit Canvas Formula" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:21.295" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:21.295" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:21.295" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:21.294" endtime="20231210 21:13:21.599"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:22.100" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:21.599" endtime="20231210 21:13:22.100"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:22.100" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:22.100" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:22.100" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:22.100" endtime="20231210 21:13:22.406"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:22.906" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:22.406" endtime="20231210 21:13:22.906"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:22.906" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:22.906" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:22.906" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:22.906" endtime="20231210 21:13:23.211"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:23.712" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:23.211" endtime="20231210 21:13:23.712"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:23.712" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:23.712" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:23.712" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:23.712" endtime="20231210 21:13:24.032"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:24.533" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:24.032" endtime="20231210 21:13:24.533"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:25.533" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:24.533" endtime="20231210 21:13:25.533"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:21.294" endtime="20231210 21:13:25.533"/>
 </kw>
 <kw name="Click Button Grand Total" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.964" endtime="20231125 09:49:43.964"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Buat Grandtotal</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:25.533" level="INFO">Clicking button 'default:Buat Grandtotal'.</msg>
+<status status="PASS" starttime="20231210 21:13:25.533" endtime="20231210 21:13:26.770"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:27.770" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:26.770" endtime="20231210 21:13:27.770"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:25.533" endtime="20231210 21:13:27.770"/>
 </kw>
 <kw name="Select Data Tabel Grand Total" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:27.771" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:27.771" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:27.771" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:27.770" endtime="20231210 21:13:28.076"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:28.576" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:28.076" endtime="20231210 21:13:28.576"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:28.576" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:28.576" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:28.576" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:28.576" endtime="20231210 21:13:28.885"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:29.385" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:28.885" endtime="20231210 21:13:29.385"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>c_pemohon</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:29.385" level="INFO">Sending key(s) ('c_pemohon',) to page.</msg>
+<msg timestamp="20231210 21:13:29.385" level="INFO">Sending keys c_pemohon</msg>
+<status status="PASS" starttime="20231210 21:13:29.385" endtime="20231210 21:13:29.700"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:30.700" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:29.700" endtime="20231210 21:13:30.700"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:30.700" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:30.700" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:30.700" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:30.700" endtime="20231210 21:13:31.005"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:31.506" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:31.005" endtime="20231210 21:13:31.506"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:31.506" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:31.506" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:31.506" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:31.506" endtime="20231210 21:13:31.821"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:27.770" endtime="20231210 21:13:31.821"/>
 </kw>
 <kw name="Select Data Kolom Grand Total" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:31.822" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:31.822" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:31.822" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:31.821" endtime="20231210 21:13:32.131"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:32.631" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:32.131" endtime="20231210 21:13:32.631"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:32.631" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:32.631" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:32.631" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:32.631" endtime="20231210 21:13:32.944"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:33.945" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:32.944" endtime="20231210 21:13:33.945"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ARROW_DOWN</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:33.945" level="INFO">Sending key(s) ('ARROW_DOWN',) to page.</msg>
+<msg timestamp="20231210 21:13:33.945" level="INFO">Pressing special key ARROW_DOWN to browser.</msg>
+<msg timestamp="20231210 21:13:33.945" level="INFO">Releasing special key ARROW_DOWN.</msg>
+<status status="PASS" starttime="20231210 21:13:33.945" endtime="20231210 21:13:34.249"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>0.5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:34.750" level="INFO">Slept 500 milliseconds</msg>
+<status status="PASS" starttime="20231210 21:13:34.249" endtime="20231210 21:13:34.750"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>ENTER</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:34.750" level="INFO">Sending key(s) ('ENTER',) to page.</msg>
+<msg timestamp="20231210 21:13:34.750" level="INFO">Pressing special key ENTER to browser.</msg>
+<msg timestamp="20231210 21:13:34.750" level="INFO">Releasing special key ENTER.</msg>
+<status status="PASS" starttime="20231210 21:13:34.750" endtime="20231210 21:13:35.068"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:31.821" endtime="20231210 21:13:35.068"/>
 </kw>
 <kw name="Click Button Plus Grand Total" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/div/form/div/div/div[2]/div[1]/div/div[1]/div/div/div[2]/button</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:35.068" endtime="20231210 21:13:35.682"/>
 </kw>
-<kw name="Click Button Simpan Grand Total" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
-</kw>
-<kw name="Input Nama Form" library="template_form">
-<arg>Form Rian III</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
-</kw>
-<kw name="Input Field Kunci" library="template_form">
-<arg>Field Kunci</arg>
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
-</kw>
-<kw name="Click Button Simpan Data" library="template_form">
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.965"/>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/div/form/div/div/div[2]/div[1]/div/div[1]/div/div/div[2]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:35.682" level="INFO">Clicking button 'xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/div/form/div/div/div[2]/div[1]/div/div[1]/div/div/div[2]/button'.</msg>
+<status status="PASS" starttime="20231210 21:13:35.682" endtime="20231210 21:13:37.226"/>
 </kw>
 <kw name="Sleep" library="BuiltIn">
 <arg>2s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" starttime="20231125 09:49:43.965" endtime="20231125 09:49:43.966"/>
+<msg timestamp="20231210 21:13:39.226" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231210 21:13:37.226" endtime="20231210 21:13:39.226"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:35.068" endtime="20231210 21:13:39.226"/>
+</kw>
+<kw name="Click Button Simpan Grand Total" library="template_form">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>xpath://html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/footer/span/button[2]</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231210 21:13:39.226" endtime="20231210 21:13:39.841"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/footer/span/button[2]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:39.841" level="INFO">Clicking button 'xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/div[5]/div/div/footer/span/button[2]'.</msg>
+<status status="PASS" starttime="20231210 21:13:39.841" endtime="20231210 21:13:41.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:42.387" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:41.386" endtime="20231210 21:13:42.387"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:39.226" endtime="20231210 21:13:42.387"/>
+</kw>
+<kw name="Input Nama Form" library="template_form">
+<arg>Form Rian III</arg>
+<kw name="Sleep" library="BuiltIn">
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:43.387" level="INFO">Slept 1 second</msg>
+<status status="PASS" starttime="20231210 21:13:42.387" endtime="20231210 21:13:43.387"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>class:el-input__inner</arg>
+<arg>${namaForm}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:43.387" level="INFO">Typing text 'Form Rian III' into text field 'class:el-input__inner'.</msg>
+<status status="PASS" starttime="20231210 21:13:43.387" endtime="20231210 21:13:44.350"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:42.387" endtime="20231210 21:13:44.350"/>
+</kw>
+<kw name="Input Field Kunci" library="template_form">
+<arg>Field Kunci</arg>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>TAB</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:44.351" level="INFO">Sending key(s) ('TAB',) to page.</msg>
+<msg timestamp="20231210 21:13:44.351" level="INFO">Pressing special key TAB to browser.</msg>
+<msg timestamp="20231210 21:13:44.351" level="INFO">Releasing special key TAB.</msg>
+<status status="PASS" starttime="20231210 21:13:44.350" endtime="20231210 21:13:44.656"/>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<arg>None</arg>
+<arg>${fieldKunci}</arg>
+<doc>Simulates the user pressing key(s) to an element or on the active browser.</doc>
+<msg timestamp="20231210 21:13:44.656" level="INFO">Sending key(s) ('Field Kunci',) to page.</msg>
+<msg timestamp="20231210 21:13:44.656" level="INFO">Sending keys Field Kunci</msg>
+<status status="PASS" starttime="20231210 21:13:44.656" endtime="20231210 21:13:44.982"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:44.350" endtime="20231210 21:13:44.982"/>
+</kw>
+<kw name="Click Button Simpan Data" library="template_form">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>default:Simpan Data</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20231210 21:13:44.982" level="INFO">Clicking button 'default:Simpan Data'.</msg>
+<status status="PASS" starttime="20231210 21:13:44.982" endtime="20231210 21:13:46.223"/>
+</kw>
+<status status="PASS" starttime="20231210 21:13:44.982" endtime="20231210 21:13:46.223"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20231210 21:13:48.223" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20231210 21:13:46.223" endtime="20231210 21:13:48.223"/>
 </kw>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="NOT RUN" starttime="20231125 09:49:43.966" endtime="20231125 09:49:43.966"/>
+<msg timestamp="20231210 21:13:48.649" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231210 21:13:48.223" endtime="20231210 21:13:48.649"/>
 </kw>
 <kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20231125 09:49:43.966" endtime="20231125 09:49:46.208"/>
+<status status="PASS" starttime="20231210 21:13:48.649" endtime="20231210 21:13:50.997"/>
 </kw>
 <doc>SC06 - Create Element Formula</doc>
 <tag>TC03 - Create Formula Grandtotal</tag>
-<status status="FAIL" starttime="20231125 09:49:19.663" endtime="20231125 09:49:46.208">Element 'xpath://*[@id="canvas-modal"]/div/form/div/div[1]/h5' not visible after 5 seconds.</status>
+<status status="PASS" starttime="20231210 21:12:21.739" endtime="20231210 21:13:50.997"/>
 </test>
 <doc>Simple example using SeleniumLibrary.</doc>
-<status status="FAIL" starttime="20231125 09:48:27.394" endtime="20231125 09:49:46.209"/>
+<status status="PASS" starttime="20231210 21:09:48.266" endtime="20231210 21:13:50.997"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="3" skip="0">All Tests</stat>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="0" fail="1" skip="0">TC01 - Create Element Formula</stat>
-<stat pass="0" fail="1" skip="0">TC02 - Create Perhitungan Formula</stat>
-<stat pass="0" fail="1" skip="0">TC03 - Create Formula Grandtotal</stat>
+<stat pass="1" fail="0" skip="0">TC01 - Create Element Formula</stat>
+<stat pass="1" fail="0" skip="0">TC02 - Create Perhitungan Formula</stat>
+<stat pass="1" fail="0" skip="0">TC03 - Create Formula Grandtotal</stat>
 </tag>
 <suite>
-<stat pass="0" fail="3" skip="0" id="s1" name="SC06 - Create Element Formula">SC06 - Create Element Formula</stat>
+<stat pass="3" fail="0" skip="0" id="s1" name="SC06 - Create Element Formula">SC06 - Create Element Formula</stat>
 </suite>
 </statistics>
 <errors>

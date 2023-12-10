@@ -5,11 +5,7 @@ Library           SeleniumLibrary
 *** Keywords ***
 Move To Alur Proses Module
     Go To       https://uji.sicantik.go.id/alur-proses
-    Wait Until Element Contains     xpath://*[@id="kt_content_container"]/div/div/div[1]/h5     Daftar Alur Proses      None    None
-    Wait Until Element Is Visible    xpath://*[@id="kt_customers_table"]/thead/tr/th[1]
-    Sleep    3s
-#    Wait Until Element Is Enabled    xpath://*[@id="kt_customers_table"]/thead/tr/th[1]
-#    Sleep    10s
+    Wait Until Location Is    https://uji.sicantik.go.id/alur-proses
 
 Click Button Filter
     Click Button    default:Filter
@@ -21,6 +17,7 @@ Filter Alur Proses
     Click Button    default:Tampilkan hasil
 
 Click Button Pencil
+    Wait Until Element Is Visible    css:i.fa-edit
     Click Element   css:i.fa-edit
     Wait Until Element Contains     css:a.text-primary-custom   UBAH ALUR PROSES    None    None
 
@@ -43,6 +40,7 @@ Move To Add Alur Proses
 
 Input Nama Alur Proses
     [Arguments]     ${namaAlurProses}
+    Clear Element Text    name:alurProses
     Input Text      name:alurProses     ${namaAlurProses}
 
 Click Button Tambah Tahapan Proses
@@ -51,6 +49,7 @@ Click Button Tambah Tahapan Proses
 
 Input No
     [Arguments]     ${no}
+    Clear Element Text    name:no-0-card
     Input Text      name:no-0-card      ${no}
 
 Select Jenis Proses

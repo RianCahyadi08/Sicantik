@@ -3,12 +3,6 @@ Documentation     Simple example using SeleniumLibrary.
 Library           SeleniumLibrary
 Resource          ../../../../keywords/login.robot
 Resource          ../../../../keywords/template_form.robot
-
-
-*** Variables ***
-${LOGIN URL}      https://uji.sicantik.go.id/sign-in
-${BROWSER}        Chrome
-
 *** Test Cases ***
 TC01 - Create Element Formula
     [Documentation]     SC06 - Create Element Formula
@@ -34,7 +28,7 @@ TC01 - Create Element Formula
     # ebd buat tab
     # buat tombol
     template_form.Click Button Buat Tombol
-    template_form.Select Jenis Aksi Buat Tombol
+    template_form.Select Jenis Aksi Buat
     template_form.Input Link Buat Tombol  https://www.google.com/
     template_form.Input Label Buat Tombol  label
     template_form.Click Button Simpan Buat Tombol
@@ -78,7 +72,7 @@ TC02 - Create Perhitungan Formula
     # ebd buat tab
     # buat tombol
     template_form.Click Button Buat Tombol
-    template_form.Select Jenis Aksi Buat Tombol
+    template_form.Select Jenis Aksi Buat
     template_form.Input Link Buat Tombol  https://www.google.com/
     template_form.Input Label Buat Tombol  label
     template_form.Click Button Simpan Buat Tombol
@@ -97,9 +91,9 @@ TC02 - Create Perhitungan Formula
     # end
     # Perhitungan formula
     template_form.Click Button Buat Element Formula
-    template_form.Input Label Element Formula     label
-    template_form.Select Tipe Element Formula
-    template_form.Select Wajib Element Formula
+    template_form.Input Label Element Formula       label
+    template_form.Select Tipe Element Formula       label
+    template_form.Select Wajib Element Formula      Ya
     template_form.Select Data Kolom Element Formula
     template_form.Click Button Simpan Element Formula
     # End
@@ -109,7 +103,6 @@ TC02 - Create Perhitungan Formula
     Sleep   2s
     Capture Page Screenshot
     [Teardown]    Close Browser
-
 
 TC03 - Create Formula Grandtotal
     [Documentation]     SC06 - Create Element Formula
@@ -135,7 +128,7 @@ TC03 - Create Formula Grandtotal
     # ebd buat tab
     # buat tombol
     template_form.Click Button Buat Tombol
-    template_form.Select Jenis Aksi Buat Tombol
+    template_form.Select Jenis Aksi Buat
     template_form.Input Link Buat Tombol  https://www.google.com/
     template_form.Input Label Buat Tombol  label
     template_form.Click Button Simpan Buat Tombol

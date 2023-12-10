@@ -4,13 +4,13 @@ Library           SeleniumLibrary
 
 *** Variables ***
 ${LOGIN URL}      https://uji.sicantik.go.id/sign-in
-${BROWSER}        Firefox
+${BROWSER}        Chrome
 
 *** Keywords ***
 Open Browser To Login Page
-    Set Selenium Speed    0.2s
-#     Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
-    Open Browser    ${LOGIN URL}    ${BROWSER}
+    Set Selenium Speed    0.3s
+     Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
+#    Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
     Title Should Be    SICANTIK
 

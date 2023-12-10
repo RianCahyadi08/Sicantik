@@ -14,12 +14,19 @@ Click Icon Notification
 
 Move To Notification
     Go To    https://uji.sicantik.go.id/notifikasi
-    Element Should Contain    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Jenis Izin
+#    Element Should Contain    xpath://*[@id="kt_content_container"]/div/div/div[1]/h5    Daftar Jenis Izin
+    Wait Until Location Is    https://uji.sicantik.go.id/notifikasi
 
 Click Button Filter
     Wait Until Element Is Visible    css:button.btn-white
     Click Button    css:button.btn-white
     Wait Until Element Is Visible    xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label
+
+Search
+    Wait Until Element Is Visible    //*[@placeholder="Jenis Izin"]
+    [Arguments]     ${param}
+    Input Text    //*[@placeholder="Jenis Izin"]    ${param}
+    Sleep    3s
 
 Input Jenis Izin
     Wait Until Element Is Visible    xpath://*[@id="collapseBtnFilter"]/div/div[1]/div[1]/label
@@ -71,7 +78,6 @@ Input Pesan
 Click Button Simpan In Modal
 #    Wait Until Element Is Visible    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
 #    Click Button    xpath://*[@id="pills-288483"]/div[2]/div/div/footer/span/button[2]
-
     Wait Until Element Is Visible    css:button.el-button--primary
     Click Button    css:button.el-button--primary
     Sleep    1s
