@@ -4,10 +4,6 @@ Library             SeleniumLibrary
 Resource            ../../../keywords/login.robot
 Resource            ../../../keywords/pemohon.robot
 
-*** Variables ***
-${LOGIN URL}      https://uji.sicantik.go.id/sign-in
-${BROWSER}        Firefox
-
 *** Test Cases ***
 TC01 - View Data Permohonan Izin
     [Documentation]     SC01 - View Data Permohonan Izin.robot

@@ -8,7 +8,7 @@ ${BROWSER}        Chrome
 
 *** Keywords ***
 Open Browser To Login Page
-    Set Selenium Speed    0.3s
+    Set Selenium Speed    0.1s
      Open Browser    ${LOGIN URL}    ${BROWSER}    options=add_argument("--incognito")
 #    Open Browser    ${LOGIN URL}    ${BROWSER}
     Maximize Browser Window
@@ -27,11 +27,10 @@ Login Admin Pusat
     Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[2]    Admin Utama
 
 Login Pemohon
-    Input Username    kartu1
-    Input Password    Kartu123*@#
+    Input Username    testingriko
+    Input Password    Monyet123#
     Submit Credentials
-    Wait Until Element Contains    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div/div[3]/div/div[2]/div[1]/span[2]    PEMOHON
-    Sleep    3s
+    Wait Until Location Is    https://uji.sicantik.go.id/home
 
 Login Jabatan Satu
     Input Username    riancahyadi
