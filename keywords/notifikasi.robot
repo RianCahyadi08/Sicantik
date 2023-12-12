@@ -1,10 +1,5 @@
 *** Settings ***
-Documentation     Simple example using SeleniumLibrary.
 Library           SeleniumLibrary
-
-*** Variables ***
-${LOGIN URL}      https://uji.sicantik.go.id/sign-in
-${BROWSER}        Firefox
 
 *** Keywords ***
 Click Icon Notification
@@ -85,3 +80,24 @@ Click Button Simpan In Modal
 Click Button Simpan
     Click Button    xpath://*[@id="kt_content_container"]/div[3]/div/div/div/div/button
     Wait Until Element Is Visible    class:Vue-Toastification__toast-body
+
+Click Tab Notification Informasi
+    Wait Until Element Is Visible    //*[@class="nav-link text-white opacity-75 opacity-state-100 pb-4"]
+    Click Element    //*[@href="#kt_topbar_notifications_2"]
+
+Click Lihat Semua Pengumuman
+    Wait Until Element Is Visible    //*[@class="nav-link text-white opacity-75 opacity-state-100 pb-4"]
+    Click Element    //*[@href="/list-notikasi-user"]
+    
+Click Lihat Semua Informasi
+    Wait Until Element Is Enabled    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/a
+    Click Element    xpath:/html/body/div[1]/div[2]/div[2]/div[1]/div/div[3]/div[2]/div[2]/div[1]/div[2]/div[2]/div[2]/div[2]/a
+
+Click Tab Informasi
+    Wait Until Element Is Visible    xpath:/html/body/div[1]/div[2]/div[2]/div[2]/div/div/ul/li[2]/a
+    Click Link    //*[@href="#kt_tab_pane_2"]
+    
+Click Icon Eye Notification
+    Wait Until Element Is Visible    //*[@class="fas fa-eye text-info me-3 pe-auto cursor-pointer el-tooltip__trigger el-tooltip__trigger"]
+    Click Element    //*[@class="fas fa-eye text-info me-3 pe-auto cursor-pointer el-tooltip__trigger el-tooltip__trigger"]
+    Sleep    3s

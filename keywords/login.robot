@@ -38,6 +38,12 @@ Login Jabatan Satu
     Submit Credentials
     Element Should Contain    xpath://*[@id="kt_header_user_menu_toggle"]/div[2]/span[1]    RIANCAHYADI
 
+Login Pengguna Satu
+    Input Username    pengguna_tte1
+    Input Password    Testing123*@#
+    Submit Credentials
+    Wait Until Location Is    https://uji.sicantik.go.id/home
+
 Input Username
     [Arguments]    ${username}
     Input Text    username    ${username}
